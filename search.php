@@ -28,7 +28,7 @@ get_header(); ?>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
-the_post();
+				the_post();
 
 				/**
 				 * Run the loop for the search to output the results.
