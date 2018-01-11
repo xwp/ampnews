@@ -18,7 +18,7 @@ if ( ! function_exists( 'ampconf_posted_on' ) ) :
 		}
 
 		$time_string = sprintf(
-			 $time_string,
+			$time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( 'c' ) ),
@@ -103,16 +103,16 @@ if ( ! function_exists( 'ampconf_entry_footer' ) ) :
 endif;
 
 if ( ! function_exists( 'ampconf_post_thumbnail' ) ) :
-/**
- * Displays an optional post thumbnail.
- *
- * Wraps the post thumbnail in an anchor element on index views, or a div
- * element when on single views.
- */
-function ampconf_post_thumbnail() {
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function ampconf_post_thumbnail() {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
-			}
+		}
 
 		if ( is_singular() ) :
 		?>
@@ -140,5 +140,5 @@ function ampconf_post_thumbnail() {
 
 	<?php
 	endif; // End is_singular().
-}
+	}
 endif;
