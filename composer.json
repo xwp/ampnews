@@ -1,6 +1,6 @@
 {
-    "name": "amp/theme",
-    "description": "WordPress AMP theme",
+    "name": "ampconf/theme",
+    "description": "WordPress AMPConf theme",
     "type": "wordpress-theme",
     "license": "GPL-2.0+",
     "require-dev": {
