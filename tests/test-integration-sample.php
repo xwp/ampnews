@@ -9,14 +9,12 @@
  * @since 0.1
  */
 
-namespace AMP\Theme\Tests\Integration;
-
 /**
  * Class Test_Integration_Sample
  *
  * @package AMP\Theme\Tests\Integration
  */
-class Test_Integration_Sample extends \WP_UnitTestCase {
+class Test_Integration_Sample extends WP_UnitTestCase {
 
 	/**
 	 * Sample test.  Will be replaced by real tests.
