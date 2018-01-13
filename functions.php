@@ -167,3 +167,8 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * AMP plugin dependency.
+ */
+require get_template_directory() . '/inc/plugin-dependency.php';
