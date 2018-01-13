@@ -23,7 +23,7 @@ function ampconf_plugin_dependency_notice() {
 	if ( ! array_key_exists( $filepath, get_plugins() ) ) {
 		$slug    = 'amp';
 		$path    = 'update.php';
-		$button  = __( 'Install', 'ampconf' );
+		$button  = __( 'Install', 'default' );
 		$message = __( 'The AMPConf theme requires the AMP plugin to be installed to function properly.', 'ampconf' );
 		$params  = array(
 			'action'   => 'install-plugin',
@@ -32,7 +32,7 @@ function ampconf_plugin_dependency_notice() {
 		);
 	} elseif ( ! is_plugin_active( $filepath ) ) {
 		$path    = 'plugins.php';
-		$button  = __( 'Activate', 'ampconf' );
+		$button  = __( 'Activate', 'default' );
 		$message = __( 'The AMPConf theme requires the AMP plugin to be activated to function properly.', 'ampconf' );
 		$params  = array(
 			'action'   => 'activate',
@@ -41,7 +41,7 @@ function ampconf_plugin_dependency_notice() {
 		);
 	} elseif ( isset( $updates->response[ $filepath ]->new_version ) ) {
 		$path    = 'update.php';
-		$button  = __( 'Update', 'ampconf' );
+		$button  = __( 'Update', 'default' );
 		$message = __( 'A new version of the AMP plugin is available, please upgrade.', 'ampconf' );
 		$params  = array(
 			'action'   => 'upgrade-plugin',
