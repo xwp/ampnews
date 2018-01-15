@@ -1,0 +1,12 @@
+.module {
+	padding: 1rem 0;
+
+	&--black-background {
+		background: $black;
+		color: $white;
+
+		a {
+			color: $white;
+		}
+	}
+}

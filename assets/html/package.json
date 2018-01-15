@@ -4,7 +4,8 @@
   "description": "Static AMP HTML for use in the AMP WordPress theme",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently \"node ./bin/inject-styles.js\" \"python -m SimpleHTTPServer\""
+    "start": "concurrently \"node ./bin/inject-styles.js\" \"python -m SimpleHTTPServer\"",
+    "clean": "node ./bin/remove-styles.js"
   },
   "repository": {
     "type": "git",

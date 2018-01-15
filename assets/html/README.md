@@ -7,7 +7,7 @@ Temporary static implementation of the AMP theme for WordPress.
 0. Clone the theme locally.
 0. Run `yarn install` or `npm install`.
 0. Start development by running `npm run start`.
-0. All styles are located in `style.css` and are automatically inserted into HTML files on save.
+0. All styles are located in `assets/dist/main.css` and are automatically inserted into HTML files on save.
 
 ## Testing
 

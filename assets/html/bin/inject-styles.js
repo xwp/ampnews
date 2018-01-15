@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 
 const fs = require( 'fs' );
+const path = require( 'path' );
 const CleanCSS = require( 'clean-css' );
 const watch = require( 'node-watch' );
 const files = [];
@@ -19,26 +20,26 @@ for ( let file of fs.readdirSync( './' ) ) {
 }
 
 // Watchs for changes to style.css and injects those styles into the HTML.
-watch( './style.css', { recursive: true }, function( evt, name ) {
+watch( path.resolve( '../dist/css/main.css' ), { recursive: true }, function( evt, name ) {
 	console.log( `\nInjected minified ${name} into:` );
 
-	fs.readFile( './style.css', 'utf8', function ( error, data ) {
+	fs.readFile( path.resolve( '../dist/css/main.css' ), 'utf8', function( error, data ) {
 		handleError( error );
 
 		var output = new CleanCSS().minify( data );
 
 		for ( let file of files ) {
-			fs.readFile( `./${ file }`, 'utf8', function ( error, data ) {
+			fs.readFile( `./${ file }`, 'utf8', function( error, data ) {
 				handleError( error );
 
 				var html = data.replace( /<style amp-custom>(.*)<\/style>/g, `<style amp-custom>${ output.styles }</style>` );
 
-				fs.writeFile( `./${ file }`, html, 'utf8', function ( error ) {
+				fs.writeFile( `./${ file }`, html, 'utf8', function( error ) {
 					console.log( `- ${ file }` );
 
 					handleError( error );
-				});
-			});
+				} );
+			} );
 		}
-	});
-});
+	} );
+} );

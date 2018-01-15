@@ -5,7 +5,16 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "DIFF_BASE=develop ./node_modules/wp-dev-lib/pre-commit"
+    "test": "DIFF_BASE=develop ./node_modules/wp-dev-lib/pre-commit",
+    "dev": "cross-env NODE_ENV=development gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme",
+    "build": "cross-env NODE_ENV=production gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme"
+  },
+  "workflows": {
+    "theme": {
+      "cwd": "assets",
+      "schema": "./assets/schema/amp.json",
+      "tasks": "./assets/tasks"
+    }
   },
   "repository": {
     "type": "git",
@@ -21,5 +30,9 @@
     "eslint": "^4.13.1",
     "eslint-config-wordpress": "^2.0.0",
     "wp-dev-lib": "github:xwp/wp-dev-lib"
+  },
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "undercurrent": "^0.1.3"
   }
 }

@@ -1,0 +1,46 @@
+.module {
+
+	&-header {
+		font-size: 0.875rem;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			display: inline-block;
+			padding: 0 1rem 0 0;
+
+			li {
+				display: block;
+				padding: 0.5rem 1rem;
+			}
+		}
+
+		.menu {
+			position: relative;
+
+
+		}
+
+		.menu-item--has-dropdown > a::after {
+			content: '▾';
+			padding-left: 0.25rem;
+		}
+
+		li:hover .submenu {
+			display: block;
+		}
+
+		.submenu {
+			display: none;
+			position: absolute;
+			padding-top: 1rem;
+			margin-left: -1rem;
+			background: #000;
+		}
+	}
+
+}
