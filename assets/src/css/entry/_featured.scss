@@ -1,0 +1,14 @@
+//
+// Featured entry.
+//
+
+.entry {
+
+	&--featured &-thumbnail {
+		margin: -20px -20px 0;
+	}
+
+	&--featured &-footer &-meta--date {
+		display: none;
+	}
+}
