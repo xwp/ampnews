@@ -26,7 +26,15 @@
 			?>
 		</style>
 	</head>
-	<body>
-		<h1>Hello AMP Theme!</h1>
+		<body>
+		<div class="container">
+
+			<?php include 'templates/entry--featured.php'; ?>
+			<?php include 'templates/entry--default.php'; ?>
+			<?php include 'templates/entry--default.php'; ?>
+			<?php include 'templates/entry--slim.php'; ?>
+			<?php include 'templates/entry--slim.php'; ?>
+
+		</div>
 	</body>
 </html>
