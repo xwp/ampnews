@@ -12,13 +12,11 @@
 
 // Components
 @import 'components/wrap';
+@import 'components/entry';
+@import 'components/entry--featured';
+@import 'components/entry--slim';
 
 // Modules
 @import 'modules/core';
 @import 'modules/header';
 @import 'modules/stream';
-
-// Entry
-@import 'entry/default';
-@import 'entry/featured';
-@import 'entry/slim';

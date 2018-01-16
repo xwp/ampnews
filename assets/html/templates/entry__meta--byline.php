@@ -7,6 +7,6 @@
 
 // @codingStandardsIgnoreStart
 ?>
-<span class="entry-meta entry-meta--byline">
+<span class="entry__meta entry__meta--byline">
 	by <span class="author vcard"><a class="url fn n" href="#">Joon Ian Wong</a></span>
 </span>

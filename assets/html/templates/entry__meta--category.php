@@ -7,7 +7,7 @@
 
 // @codingStandardsIgnoreStart
 ?>
-<span class="entry-meta entry-meta--category">
+<span class="entry__meta entry__meta--category">
 	<span class="screen-reader-text">Primary category:</span>
 	<a href="#" rel="category tag">Elections</a>
 </span>
