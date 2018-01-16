@@ -31,10 +31,28 @@
 	&-summary {
 		line-height: 1.5;
 		color: $muted;
+
+		p {
+			margin: 15px 0 0;
+		}
 	}
 
 	&-link-more {
 		display: none;
+
+		.more-link {
+			@extend .button;
+
+			max-width: 240px;
+		}
+	}
+
+	//
+	// Entry footer.
+	//
+
+	&-footer {
+		padding-top: 15px;
 	}
 
 	//
