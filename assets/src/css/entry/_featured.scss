@@ -5,19 +5,26 @@
 .entry {
 
 	&--featured {
+		padding: 0 20px;
+
 		@media ( query( min, tablet ) ) {
 			display: flex;
 			flex-flow: row wrap;
-			padding-bottom: 45px;
+			padding-bottom: 25px;
 		}
 
 		@media ( query( min, desktop ) ) {
-			padding: 20px 0 60px;
+			padding-bottom: 40px;
+		}
+
+		@media ( query( min, site-width ) ) {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 
 	&--featured &-thumbnail {
-		margin: -20px -20px 0;
+		margin: #{ -$site-gutter } #{ -$site-gutter } 0;
 
 		@media ( query( min, tablet ) ) {
 			width: calc( 100% + 40px );

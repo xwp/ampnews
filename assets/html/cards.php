@@ -26,15 +26,42 @@
 			?>
 		</style>
 	</head>
-		<body>
-		<div class="container">
+	<body>
+		<div class="wrap wrap--full-width">
+			<div class="wrap__item wrap__item--has-separator">
+				<?php include 'templates/entry--featured.php'; ?>
+			</div>
+		</div>
 
-			<?php include 'templates/entry--featured.php'; ?>
-			<?php include 'templates/entry--default.php'; ?>
-			<?php include 'templates/entry--default.php'; ?>
-			<?php include 'templates/entry--slim.php'; ?>
-			<?php include 'templates/entry--slim.php'; ?>
+		<div class="wrap wrap--two-equal">
+			<div class="wrap__item wrap__item--has-separator">
+				<?php include 'templates/entry--default.php'; ?>
+			</div>
+			<div class="wrap__item wrap__item--has-separator">
+				<?php include 'templates/entry--default.php'; ?>
+			</div>
+		</div>
 
+		<div class="wrap wrap--blog">
+			<div class="wrap__item wrap__item--primary">
+				<ul class="module-stream">
+					<li class="module-card">
+						<?php include 'templates/entry--slim.php'; ?>
+					</li>
+					<li class="module-card">
+						<?php include 'templates/entry--slim.php'; ?>
+					</li>
+					<li class="module-card">
+						<?php include 'templates/entry--slim.php'; ?>
+					</li>
+					<li class="module-card">
+						<?php include 'templates/entry--slim.php'; ?>
+					</li>
+				</ul>
+			</div>
+			<div class="wrap__item wrap__item--secondary">
+				<h3>Sidebar</h3>
+			</div>
 		</div>
 	</body>
 </html>
