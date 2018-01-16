@@ -27,12 +27,16 @@
 		</style>
 	</head>
 	<body>
+
+		<!-- START: Featured post -->
 		<div class="wrap wrap--full-width">
 			<div class="wrap__item wrap__item--has-separator">
 				<?php include 'templates/entry--featured.php'; ?>
 			</div>
 		</div>
+		<!-- END: Featured post -->
 
+		<!-- START: Homepage two-pack -->
 		<div class="wrap wrap--two-equal">
 			<div class="wrap__item wrap__item--has-separator">
 				<?php include 'templates/entry--default.php'; ?>
@@ -41,7 +45,9 @@
 				<?php include 'templates/entry--default.php'; ?>
 			</div>
 		</div>
+		<!-- END: Homepage two-pack -->
 
+		<!-- START: Blog layout -->
 		<div class="wrap wrap--blog">
 			<div class="wrap__item wrap__item--primary">
 				<ul class="module-stream">
@@ -63,5 +69,7 @@
 				<h3>Sidebar</h3>
 			</div>
 		</div>
+		<!-- END: Blog layout -->
+
 	</body>
 </html>
