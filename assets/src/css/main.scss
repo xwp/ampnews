@@ -1,7 +1,9 @@
 // Commons
+@import 'base/variables';
 @import 'base/typography';
 @import 'base/structure';
 @import 'base/colors';
+@import 'scss-query/query';
 
 // Elements
 @import 'elements/headings';

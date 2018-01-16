@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 .container {
 	max-width: 1040px;
 	margin: 0 auto;

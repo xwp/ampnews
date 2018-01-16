@@ -1,0 +1,15 @@
+//
+// Breakpoints.
+//
+
+$g-breakpoint-mobile: 375px;
+$g-breakpoint-tablet: 768px;
+$g-breakpoint-desktop: 1024px;
+$g-breakpoint-desktop-large: 1440px;
+
+$query-breakpoints: (
+	'mobile': $g-breakpoint-mobile,
+	'tablet': $g-breakpoint-tablet,
+	'desktop': $g-breakpoint-desktop,
+	'desktop-large': $g-breakpoint-desktop-large
+);
