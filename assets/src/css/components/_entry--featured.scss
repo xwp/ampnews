@@ -36,6 +36,21 @@
 		}
 	}
 
+	&--featured &__image {
+
+		&--mobile {
+			@media ( query( min, tablet ) ) {
+				display: none;
+			}
+		}
+
+		&--tablet {
+			@media ( query( max, tablet ) ) {
+				display: none;
+			}
+		}
+	}
+
 	&--featured &__header {
 		@media ( query( min, tablet ) ) {
 			width: 100%;

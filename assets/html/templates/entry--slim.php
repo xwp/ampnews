@@ -10,11 +10,12 @@
 <article class="entry entry--slim">
 	<figure class="entry__thumbnail">
 		<a href="#">
-			<amp-img alt="Post title"
-			         src="https://placehold.it/238x159"
-			         width="238"
-			         height="159"
-			         layout="responsive">
+			<amp-img class="entry__image"
+					 alt="Post title"
+					 src="https://placehold.it/238x159"
+					 width="238"
+					 height="159"
+					 layout="responsive">
 			</amp-img>
 		</a>
 	</figure><!-- .entry__thumbnail -->
