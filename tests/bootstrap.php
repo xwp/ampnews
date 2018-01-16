@@ -10,7 +10,7 @@ if ( ! file_exists( '../../../wp-content' ) ) {
 	trigger_error( 'PHPUnit can only run in a WP environment', E_USER_ERROR ); // @codingStandardsIgnoreLine.
 }
 
-define( 'AMP_THEME_DIR', dirname( __DIR__ ) );
+define( 'AMP_THEME_DIR', dirname( dirname( __FILE__ ) ) );
 define( 'WP_CONTENT_DIR', dirname( dirname( getcwd() ) ) ); // @codingStandardsIgnoreLine.
 
 if ( defined( 'WP_CONTENT_DIR' ) && ! defined( 'WP_PLUGIN_DIR' ) ) {
@@ -37,12 +37,13 @@ if ( ! file_exists( $_tests_dir . '/includes/' ) ) {
 require_once getenv( 'WP_TESTS_DIR' ) . '/includes/functions.php';
 
 /**
-* Loads theme.
-*/
-tests_add_filter( 'setup_theme', function() {
+ * Loads theme.
+ */
+function ampconf_bootstrap_phpunit_switch_theme() {
 	register_theme_directory( WP_CONTENT_DIR . '/themes' );
 	switch_theme( basename( AMP_THEME_DIR ) );
-} );
+}
+tests_add_filter( 'setup_theme', 'ampconf_bootstrap_phpunit_switch_theme' );
 
 // Start up the WP testing environment.
 require getenv( 'WP_TESTS_DIR' ) . '/includes/bootstrap.php';
