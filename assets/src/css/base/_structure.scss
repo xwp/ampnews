@@ -1,4 +1,18 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 .container {
 	max-width: 1040px;
 	margin: 0 auto;
+}
+
+.screen-reader-text {
+	position: absolute;
+	left: -200vw;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }

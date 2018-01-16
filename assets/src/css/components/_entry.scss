@@ -1,0 +1,97 @@
+//
+// Default entry.
+//
+
+.entry {
+
+	//
+	// Entry thumbnail.
+	//
+
+	&__thumbnail {
+		margin: 0;
+		padding: 0 0 20px;
+	}
+
+	//
+	// Entry title.
+	//
+
+	&__title {
+		margin: 0;
+		font-size: 24px;
+	}
+
+	//
+	// Entry summary.
+	//
+
+	&__summary {
+		line-height: 1.5;
+		color: $muted;
+
+		p {
+			margin: 15px 0 0;
+		}
+	}
+
+	&__link-more {
+		display: none;
+
+		.more-link {
+			@extend .button;
+
+			max-width: 240px;
+		}
+	}
+
+	//
+	// Entry footer.
+	//
+
+	&__footer {
+		padding-top: 15px;
+	}
+
+	//
+	// Entry meta.
+	//
+
+	&__meta {
+		display: inline-block;
+		padding: 0 0 10px;
+		font-size: 14px;
+		line-height: 1.5;
+		color: $muted;
+
+		a {
+			font-weight: 700;
+			color: $black;
+		}
+
+		&--byline::first-letter {
+			text-transform: uppercase;
+		}
+
+		&--date a {
+			font-weight: 400;
+			color: $muted;
+		}
+
+		// Meta items separators.
+		&::after {
+			content: '';
+			display: inline-block;
+			margin: 0 1em 0 0;
+			padding: 1em 1em 0 0;
+			border-right: 1px solid $border-color;
+			vertical-align: middle;
+		}
+	}
+
+	// Don't show meta separators in the header and after last meta item.
+	&__meta:last-child::after,
+	&__header &__meta::after {
+		content: none;
+	}
+}
