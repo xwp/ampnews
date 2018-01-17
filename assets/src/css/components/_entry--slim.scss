@@ -4,5 +4,68 @@
 
 .entry {
 
-	&--slim {}
+	&--slim {
+		@media ( query( min, desktop ) ) {
+			position: relative;
+			padding: 15px 270px 10px 0;
+		}
+	}
+
+	//
+	// Entry thumbnail.
+	//
+
+	&--slim &__thumbnail {
+		@media ( query( min, desktop ) ) {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			width: 240px;
+			height: 160px;
+			padding: 0;
+		}
+	}
+
+	//
+	// Entry header.
+	//
+
+	&--slim &__header {
+		@media ( query( min, desktop ) ) {
+			padding: 0;
+		}
+	}
+
+	//
+	// Entry title.
+	//
+
+	&--slim &__title {
+		@media ( query( min, desktop ) ) {
+			font-size: 24px;
+		}
+	}
+
+	//
+	// Entry summary.
+	//
+
+	&--slim &__summary {
+
+		p {
+			@media ( query( min, desktop ) ) {
+				margin-top: 15px;
+			}
+		}
+	}
+
+	//
+	// Entry footer.
+	//
+
+	&--slim &__footer {
+		@media ( query( min, desktop ) ) {
+			padding-top: 15px;
+		}
+	}
 }
