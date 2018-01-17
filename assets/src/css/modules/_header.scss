@@ -51,8 +51,12 @@
 			&-title {
 
 				a {
-					color: $black;
+					color: $white;
 					opacity: 1;
+
+					@media ( query( min, tablet ) ) {
+						color: $black;
+					}
 
 					&:hover {
 						opacity: 0.8;
@@ -74,6 +78,7 @@
 				display: none;
 				color: $muted;
 				font-size: 18px;
+				font-weight: 300;
 
 				@media ( query( min, tablet ) ) {
 					display: block;
