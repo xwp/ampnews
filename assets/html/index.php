@@ -20,5 +20,6 @@
 
 	<body>
 		<?php include 'templates/site-header.php'; ?>
+		<?php include 'templates/site-footer.php'; ?>
 	</body>
 </html>

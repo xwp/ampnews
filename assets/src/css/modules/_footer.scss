@@ -1,0 +1,47 @@
+//
+// Site Footer
+//
+.module {
+
+	&-footer {
+
+		.container {
+			border-top: 2px solid $black;
+			padding-top: 30px;
+			max-width: 685px;
+
+			@media ( query( max, tablet ) ) {
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+		}
+
+		&--menu {
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					margin-bottom: 16px;
+				}
+
+				@media ( query( min, tablet ) ) {
+					display: flex;
+					flex-flow: wrap;
+
+					li {
+						flex-basis: 50%;
+					}
+				}
+			}
+		}
+
+		&--copyright {
+			color: $grey;
+			font-weight: 300;
+			margin-top: 32px;
+		}
+	}
+}
