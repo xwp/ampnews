@@ -24,7 +24,7 @@
 	}
 
 	&--featured &__thumbnail {
-		margin: #{ -$site-gutter } #{ -$site-gutter } 0;
+		margin: 0 #{ -$site-gutter };
 
 		@media ( query( min, tablet ) ) {
 			width: calc( 100% + 40px );
