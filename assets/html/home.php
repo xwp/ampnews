@@ -29,48 +29,46 @@
 	<body>
 		<?php include 'templates/site-header.php'; ?>
 
-		<!-- START: Featured post -->
-		<div class="wrap wrap--full-width">
-			<div class="wrap__item wrap__item--has-separator">
+		<div class="wrap">
+
+			<!-- START: Featured post -->
+			<div class="wrap__item wrap__item--full-width">
 				<?php include 'templates/entry--featured.php'; ?>
 			</div>
-		</div>
-		<!-- END: Featured post -->
+			<!-- END: Featured post -->
 
-		<!-- START: Homepage two-pack -->
-		<div class="wrap wrap--two-equal">
-			<div class="wrap__item wrap__item--has-separator">
+			<!-- START: Homepage two-pack -->
+			<div class="wrap__item wrap__item--half wrap__item--half--primary">
 				<?php include 'templates/entry--default.php'; ?>
 			</div>
-			<div class="wrap__item wrap__item--has-separator">
+			<div class="wrap__item wrap__item--half wrap__item--half--secondary">
 				<?php include 'templates/entry--default.php'; ?>
 			</div>
-		</div>
-		<!-- END: Homepage two-pack -->
+			<!-- END: Homepage two-pack -->
 
-		<!-- START: Blog layout -->
-		<div class="wrap wrap--blog">
-			<div class="wrap__item wrap__item--primary">
-				<ul class="module-stream">
-					<li class="module-card">
-						<?php include 'templates/entry--slim.php'; ?>
-					</li>
-					<li class="module-card">
-						<?php include 'templates/entry--slim.php'; ?>
-					</li>
-					<li class="module-card">
-						<?php include 'templates/entry--slim.php'; ?>
-					</li>
-					<li class="module-card">
-						<?php include 'templates/entry--slim.php'; ?>
-					</li>
-				</ul>
+			<!-- START: Blog layout -->
+			<div class="wrap__item wrap__item--blog wrap__item--blog--primary">
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php include 'templates/entry--slim.php'; ?>
+				</div>
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php include 'templates/entry--slim.php'; ?>
+				</div>
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php include 'templates/entry--slim.php'; ?>
+				</div>
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php include 'templates/entry--slim.php'; ?>
+				</div>
 			</div>
-			<div class="wrap__item wrap__item--secondary">
-				<h3>Sidebar</h3>
+			<div class="wrap__item wrap__item--blog wrap__item--blog--secondary">
+				<div class="wrap__subitem wrap__subitem--blog wrap__subitem--no-separator">
+					<h3>Sidebar</h3>
+				</div>
 			</div>
+			<!-- END: Blog layout -->
+
 		</div>
-		<!-- END: Blog layout -->
 
 	</body>
 </html>
