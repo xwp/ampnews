@@ -16,6 +16,8 @@
 			echo $style;
 			?>
 		</style>
+
+		<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 	</head>
 
 	<body>

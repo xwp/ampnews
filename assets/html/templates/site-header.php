@@ -50,7 +50,7 @@
 				<li class="menu-item"><a href>Shopping</a></li>
 			</ul>
 
-			<form class="module-header--search-form">
+			<form class="module-header--search-form" method="GET" action="https://example.com/search" target="_top">
 				<input type="search" placeholder="Search">
 				<button name="submit"></button>
 			</form>
