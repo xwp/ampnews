@@ -55,7 +55,8 @@
             "outline",
             "transforms2d",
             "viewport-units",
-            "will-change"
+            "will-change",
+            "border-radius"
           ]
         }
       ]

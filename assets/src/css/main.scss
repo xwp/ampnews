@@ -9,6 +9,7 @@
 @import 'elements/headings';
 @import 'elements/inline';
 @import 'elements/button';
+@import 'elements/search-icon';
 
 // Components
 @import 'components/wrap';
@@ -17,6 +18,5 @@
 @import 'components/entry--slim';
 
 // Modules
-@import 'modules/core';
 @import 'modules/header';
 @import 'modules/stream';

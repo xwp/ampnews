@@ -27,6 +27,7 @@
 		</style>
 	</head>
 	<body>
+		<?php include 'templates/site-header.php'; ?>
 
 		<!-- START: Featured post -->
 		<div class="wrap wrap--full-width">

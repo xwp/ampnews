@@ -18,6 +18,6 @@
 		</style>
 	</head>
 	<body>
-		<h1>Hello AMP Theme!</h1>
+		<?php include 'templates/site-header.php'; ?>
 	</body>
 </html>

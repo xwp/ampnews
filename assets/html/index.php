@@ -19,26 +19,6 @@
 	</head>
 
 	<body>
-		<header class="module module--black-background module-header">
-			<div class="container">
-				<ul class="menu">
-					<li class="menu-item"><a href>News</a></li>
-					<li class="menu-item menu-item--has-dropdown">
-						<a href>Sports</a>
-						<ul class="submenu">
-							<li class="menu-item"><a href>Odds</a></li>
-							<li class="menu-item"><a href>Betting</a></li>
-							<li class="menu-item"><a href>NFL</a></li>
-							<li class="menu-item"><a href>College Football</a></li>
-							<li class="menu-item"><a href>Soccer</a></li>
-						</ul>
-					</li>
-					<li class="menu-item"><a href>Entertainment</a></li>
-					<li class="menu-item"><a href>Tech</a></li>
-					<li class="menu-item"><a href>Gaming</a></li>
-					<li class="menu-item"><a href>Shopping</a></li>
-				</ul>
-			</div>
-		</header>
+		<?php include 'templates/site-header.php'; ?>
 	</body>
 </html>
