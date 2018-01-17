@@ -13,8 +13,14 @@
 		flex: 0 0 auto;
 		padding: $site-gutter;
 
+		@media ( query( min, tablet ) ) {
+			padding-top: $site-gutter * 2;
+			padding-bottom: $site-gutter * 2;
+		}
+
 		@media ( query( min, site-width ) ) {
-			padding: $site-gutter 0;
+			padding-left: 0;
+			padding-right: 0;
 		}
 
 		&--has-separator {
@@ -27,7 +33,11 @@
 	//
 
 	&--full-width &__item {
-		padding: $site-gutter 0;
+		padding: 0 0 $site-gutter;
+
+		@media ( query( min, tablet ) ) {
+			padding-top: 0;
+		}
 	}
 
 	//
