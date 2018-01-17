@@ -23,6 +23,10 @@
 		}
 	}
 
+	//
+	// Thumbnail.
+	//
+
 	&--featured &__thumbnail {
 		margin: 0 #{ -$site-gutter };
 
@@ -36,6 +40,10 @@
 		}
 	}
 
+	//
+	// Header.
+	//
+
 	&--featured &__header {
 		@media ( query( min, tablet ) ) {
 			width: 100%;
@@ -47,11 +55,9 @@
 		}
 	}
 
-	&--featured &__header &__meta {
-		@media ( query( min, tablet ) ) {
-			display: none;
-		}
-	}
+	//
+	// Title.
+	//
 
 	&--featured &__title {
 		@media ( query( min, tablet ) ) {
@@ -62,6 +68,10 @@
 			font-size: 56px;
 		}
 	}
+
+	//
+	// Meta (general and in header/footer).
+	//
 
 	&--featured &__meta {
 		@media ( query( min, tablet ) ) {
@@ -87,6 +97,16 @@
 		}
 	}
 
+	&--featured &__header &__meta {
+		@media ( query( min, tablet ) ) {
+			display: none;
+		}
+	}
+
+	//
+	// Footer.
+	//
+
 	&--featured &__footer {
 		@media ( query( min, tablet ) ) {
 			order: 1;
@@ -94,6 +114,10 @@
 			flex: 0 0;
 		}
 	}
+
+	//
+	// Summary.
+	//
 
 	&--featured &__summary {
 		@media ( query( min, tablet ) ) {
@@ -110,6 +134,10 @@
 			line-height: #{ 33px / 20px };
 		}
 	}
+
+	//
+	// Link more.
+	//
 
 	&--featured &__link-more {
 		@media ( query( min, tablet ) ) {
