@@ -7,12 +7,12 @@
 
 ?>
 
-<header class="wrap wrap--header">
+<header class="wrap wrap--header wrap--header__menu-hidden" [class]="mobileMenu ? 'wrap wrap--header' : 'wrap wrap--header wrap--header__menu-hidden'">
 
 	<div class="wrap__item wrap__item--branding">
 		<h1 class="wrap__item--branding-title"><a href>Brand</a></h1>
 		<p class="wrap__item--branding-description">Previewing Another WordPress Blog</p>
-		<span class="wrap__item--menu-toggle"></span>
+		<button class="wrap__item--menu-toggle" on="tap:AMP.setState( { mobileMenu: ! mobileMenu } )"></button>
 	</div>
 
 	<nav class="wrap__item wrap__item--menu">
