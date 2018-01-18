@@ -65,9 +65,9 @@
 				</div>
 			</div>
 			<div class="wrap__item wrap__item--blog wrap__item--blog--secondary">
-				<div class="wrap__subitem wrap__subitem--blog wrap__subitem--no-separator">
-					<h3>Sidebar</h3>
-				</div>
+				<aside class="wrap__subitem wrap__subitem--blog wrap__subitem--no-separator">
+					<?php include 'templates/sidebar.php'; ?>
+				</aside>
 			</div>
 			<!-- END: Blog layout -->
 
