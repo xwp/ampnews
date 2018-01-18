@@ -108,6 +108,8 @@
 		right: $site-gutter;
 		top: $site-gutter * 1.5;
 		cursor: pointer;
+		background: none;
+		border: 0;
 
 		@media ( query( max, tablet ) ) {
 			display: block;
