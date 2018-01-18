@@ -5,8 +5,23 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "DIFF_BASE=develop ./node_modules/wp-dev-lib/pre-commit"
+    "test": "DIFF_BASE=develop ./node_modules/wp-dev-lib/pre-commit",
+    "dev": "cross-env NODE_ENV=development gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme",
+    "build": "cross-env NODE_ENV=production gulp --gulpfile $(npm root)/undercurrent/src/index.js --cwd $(npm prefix) --workflow theme && bundlesize"
   },
+  "workflows": {
+    "theme": {
+      "cwd": "assets",
+      "schema": "./assets/schema/amp.json",
+      "tasks": "./assets/tasks"
+    }
+  },
+  "bundlesize": [
+    {
+      "path": "./assets/dist/css/main.css",
+      "maxSize": "50 kB"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xwp/wp-amp-theme.git"
@@ -17,9 +32,53 @@
     "url": "https://github.com/xwp/wp-amp-theme/issues"
   },
   "homepage": "https://github.com/xwp/wp-amp-theme#readme",
+  "stylelint": {
+    "extends": "stylelint-config-xwp/scss",
+    "rules": {
+      "media-feature-name-no-unknown": [
+        true,
+        {
+          "ignoreMediaFeatureNames": [
+            "/query/"
+          ]
+        }
+      ],
+      "plugin/no-unsupported-browser-features": [
+        true,
+        {
+          "ignore": [
+            "calc",
+            "css-transitions",
+            "fontface",
+            "font-unicode-range",
+            "flexbox",
+            "outline",
+            "transforms2d",
+            "viewport-units",
+            "will-change",
+            "border-radius"
+          ]
+        }
+      ]
+    }
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "last 2 iOS versions",
+    "last 1 Android version",
+    "last 1 ChromeAndroid version",
+    "ie 11",
+    "> 3%"
+  ],
   "devDependencies": {
+    "bundlesize": "^0.15.3",
     "eslint": "^4.13.1",
     "eslint-config-wordpress": "^2.0.0",
+    "scss-query": "^1.0.1",
+    "undercurrent": "^0.1.3",
     "wp-dev-lib": "github:xwp/wp-dev-lib"
   }
 }

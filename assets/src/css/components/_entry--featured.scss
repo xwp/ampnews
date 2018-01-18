@@ -1,0 +1,140 @@
+//
+// Featured entry.
+//
+
+.entry {
+
+	&--featured {
+		padding: 0 20px;
+
+		@media ( query( min, tablet ) ) {
+			display: flex;
+			flex-flow: row wrap;
+			padding-bottom: 25px;
+		}
+
+		@media ( query( min, desktop ) ) {
+			padding-bottom: 40px;
+		}
+
+		@media ( query( min, site-width ) ) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&--featured &__thumbnail {
+		margin: #{ -$site-gutter } #{ -$site-gutter } 0;
+
+		@media ( query( min, tablet ) ) {
+			width: calc( 100% + 40px );
+		}
+
+		@media ( query( min, desktop ) ) {
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	&--featured &__image {
+
+		&--mobile {
+			@media ( query( min, tablet ) ) {
+				display: none;
+			}
+		}
+
+		&--tablet {
+			@media ( query( max, tablet ) ) {
+				display: none;
+			}
+		}
+	}
+
+	&--featured &__header {
+		@media ( query( min, tablet ) ) {
+			width: 100%;
+			padding: 10px 0 15px;
+		}
+
+		@media ( query( min, desktop ) ) {
+			padding: 20px 0 25px;
+		}
+	}
+
+	&--featured &__header &__meta {
+		@media ( query( min, tablet ) ) {
+			display: none;
+		}
+	}
+
+	&--featured &__title {
+		@media ( query( min, tablet ) ) {
+			font-size: 36px;
+		}
+
+		@media ( query( min, desktop ) ) {
+			font-size: 56px;
+		}
+	}
+
+	&--featured &__meta {
+		@media ( query( min, tablet ) ) {
+			padding: 0;
+			font-size: 16px;
+			line-height: #{ 30px / 16px };
+
+			&::after {
+				content: none;
+			}
+		}
+
+		@media ( query( min, desktop ) ) {
+			line-height: #{ 33px / 16px };
+		}
+	}
+
+	&--featured &__footer &__meta--date {
+		display: none;
+
+		@media ( query( min, tablet ) ) {
+			display: inline-block;
+		}
+	}
+
+	&--featured &__footer {
+		@media ( query( min, tablet ) ) {
+			order: 1;
+			min-width: 150px;
+			flex: 0 0;
+		}
+	}
+
+	&--featured &__summary {
+		@media ( query( min, tablet ) ) {
+			order: 2;
+			max-width: 720px;
+			padding-left: 30px;
+			flex: 1 1;
+			font-size: 18px;
+			line-height: #{ 30px / 18px };
+		}
+
+		@media ( query( min, desktop ) ) {
+			font-size: 20px;
+			line-height: #{ 33px / 20px };
+		}
+	}
+
+	&--featured &__link-more {
+		@media ( query( min, tablet ) ) {
+			display: block;
+			padding: 10px 0 0;
+			font-size: 16px;
+		}
+
+		@media ( query( min, desktop ) ) {
+			padding: 20px 0 0;
+		}
+	}
+}

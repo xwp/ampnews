@@ -1,0 +1,236 @@
+//
+// Site Header
+//
+
+.wrap {
+
+	&--header {
+		font-size: 14px;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			display: inline-block;
+			padding: 0 16px 0 0;
+
+			li {
+				min-width: 150px;
+				display: block;
+				padding: 8px 16px;
+			}
+		}
+
+		&__menu-hidden {
+			@media ( query( max, tablet ) ) {
+
+				.wrap__item--menu {
+					display: none;
+				}
+			}
+		}
+	}
+
+	//
+	// Branding Section
+	//
+
+	&--header &__item--branding {
+		position: relative;
+
+		@media ( query( max, tablet ) ) {
+			background: $black;
+			color: $white;
+			padding: 16px;
+
+			.container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+
+		@media ( query( min, tablet ) ) {
+			flex-basis: 100%;
+			order: 2;
+			text-align: center;
+			margin-bottom: 16px;
+		}
+
+		&-title {
+
+			a {
+				color: $white;
+				opacity: 1;
+
+				@media ( query( min, tablet ) ) {
+					color: $black;
+				}
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+
+			@media ( query( max, tablet ) ) {
+				font-weight: 400;
+				font-size: 32px;
+				margin: 0;
+			}
+
+			@media ( query( min, tablet ) ) {
+				margin-bottom: 16px;
+			}
+		}
+
+		&-description {
+			display: none;
+			color: $muted;
+			font-size: 18px;
+			font-weight: 300;
+
+			@media ( query( min, tablet ) ) {
+				display: block;
+			}
+		}
+	}
+
+	//
+	// Mobile Menu Toggle
+	//
+
+	&--header &__item--menu-toggle {
+		display: none;
+		position: absolute;
+		right: $site-gutter;
+		top: $site-gutter * 1.5;
+		cursor: pointer;
+		background: none;
+		border: 0;
+
+		@media ( query( max, tablet ) ) {
+			display: block;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			height: 7px;
+			width: 20px;
+			border-top: 2px solid $white;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			height: 9px;
+			width: 20px;
+			border-top: 2px solid $white;
+			border-bottom: 2px solid $white;
+		}
+	}
+
+	//
+	// Header Menu
+	//
+
+	&--header &__item--menu {
+		position: relative;
+		background: $black;
+		color: $white;
+		padding: 16px;
+		z-index: 10;
+
+		a {
+			color: $white;
+		}
+
+		@media ( query( min, tablet ) ) {
+			display: block;
+			flex-basis: 100%;
+			order: 1;
+
+			.container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+
+		.menu-item-has-children {
+
+			& > a::after {
+				content: '▾';
+				padding-left: 4px;
+			}
+		}
+
+		.menu-item-search-form {
+			float: right;
+			margin-top: -4px;
+			margin-bottom: -4px;
+
+			input {
+				background-color: $black;
+				border: 0;
+				padding: 4px;
+				font-size: 14px;
+				max-width: 70px;
+				transition: max-width 100ms linear, background-color 100ms linear;
+
+				&:focus {
+					background-color: $white;
+					max-width: 200px;
+				}
+
+				&::placeholder {
+					color: $white;
+					font-size: 14px;
+				}
+			}
+
+			button {
+				@extend %search-icon;
+				margin-top: 4px;
+				margin-left: 4px;
+				float: right;
+			}
+		}
+
+		li:hover > .sub-menu {
+			display: block;
+		}
+
+		.sub-menu {
+			display: none;
+			position: absolute;
+			padding-top: 16px;
+			margin-left: -16px;
+			background: #000;
+
+			.menu-item-has-children {
+
+				& > a::after {
+					content: '▸';
+				}
+			}
+
+			.sub-menu {
+				left: 100%;
+				margin-left: 0;
+				padding-top: 8px;
+				margin-top: -32px;
+			}
+
+			li {
+
+				&:last-child {
+					padding-bottom: 16px;
+				}
+			}
+		}
+	}
+}

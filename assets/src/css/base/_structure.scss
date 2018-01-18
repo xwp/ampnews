@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.screen-reader-text {
+	position: absolute;
+	left: -200vw;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}

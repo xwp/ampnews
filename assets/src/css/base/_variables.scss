@@ -1,0 +1,24 @@
+//
+// Dimensions.
+//
+
+$site-max-width: 1080px;
+$site-gutter: 20px;
+
+//
+// Breakpoints.
+//
+
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-large: 1440px;
+$breakpoint-site-width: $site-max-width;
+
+$query-breakpoints: (
+	'mobile': $breakpoint-mobile,
+	'tablet': $breakpoint-tablet,
+	'desktop': $breakpoint-desktop,
+	'desktop-large': $breakpoint-desktop-large,
+	'site-width': $breakpoint-site-width
+);
