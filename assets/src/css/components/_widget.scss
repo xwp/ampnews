@@ -1,0 +1,151 @@
+//
+// WordPress widget.
+//
+
+%widget-text-caption {
+	font-size: 20px;
+	font-weight: 700;
+	color: $black;
+}
+
+%widget-text-regular {
+	font-size: 16px;
+	font-weight: 400;
+	color: $muted;
+}
+
+%widget-text-bold {
+	font-size: 16px;
+	font-weight: 700;
+	color: $black;
+}
+
+%widget-text-small {
+	font-size: 12px;
+	font-weight: 400;
+	color: $muted;
+}
+
+.widget {
+	@extend %widget-text-regular;
+	padding: 20px 0;
+	line-height: 1.5;
+	word-break: break-word;
+
+	&-title {
+		margin: 0 0 10px;
+		padding: 0 0 10px;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $muted;
+		border-bottom: 1px dashed rgba( $black, 0.1 );
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@media ( query( min, mobile-large ) ) and ( query( max, tablet ) ) {
+			//column-count: 2;
+			//column-gap: 30px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+	}
+
+	li {
+		@extend %widget-text-caption;
+		padding: 0;
+
+		@media ( query( min, mobile-large ) ) and ( query( max, tablet ) ) {
+			width: calc( 50% - 15px );
+		}
+
+		& + li {
+			padding-top: 6px;
+		}
+
+		a {
+			@extend %widget-text-caption;
+			display: inline-block;
+		}
+
+		&.cat-item {
+			@extend %widget-text-regular;
+		}
+	}
+
+	//
+	// Recent entries widget.
+	//
+
+	&_recent_entries {
+
+		li {
+			display: flex;
+			flex-flow: column nowrap;
+
+			& + li {
+				padding-top: 15px;
+			}
+
+			.post-date {
+				@extend %widget-text-small;
+				order: 0;
+			}
+
+			> a {
+				@extend %widget-text-caption;
+				order: 1;
+			}
+		}
+	}
+
+	//
+	// RSS widget.
+	//
+
+	&_rss {
+
+		li {
+			display: flex;
+			flex-flow: row wrap;
+
+			& + li {
+				padding-top: 20px;
+			}
+
+			.rss-date {
+				@extend %widget-text-small;
+				order: 0;
+				width: 50%;
+				flex: 1 1 50%;
+			}
+
+			> cite {
+				@extend %widget-text-small;
+				order: 1;
+				width: 50%;
+				flex: 1 1 50%;
+				font-weight: 700;
+				font-style: normal;
+				text-align: right;
+			}
+
+			.rsswidget {
+				order: 2;
+				width: 100%;
+				padding: 5px 0;
+			}
+
+			.rssSummary {
+				@extend %widget-text-small;
+				order: 3;
+				width: 100%;
+			}
+		}
+	}
+}
