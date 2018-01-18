@@ -25,6 +25,9 @@
 			echo $style;
 			?>
 		</style>
+
+		<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 	</head>
 	<body>
 		<?php include 'templates/site-header.php'; ?>

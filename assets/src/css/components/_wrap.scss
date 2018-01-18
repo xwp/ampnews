@@ -92,6 +92,18 @@
 	}
 
 	//
+	// Site Header
+	//
+
+	&--header {
+		max-width: none;
+	}
+
+	&--header &__item--branding {
+		max-width: $site-max-width - ( 2 * $site-gutter );
+	}
+
+	//
 	// Wrap sub item.
 	//
 

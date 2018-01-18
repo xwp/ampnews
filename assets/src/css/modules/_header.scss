@@ -1,15 +1,11 @@
 //
 // Site Header
 //
-.module {
 
-	&-header {
+.wrap {
+
+	&--header {
 		font-size: 14px;
-
-		@media ( query( min, tablet ) ) {
-			display: flex;
-			flex-flow: wrap;
-		}
 
 		ul {
 			margin: 0;
@@ -28,118 +24,152 @@
 			}
 		}
 
-		&--branding {
+		&__menu-hidden {
 			@media ( query( max, tablet ) ) {
-				background: $black;
-				color: $white;
-				padding: 16px;
 
-				.container {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-				}
-			}
-
-			@media ( query( min, tablet ) ) {
-				flex-basis: 100%;
-				order: 2;
-				text-align: center;
-				margin-bottom: 16px;
-			}
-
-			&-title {
-
-				a {
-					color: $white;
-					opacity: 1;
-
-					@media ( query( min, tablet ) ) {
-						color: $black;
-					}
-
-					&:hover {
-						opacity: 0.8;
-					}
-				}
-
-				@media ( query( max, tablet ) ) {
-					font-weight: 400;
-					font-size: 32px;
-					margin: 0;
-				}
-
-				@media ( query( min, tablet ) ) {
-					margin-bottom: 16px;
-				}
-			}
-
-			&-description {
-				display: none;
-				color: $muted;
-				font-size: 18px;
-				font-weight: 300;
-
-				@media ( query( min, tablet ) ) {
-					display: block;
+				.wrap__item--menu {
+					display: none;
 				}
 			}
 		}
+	}
 
-		&--menu-toggle {
-			display: none;
+	//
+	// Branding Section
+	//
 
-			@media ( query( max, tablet ) ) {
-				display: block;
-			}
+	&--header &__item--branding {
+		position: relative;
 
-			&::before {
-				content: '';
-				display: block;
-				height: 7px;
-				width: 20px;
-				border-top: 2px solid $white;
-			}
-
-			&::after {
-				content: '';
-				display: block;
-				height: 9px;
-				width: 20px;
-				border-top: 2px solid $white;
-				border-bottom: 2px solid $white;
-			}
-		}
-
-		&--menu {
-			display: none;
-			position: relative;
+		@media ( query( max, tablet ) ) {
 			background: $black;
 			color: $white;
 			padding: 16px;
-			z-index: 10;
 
-			a {
-				color: $white;
-			}
-
-			@media ( query( min, tablet ) ) {
-				display: block;
-				flex-basis: 100%;
-				order: 1;
-
-				.container {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-				}
+			.container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 			}
 		}
 
-		&--search-form {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		@media ( query( min, tablet ) ) {
+			flex-basis: 100%;
+			order: 2;
+			text-align: center;
+			margin-bottom: 16px;
+		}
+
+		&-title {
+
+			a {
+				color: $white;
+				opacity: 1;
+
+				@media ( query( min, tablet ) ) {
+					color: $black;
+				}
+
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+
+			@media ( query( max, tablet ) ) {
+				font-weight: 400;
+				font-size: 32px;
+				margin: 0;
+			}
+
+			@media ( query( min, tablet ) ) {
+				margin-bottom: 16px;
+			}
+		}
+
+		&-description {
+			display: none;
+			color: $muted;
+			font-size: 18px;
+			font-weight: 300;
+
+			@media ( query( min, tablet ) ) {
+				display: block;
+			}
+		}
+	}
+
+	//
+	// Mobile Menu Toggle
+	//
+
+	&--header &__item--menu-toggle {
+		display: none;
+		position: absolute;
+		right: $site-gutter;
+		top: $site-gutter * 1.5;
+		cursor: pointer;
+
+		@media ( query( max, tablet ) ) {
+			display: block;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			height: 7px;
+			width: 20px;
+			border-top: 2px solid $white;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			height: 9px;
+			width: 20px;
+			border-top: 2px solid $white;
+			border-bottom: 2px solid $white;
+		}
+	}
+
+	//
+	// Header Menu
+	//
+
+	&--header &__item--menu {
+		position: relative;
+		background: $black;
+		color: $white;
+		padding: 16px;
+		z-index: 10;
+
+		a {
+			color: $white;
+		}
+
+		@media ( query( min, tablet ) ) {
+			display: block;
+			flex-basis: 100%;
+			order: 1;
+
+			.container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+
+		.menu-item-has-children {
+
+			& > a::after {
+				content: '▾';
+				padding-left: 4px;
+			}
+		}
+
+		.menu-item-search-form {
+			float: right;
+			margin-top: -4px;
+			margin-bottom: -4px;
 
 			input {
 				background-color: $black;
@@ -162,15 +192,9 @@
 
 			button {
 				@extend %search-icon;
-				margin-top: -4px;
-			}
-		}
-
-		.menu-item-has-children {
-
-			& > a::after {
-				content: '▾';
-				padding-left: 4px;
+				margin-top: 4px;
+				margin-left: 4px;
+				float: right;
 			}
 		}
 
