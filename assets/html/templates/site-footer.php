@@ -7,18 +7,15 @@
 
 ?>
 
-<footer class="module module-footer">
-	<div class="container">
-		<nav class="module-footer--menu">
-				<ul class="menu">
-					<li class="menu-item"><a href>Help and Contact Us</a></li>
-					<li class="menu-item"><a href>Policies and Standards</a></li>
-					<li class="menu-item"><a href>Terms of Service</a></li>
-					<li class="menu-item"><a href>Privacy Policy</a></li>
-				</ul>
+<footer class="wrap wrap--full-width wrap--footer">
+	<nav class="wrap__item wrap__item--footer-menu">
+		<ul class="menu">
+			<li class="menu-item"><a href>Help and Contact Us</a></li>
+			<li class="menu-item"><a href>Policies and Standards</a></li>
+			<li class="menu-item"><a href>Terms of Service</a></li>
+			<li class="menu-item"><a href>Privacy Policy</a></li>
+		</ul>
+	</nav>
 
-		</nav>
-
-		<p class="module-footer--copyright">&copy; <?php echo date( 'Y' ) ?> Brand</p>
-	</div>
+	<p class="wrap__item wrap__item--footer-copyright">&copy; <?php echo date( 'Y' ) ?> Brand</p>
 </footer>
