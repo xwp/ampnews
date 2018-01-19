@@ -133,11 +133,24 @@ function ampconf_widgets_init() {
 add_action( 'widgets_init', 'ampconf_widgets_init' );
 
 /**
+ * Filters the AMP custom css to include the CSS from out theme.
+ *
+ * @param string $css The combined custom css.
+ *
+ * @return string $css
+ */
+function ampconf_custom_styles( $css ) {
+	$path   = get_template_directory() . '/assets/dist/css/main.css';
+	$styles = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions -- Not a remote file.
+
+	return $styles . $css;
+}
+add_filter( 'amp_custom_styles', 'ampconf_custom_styles' );
+
+/**
  * Enqueue scripts and styles.
  */
 function ampconf_scripts() {
-	wp_enqueue_style( 'ampconf-style', get_stylesheet_uri() );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
