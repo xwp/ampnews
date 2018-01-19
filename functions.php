@@ -44,10 +44,13 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		/***
+		 * Registers multiple menus
+		 */
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'ampconf' ),
+				'header' => esc_html__( 'Header', 'ampconf' ),
+				'footer' => esc_html__( 'Footer', 'ampconf' ),
 			)
 		);
 
