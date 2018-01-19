@@ -148,4 +148,41 @@
 			}
 		}
 	}
+
+	//
+	// Search widget.
+	//
+
+	&_search {
+
+		.search-form {
+			display: flex;
+			flex-flow: row nowrap;
+			width: 100%;
+			max-width: 320px;
+			margin: 0 auto;
+			background-color: $light-grey;
+			border: 1px solid $border-color;
+
+			> label {
+				flex: 1 1 auto;
+			}
+		}
+
+		.search-field,
+		.search-submit {
+			min-height: 40px;
+			padding: 10px;
+			border: none;
+			background-color: transparent;
+		}
+
+		.search-field {
+			width: 100%;
+		}
+
+		.search-submit {
+			font-weight: 700;
+		}
+	}
 }

@@ -1,4 +1,6 @@
-a {
+a,
+button,
+input[type='submit'] {
 	color: #000;
 	opacity: 0.8;
 	text-decoration: none;
@@ -6,5 +8,6 @@ a {
 
 	&:hover {
 		opacity: 1;
+		cursor: pointer;
 	}
 }
