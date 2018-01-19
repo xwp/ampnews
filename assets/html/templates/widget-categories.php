@@ -8,433 +8,559 @@
 // @codingStandardsIgnoreStart
 ?>
 
-<section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>
-	<ul>
-		<li class="cat-item cat-item-2"><a href="http://ampconf.local/category/alignment/"
-										   title="Posts in this category test image and text alignment.">Alignment</a>
-		</li>
-		<li class="cat-item cat-item-3"><a href="http://ampconf.local/category/post-format-aside/"
-										   title="Posts in this category test the aside post format.">Aside</a>
-		</li>
-		<li class="cat-item cat-item-4"><a href="http://ampconf.local/category/post-format-audio/"
-										   title="Posts in this category test the audio post format.">Audio</a>
-		</li>
-		<li class="cat-item cat-item-5"><a href="http://ampconf.local/category/captions/"
-										   title="Posts in this category test image captions.">Captions</a>
-		</li>
-		<li class="cat-item cat-item-6"><a href="http://ampconf.local/category/post-format-chat/"
-										   title="Posts in this category test the chat post format.">Chat</a>
-		</li>
-		<li class="cat-item cat-item-37"><a href="http://ampconf.local/category/parent-category/child-category-01/"
-											title="This is a description for the Child Category 01.">Child Category
-				01</a>
-		</li>
-		<li class="cat-item cat-item-38"><a href="http://ampconf.local/category/parent-category/child-category-02/"
-											title="This is a description for the Child Category 02.">Child Category
-				02</a>
-		</li>
-		<li class="cat-item cat-item-39"><a href="http://ampconf.local/category/parent-category/child-category-03/"
-											title="This is a description for the Child Category 03.">Child Category
-				03</a>
-		</li>
-		<li class="cat-item cat-item-40"><a href="http://ampconf.local/category/parent-category/child-category-04/"
-											title="This is a description for the Child Category 04.">Child Category
-				04</a>
-		</li>
-		<li class="cat-item cat-item-41"><a href="http://ampconf.local/category/parent-category/child-category-05/"
-											title="This is a description for the Child Category 05.">Child Category
-				05</a>
-		</li>
-		<li class="cat-item cat-item-7"><a href="http://ampconf.local/category/codex/"
-										   title="Posts in this category contain Codex references.">Codex</a>
-		</li>
-		<li class="cat-item cat-item-8"><a href="http://ampconf.local/category/comments/"
-										   title="Posts in this category test comments.">Comments</a>
-		</li>
-		<li class="cat-item cat-item-9"><a href="http://ampconf.local/category/content/"
-										   title="Posts in this category test post content.">Content</a>
-		</li>
-		<li class="cat-item cat-item-10"><a href="http://ampconf.local/category/corner-case/"
-											title="Posts in this category test odd corner cases, using uncovered by rare user workflows.">Corner
-				Case</a>
-		</li>
-		<li class="cat-item cat-item-11"><a href="http://ampconf.local/category/embeds/"
-											title="Posts in this category test various embed codes.">Embeds</a>
-		</li>
-		<li class="cat-item cat-item-12"><a href="http://ampconf.local/category/excerpt/"
-											title="Posts in this category test post excerpts.">Excerpt</a>
-		</li>
-		<li class="cat-item cat-item-13"><a href="http://ampconf.local/category/featured-images/"
-											title="Posts in this category test featured images.">Featured Images</a>
-		</li>
-		<li class="cat-item cat-item-14"><a href="http://ampconf.local/category/formatting/"
-											title="Posts in this category test various formatting scenarios.">Formatting</a>
-		</li>
-		<li class="cat-item cat-item-15"><a href="http://ampconf.local/category/post-format-gallery/"
-											title="Posts in this category test the gallery post format.">Gallery</a>
-		</li>
-		<li class="cat-item cat-item-42"><a
-					href="http://ampconf.local/category/parent-category/child-category-03/grandchild-category/"
-					title="This is a description for the Grandchild Category.">Grandchild Category</a>
-		</li>
-		<li class="cat-item cat-item-16"><a href="http://ampconf.local/category/images/"
-											title="Posts in this category test images in various ways.">Images</a>
-		</li>
-		<li class="cat-item cat-item-17"><a href="http://ampconf.local/category/jetpack/"
-											title="Posts in this category test Jetpack features.">Jetpack</a>
-		</li>
-		<li class="cat-item cat-item-18"><a href="http://ampconf.local/category/post-format-link/"
-											title="Posts in this category test the link post format.">Link</a>
-		</li>
-		<li class="cat-item cat-item-19"><a href="http://ampconf.local/category/lists/"
-											title="Posts in this category test various list scenarios.">Lists</a>
-		</li>
-		<li class="cat-item cat-item-20"><a href="http://ampconf.local/category/markup/"
-											title="Posts in this category test markup tags and styles.">Markup</a>
-		</li>
-		<li class="cat-item cat-item-21"><a href="http://ampconf.local/category/more-tag/"
-											title="Posts in this category test the more tag feature.">More Tag</a>
-		</li>
-		<li class="cat-item cat-item-22"><a href="http://ampconf.local/category/parent-category/"
-											title="This is a parent category. It will contain child categories">Parent
-				Category</a>
-		</li>
-		<li class="cat-item cat-item-23"><a href="http://ampconf.local/category/password/"
-											title="Posts in this category test the post password feature.">Password</a>
-		</li>
-		<li class="cat-item cat-item-24"><a href="http://ampconf.local/category/pingbacks/"
-											title="Posts in this category test pingbacks.">Pingbacks</a>
-		</li>
-		<li class="cat-item cat-item-25"><a href="http://ampconf.local/category/post-formats/"
-											title="Posts in this category test post formats.">Post Formats</a>
-		</li>
-		<li class="cat-item cat-item-26"><a href="http://ampconf.local/category/post-format-quote/"
-											title="Posts in this category test the quote post format.">Quote</a>
-		</li>
-		<li class="cat-item cat-item-27"><a href="http://ampconf.local/category/shortcodes/"
-											title="Posts in this category test various shortcodes.">Shortcodes</a>
-		</li>
-		<li class="cat-item cat-item-28"><a href="http://ampconf.local/category/standard/"
-											title="Posts in this category test the standard post format.">Standard</a>
-		</li>
-		<li class="cat-item cat-item-29"><a href="http://ampconf.local/category/post-format-status/"
-											title="Posts in this category test the status post format.">Status</a>
-		</li>
-		<li class="cat-item cat-item-30"><a href="http://ampconf.local/category/sticky/">Sticky</a>
-		</li>
-		<li class="cat-item cat-item-31"><a href="http://ampconf.local/category/titles/"
-											title="Posts in this category test post title scenarios.">Titles</a>
-		</li>
-		<li class="cat-item cat-item-32"><a href="http://ampconf.local/category/trackbacks/"
-											title="Posts in this category test trackbacks.">Trackbacks</a>
-		</li>
-		<li class="cat-item cat-item-33"><a href="http://ampconf.local/category/twitter/"
-											title="Posts in this category test various Twitter features.">Twitter</a>
-		</li>
-		<li class="cat-item cat-item-1"><a href="http://ampconf.local/category/uncategorized/">Uncategorized</a>
-		</li>
-		<li class="cat-item cat-item-34"><a href="http://ampconf.local/category/unpublished/"
-											title="Posts in this category test unpublished posts.">Unpublished</a>
-		</li>
-		<li class="cat-item cat-item-35"><a href="http://ampconf.local/category/post-format-video/"
-											title="Posts in this category test the video post format.">Video</a>
-		</li>
-		<li class="cat-item cat-item-36"><a href="http://ampconf.local/category/videopress/"
-											title="Posts in this category test VideoPress features.">VideoPress</a>
-		</li>
-	</ul>
-</section>
+	<section id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>
+		<ul>
+			<li class="cat-item cat-item-2">
+				<a href="category.php#development=1"
+				   title="Posts in this category test image and text alignment.">Alignment</a>
+			</li>
+			<li class="cat-item cat-item-3">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the aside post format.">Aside</a>
+			</li>
+			<li class="cat-item cat-item-4">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the audio post format.">Audio</a>
+			</li>
+			<li class="cat-item cat-item-5">
+				<a href="category.php#development=1"
+				   title="Posts in this category test image captions.">Captions</a>
+			</li>
+			<li class="cat-item cat-item-6">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the chat post format.">Chat</a>
+			</li>
+			<li class="cat-item cat-item-37">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 01.">Child Category
+					01</a>
+			</li>
+			<li class="cat-item cat-item-38">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 02.">Child Category
+					02</a>
+			</li>
+			<li class="cat-item cat-item-39">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 03.">Child Category
+					03</a>
+			</li>
+			<li class="cat-item cat-item-40">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 04.">Child Category
+					04</a>
+			</li>
+			<li class="cat-item cat-item-41">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 05.">Child Category
+					05</a>
+			</li>
+			<li class="cat-item cat-item-7">
+				<a href="category.php#development=1"
+				   title="Posts in this category contain Codex references.">Codex</a>
+			</li>
+			<li class="cat-item cat-item-8">
+				<a href="category.php#development=1"
+				   title="Posts in this category test comments.">Comments</a>
+			</li>
+			<li class="cat-item cat-item-9">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post content.">Content</a>
+			</li>
+			<li class="cat-item cat-item-10">
+				<a href="category.php#development=1"
+				   title="Posts in this category test odd corner cases, using uncovered by rare user workflows.">Corner
+					Case</a>
+			</li>
+			<li class="cat-item cat-item-11">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various embed codes.">Embeds</a>
+			</li>
+			<li class="cat-item cat-item-12">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post excerpts.">Excerpt</a>
+			</li>
+			<li class="cat-item cat-item-13">
+				<a href="category.php#development=1"
+				   title="Posts in this category test featured images.">Featured Images</a>
+			</li>
+			<li class="cat-item cat-item-14">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various formatting scenarios.">Formatting</a>
+			</li>
+			<li class="cat-item cat-item-15">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the gallery post format.">Gallery</a>
+			</li>
+			<li class="cat-item cat-item-42">
+				<a
+						href="category.php#development=1"
+						title="This is a description for the Grandchild Category.">Grandchild Category</a>
+			</li>
+			<li class="cat-item cat-item-16">
+				<a href="category.php#development=1"
+				   title="Posts in this category test images in various ways.">Images</a>
+			</li>
+			<li class="cat-item cat-item-17">
+				<a href="category.php#development=1"
+				   title="Posts in this category test Jetpack features.">Jetpack</a>
+			</li>
+			<li class="cat-item cat-item-18">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the link post format.">Link</a>
+			</li>
+			<li class="cat-item cat-item-19">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various list scenarios.">Lists</a>
+			</li>
+			<li class="cat-item cat-item-20">
+				<a href="category.php#development=1"
+				   title="Posts in this category test markup tags and styles.">Markup</a>
+			</li>
+			<li class="cat-item cat-item-21">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the more tag feature.">More Tag</a>
+			</li>
+			<li class="cat-item cat-item-22">
+				<a href="category.php#development=1"
+				   title="This is a parent category. It will contain child categories">Parent
+					Category</a>
+			</li>
+			<li class="cat-item cat-item-23">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the post password feature.">Password</a>
+			</li>
+			<li class="cat-item cat-item-24">
+				<a href="category.php#development=1"
+				   title="Posts in this category test pingbacks.">Pingbacks</a>
+			</li>
+			<li class="cat-item cat-item-25">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post formats.">Post Formats</a>
+			</li>
+			<li class="cat-item cat-item-26">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the quote post format.">Quote</a>
+			</li>
+			<li class="cat-item cat-item-27">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various shortcodes.">Shortcodes</a>
+			</li>
+			<li class="cat-item cat-item-28">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the standard post format.">Standard</a>
+			</li>
+			<li class="cat-item cat-item-29">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the status post format.">Status</a>
+			</li>
+			<li class="cat-item cat-item-30">
+				<a href="category.php#development=1">Sticky</a>
+			</li>
+			<li class="cat-item cat-item-31">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post title scenarios.">Titles</a>
+			</li>
+			<li class="cat-item cat-item-32">
+				<a href="category.php#development=1"
+				   title="Posts in this category test trackbacks.">Trackbacks</a>
+			</li>
+			<li class="cat-item cat-item-33">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various Twitter features.">Twitter</a>
+			</li>
+			<li class="cat-item cat-item-1">
+				<a href="category.php#development=1">Uncategorized</a>
+			</li>
+			<li class="cat-item cat-item-34">
+				<a href="category.php#development=1"
+				   title="Posts in this category test unpublished posts.">Unpublished</a>
+			</li>
+			<li class="cat-item cat-item-35">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the video post format.">Video</a>
+			</li>
+			<li class="cat-item cat-item-36">
+				<a href="category.php#development=1"
+				   title="Posts in this category test VideoPress features.">VideoPress</a>
+			</li>
+		</ul>
+	</section>
 
-<section id="categories-3" class="widget widget_categories"><h2 class="widget-title">Test Categories Widget: No
-		Count, Dropdown, or Hierarchical</h2>
-	<ul>
-		<li class="cat-item cat-item-2"><a href="http://ampconf.local/category/alignment/"
-										   title="Posts in this category test image and text alignment.">Alignment</a>
-		</li>
-		<li class="cat-item cat-item-3"><a href="http://ampconf.local/category/post-format-aside/"
-										   title="Posts in this category test the aside post format.">Aside</a>
-		</li>
-		<li class="cat-item cat-item-4"><a href="http://ampconf.local/category/post-format-audio/"
-										   title="Posts in this category test the audio post format.">Audio</a>
-		</li>
-		<li class="cat-item cat-item-5"><a href="http://ampconf.local/category/captions/"
-										   title="Posts in this category test image captions.">Captions</a>
-		</li>
-		<li class="cat-item cat-item-6"><a href="http://ampconf.local/category/post-format-chat/"
-										   title="Posts in this category test the chat post format.">Chat</a>
-		</li>
-		<li class="cat-item cat-item-37"><a href="http://ampconf.local/category/parent-category/child-category-01/"
-											title="This is a description for the Child Category 01.">Child Category
-				01</a>
-		</li>
-		<li class="cat-item cat-item-38"><a href="http://ampconf.local/category/parent-category/child-category-02/"
-											title="This is a description for the Child Category 02.">Child Category
-				02</a>
-		</li>
-		<li class="cat-item cat-item-39"><a href="http://ampconf.local/category/parent-category/child-category-03/"
-											title="This is a description for the Child Category 03.">Child Category
-				03</a>
-		</li>
-		<li class="cat-item cat-item-40"><a href="http://ampconf.local/category/parent-category/child-category-04/"
-											title="This is a description for the Child Category 04.">Child Category
-				04</a>
-		</li>
-		<li class="cat-item cat-item-41"><a href="http://ampconf.local/category/parent-category/child-category-05/"
-											title="This is a description for the Child Category 05.">Child Category
-				05</a>
-		</li>
-		<li class="cat-item cat-item-7"><a href="http://ampconf.local/category/codex/"
-										   title="Posts in this category contain Codex references.">Codex</a>
-		</li>
-		<li class="cat-item cat-item-8"><a href="http://ampconf.local/category/comments/"
-										   title="Posts in this category test comments.">Comments</a>
-		</li>
-		<li class="cat-item cat-item-9"><a href="http://ampconf.local/category/content/"
-										   title="Posts in this category test post content.">Content</a>
-		</li>
-		<li class="cat-item cat-item-10"><a href="http://ampconf.local/category/corner-case/"
-											title="Posts in this category test odd corner cases, using uncovered by rare user workflows.">Corner
-				Case</a>
-		</li>
-		<li class="cat-item cat-item-11"><a href="http://ampconf.local/category/embeds/"
-											title="Posts in this category test various embed codes.">Embeds</a>
-		</li>
-		<li class="cat-item cat-item-12"><a href="http://ampconf.local/category/excerpt/"
-											title="Posts in this category test post excerpts.">Excerpt</a>
-		</li>
-		<li class="cat-item cat-item-13"><a href="http://ampconf.local/category/featured-images/"
-											title="Posts in this category test featured images.">Featured Images</a>
-		</li>
-		<li class="cat-item cat-item-14"><a href="http://ampconf.local/category/formatting/"
-											title="Posts in this category test various formatting scenarios.">Formatting</a>
-		</li>
-		<li class="cat-item cat-item-15"><a href="http://ampconf.local/category/post-format-gallery/"
-											title="Posts in this category test the gallery post format.">Gallery</a>
-		</li>
-		<li class="cat-item cat-item-42"><a
-					href="http://ampconf.local/category/parent-category/child-category-03/grandchild-category/"
-					title="This is a description for the Grandchild Category.">Grandchild Category</a>
-		</li>
-		<li class="cat-item cat-item-16"><a href="http://ampconf.local/category/images/"
-											title="Posts in this category test images in various ways.">Images</a>
-		</li>
-		<li class="cat-item cat-item-17"><a href="http://ampconf.local/category/jetpack/"
-											title="Posts in this category test Jetpack features.">Jetpack</a>
-		</li>
-		<li class="cat-item cat-item-18"><a href="http://ampconf.local/category/post-format-link/"
-											title="Posts in this category test the link post format.">Link</a>
-		</li>
-		<li class="cat-item cat-item-19"><a href="http://ampconf.local/category/lists/"
-											title="Posts in this category test various list scenarios.">Lists</a>
-		</li>
-		<li class="cat-item cat-item-20"><a href="http://ampconf.local/category/markup/"
-											title="Posts in this category test markup tags and styles.">Markup</a>
-		</li>
-		<li class="cat-item cat-item-21"><a href="http://ampconf.local/category/more-tag/"
-											title="Posts in this category test the more tag feature.">More Tag</a>
-		</li>
-		<li class="cat-item cat-item-22"><a href="http://ampconf.local/category/parent-category/"
-											title="This is a parent category. It will contain child categories">Parent
-				Category</a>
-		</li>
-		<li class="cat-item cat-item-23"><a href="http://ampconf.local/category/password/"
-											title="Posts in this category test the post password feature.">Password</a>
-		</li>
-		<li class="cat-item cat-item-24"><a href="http://ampconf.local/category/pingbacks/"
-											title="Posts in this category test pingbacks.">Pingbacks</a>
-		</li>
-		<li class="cat-item cat-item-25"><a href="http://ampconf.local/category/post-formats/"
-											title="Posts in this category test post formats.">Post Formats</a>
-		</li>
-		<li class="cat-item cat-item-26"><a href="http://ampconf.local/category/post-format-quote/"
-											title="Posts in this category test the quote post format.">Quote</a>
-		</li>
-		<li class="cat-item cat-item-27"><a href="http://ampconf.local/category/shortcodes/"
-											title="Posts in this category test various shortcodes.">Shortcodes</a>
-		</li>
-		<li class="cat-item cat-item-28"><a href="http://ampconf.local/category/standard/"
-											title="Posts in this category test the standard post format.">Standard</a>
-		</li>
-		<li class="cat-item cat-item-29"><a href="http://ampconf.local/category/post-format-status/"
-											title="Posts in this category test the status post format.">Status</a>
-		</li>
-		<li class="cat-item cat-item-30"><a href="http://ampconf.local/category/sticky/">Sticky</a>
-		</li>
-		<li class="cat-item cat-item-31"><a href="http://ampconf.local/category/titles/"
-											title="Posts in this category test post title scenarios.">Titles</a>
-		</li>
-		<li class="cat-item cat-item-32"><a href="http://ampconf.local/category/trackbacks/"
-											title="Posts in this category test trackbacks.">Trackbacks</a>
-		</li>
-		<li class="cat-item cat-item-33"><a href="http://ampconf.local/category/twitter/"
-											title="Posts in this category test various Twitter features.">Twitter</a>
-		</li>
-		<li class="cat-item cat-item-1"><a href="http://ampconf.local/category/uncategorized/">Uncategorized</a>
-		</li>
-		<li class="cat-item cat-item-34"><a href="http://ampconf.local/category/unpublished/"
-											title="Posts in this category test unpublished posts.">Unpublished</a>
-		</li>
-		<li class="cat-item cat-item-35"><a href="http://ampconf.local/category/post-format-video/"
-											title="Posts in this category test the video post format.">Video</a>
-		</li>
-		<li class="cat-item cat-item-36"><a href="http://ampconf.local/category/videopress/"
-											title="Posts in this category test VideoPress features.">VideoPress</a>
-		</li>
-	</ul>
-</section>
+	<section id="categories-3" class="widget widget_categories"><h2 class="widget-title">Test Categories Widget: No
+			Count, Dropdown, or Hierarchical</h2>
+		<ul>
+			<li class="cat-item cat-item-2">
+				<a href="category.php#development=1"
+				   title="Posts in this category test image and text alignment.">Alignment</a>
+			</li>
+			<li class="cat-item cat-item-3">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the aside post format.">Aside</a>
+			</li>
+			<li class="cat-item cat-item-4">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the audio post format.">Audio</a>
+			</li>
+			<li class="cat-item cat-item-5">
+				<a href="category.php#development=1"
+				   title="Posts in this category test image captions.">Captions</a>
+			</li>
+			<li class="cat-item cat-item-6">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the chat post format.">Chat</a>
+			</li>
+			<li class="cat-item cat-item-37">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 01.">Child Category
+					01</a>
+			</li>
+			<li class="cat-item cat-item-38">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 02.">Child Category
+					02</a>
+			</li>
+			<li class="cat-item cat-item-39">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 03.">Child Category
+					03</a>
+			</li>
+			<li class="cat-item cat-item-40">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 04.">Child Category
+					04</a>
+			</li>
+			<li class="cat-item cat-item-41">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 05.">Child Category
+					05</a>
+			</li>
+			<li class="cat-item cat-item-7">
+				<a href="category.php#development=1"
+				   title="Posts in this category contain Codex references.">Codex</a>
+			</li>
+			<li class="cat-item cat-item-8">
+				<a href="category.php#development=1"
+				   title="Posts in this category test comments.">Comments</a>
+			</li>
+			<li class="cat-item cat-item-9">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post content.">Content</a>
+			</li>
+			<li class="cat-item cat-item-10">
+				<a href="category.php#development=1"
+				   title="Posts in this category test odd corner cases, using uncovered by rare user workflows.">Corner
+					Case</a>
+			</li>
+			<li class="cat-item cat-item-11">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various embed codes.">Embeds</a>
+			</li>
+			<li class="cat-item cat-item-12">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post excerpts.">Excerpt</a>
+			</li>
+			<li class="cat-item cat-item-13">
+				<a href="category.php#development=1"
+				   title="Posts in this category test featured images.">Featured Images</a>
+			</li>
+			<li class="cat-item cat-item-14">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various formatting scenarios.">Formatting</a>
+			</li>
+			<li class="cat-item cat-item-15">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the gallery post format.">Gallery</a>
+			</li>
+			<li class="cat-item cat-item-42">
+				<a
+						href="category.php#development=1"
+						title="This is a description for the Grandchild Category.">Grandchild Category</a>
+			</li>
+			<li class="cat-item cat-item-16">
+				<a href="category.php#development=1"
+				   title="Posts in this category test images in various ways.">Images</a>
+			</li>
+			<li class="cat-item cat-item-17">
+				<a href="category.php#development=1"
+				   title="Posts in this category test Jetpack features.">Jetpack</a>
+			</li>
+			<li class="cat-item cat-item-18">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the link post format.">Link</a>
+			</li>
+			<li class="cat-item cat-item-19">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various list scenarios.">Lists</a>
+			</li>
+			<li class="cat-item cat-item-20">
+				<a href="category.php#development=1"
+				   title="Posts in this category test markup tags and styles.">Markup</a>
+			</li>
+			<li class="cat-item cat-item-21">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the more tag feature.">More Tag</a>
+			</li>
+			<li class="cat-item cat-item-22">
+				<a href="category.php#development=1"
+				   title="This is a parent category. It will contain child categories">Parent
+					Category</a>
+			</li>
+			<li class="cat-item cat-item-23">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the post password feature.">Password</a>
+			</li>
+			<li class="cat-item cat-item-24">
+				<a href="category.php#development=1"
+				   title="Posts in this category test pingbacks.">Pingbacks</a>
+			</li>
+			<li class="cat-item cat-item-25">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post formats.">Post Formats</a>
+			</li>
+			<li class="cat-item cat-item-26">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the quote post format.">Quote</a>
+			</li>
+			<li class="cat-item cat-item-27">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various shortcodes.">Shortcodes</a>
+			</li>
+			<li class="cat-item cat-item-28">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the standard post format.">Standard</a>
+			</li>
+			<li class="cat-item cat-item-29">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the status post format.">Status</a>
+			</li>
+			<li class="cat-item cat-item-30">
+				<a href="category.php#development=1">Sticky</a>
+			</li>
+			<li class="cat-item cat-item-31">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post title scenarios.">Titles</a>
+			</li>
+			<li class="cat-item cat-item-32">
+				<a href="category.php#development=1"
+				   title="Posts in this category test trackbacks.">Trackbacks</a>
+			</li>
+			<li class="cat-item cat-item-33">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various Twitter features.">Twitter</a>
+			</li>
+			<li class="cat-item cat-item-1">
+				<a href="category.php#development=1">Uncategorized</a>
+			</li>
+			<li class="cat-item cat-item-34">
+				<a href="category.php#development=1"
+				   title="Posts in this category test unpublished posts.">Unpublished</a>
+			</li>
+			<li class="cat-item cat-item-35">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the video post format.">Video</a>
+			</li>
+			<li class="cat-item cat-item-36">
+				<a href="category.php#development=1"
+				   title="Posts in this category test VideoPress features.">VideoPress</a>
+			</li>
+		</ul>
+	</section>
 
-<section id="categories-4" class="widget widget_categories"><h2 class="widget-title">Test Categories Widget: With
-		Count</h2>
-	<ul>
-		<li class="cat-item cat-item-2"><a href="http://ampconf.local/category/alignment/"
-										   title="Posts in this category test image and text alignment.">Alignment</a>
-			(3)
-		</li>
-		<li class="cat-item cat-item-3"><a href="http://ampconf.local/category/post-format-aside/"
-										   title="Posts in this category test the aside post format.">Aside</a> (2)
-		</li>
-		<li class="cat-item cat-item-4"><a href="http://ampconf.local/category/post-format-audio/"
-										   title="Posts in this category test the audio post format.">Audio</a> (2)
-		</li>
-		<li class="cat-item cat-item-5"><a href="http://ampconf.local/category/captions/"
-										   title="Posts in this category test image captions.">Captions</a> (2)
-		</li>
-		<li class="cat-item cat-item-6"><a href="http://ampconf.local/category/post-format-chat/"
-										   title="Posts in this category test the chat post format.">Chat</a> (2)
-		</li>
-		<li class="cat-item cat-item-37"><a href="http://ampconf.local/category/parent-category/child-category-01/"
-											title="This is a description for the Child Category 01.">Child Category
-				01</a> (1)
-		</li>
-		<li class="cat-item cat-item-38"><a href="http://ampconf.local/category/parent-category/child-category-02/"
-											title="This is a description for the Child Category 02.">Child Category
-				02</a> (1)
-		</li>
-		<li class="cat-item cat-item-39"><a href="http://ampconf.local/category/parent-category/child-category-03/"
-											title="This is a description for the Child Category 03.">Child Category
-				03</a> (1)
-		</li>
-		<li class="cat-item cat-item-40"><a href="http://ampconf.local/category/parent-category/child-category-04/"
-											title="This is a description for the Child Category 04.">Child Category
-				04</a> (1)
-		</li>
-		<li class="cat-item cat-item-41"><a href="http://ampconf.local/category/parent-category/child-category-05/"
-											title="This is a description for the Child Category 05.">Child Category
-				05</a> (1)
-		</li>
-		<li class="cat-item cat-item-7"><a href="http://ampconf.local/category/codex/"
-										   title="Posts in this category contain Codex references.">Codex</a> (3)
-		</li>
-		<li class="cat-item cat-item-8"><a href="http://ampconf.local/category/comments/"
-										   title="Posts in this category test comments.">Comments</a> (6)
-		</li>
-		<li class="cat-item cat-item-9"><a href="http://ampconf.local/category/content/"
-										   title="Posts in this category test post content.">Content</a> (11)
-		</li>
-		<li class="cat-item cat-item-10"><a href="http://ampconf.local/category/corner-case/"
-											title="Posts in this category test odd corner cases, using uncovered by rare user workflows.">Corner
-				Case</a> (4)
-		</li>
-		<li class="cat-item cat-item-11"><a href="http://ampconf.local/category/embeds/"
-											title="Posts in this category test various embed codes.">Embeds</a> (2)
-		</li>
-		<li class="cat-item cat-item-12"><a href="http://ampconf.local/category/excerpt/"
-											title="Posts in this category test post excerpts.">Excerpt</a> (2)
-		</li>
-		<li class="cat-item cat-item-13"><a href="http://ampconf.local/category/featured-images/"
-											title="Posts in this category test featured images.">Featured Images</a>
-			(3)
-		</li>
-		<li class="cat-item cat-item-14"><a href="http://ampconf.local/category/formatting/"
-											title="Posts in this category test various formatting scenarios.">Formatting</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-15"><a href="http://ampconf.local/category/post-format-gallery/"
-											title="Posts in this category test the gallery post format.">Gallery</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-42"><a
-					href="http://ampconf.local/category/parent-category/child-category-03/grandchild-category/"
-					title="This is a description for the Grandchild Category.">Grandchild Category</a> (1)
-		</li>
-		<li class="cat-item cat-item-16"><a href="http://ampconf.local/category/images/"
-											title="Posts in this category test images in various ways.">Images</a>
-			(7)
-		</li>
-		<li class="cat-item cat-item-17"><a href="http://ampconf.local/category/jetpack/"
-											title="Posts in this category test Jetpack features.">Jetpack</a> (3)
-		</li>
-		<li class="cat-item cat-item-18"><a href="http://ampconf.local/category/post-format-link/"
-											title="Posts in this category test the link post format.">Link</a> (3)
-		</li>
-		<li class="cat-item cat-item-19"><a href="http://ampconf.local/category/lists/"
-											title="Posts in this category test various list scenarios.">Lists</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-20"><a href="http://ampconf.local/category/markup/"
-											title="Posts in this category test markup tags and styles.">Markup</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-21"><a href="http://ampconf.local/category/more-tag/"
-											title="Posts in this category test the more tag feature.">More Tag</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-22"><a href="http://ampconf.local/category/parent-category/"
-											title="This is a parent category. It will contain child categories">Parent
-				Category</a> (1)
-		</li>
-		<li class="cat-item cat-item-23"><a href="http://ampconf.local/category/password/"
-											title="Posts in this category test the post password feature.">Password</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-24"><a href="http://ampconf.local/category/pingbacks/"
-											title="Posts in this category test pingbacks.">Pingbacks</a> (4)
-		</li>
-		<li class="cat-item cat-item-25"><a href="http://ampconf.local/category/post-formats/"
-											title="Posts in this category test post formats.">Post Formats</a> (13)
-		</li>
-		<li class="cat-item cat-item-26"><a href="http://ampconf.local/category/post-format-quote/"
-											title="Posts in this category test the quote post format.">Quote</a> (2)
-		</li>
-		<li class="cat-item cat-item-27"><a href="http://ampconf.local/category/shortcodes/"
-											title="Posts in this category test various shortcodes.">Shortcodes</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-28"><a href="http://ampconf.local/category/standard/"
-											title="Posts in this category test the standard post format.">Standard</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-29"><a href="http://ampconf.local/category/post-format-status/"
-											title="Posts in this category test the status post format.">Status</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-30"><a href="http://ampconf.local/category/sticky/">Sticky</a> (1)
-		</li>
-		<li class="cat-item cat-item-31"><a href="http://ampconf.local/category/titles/"
-											title="Posts in this category test post title scenarios.">Titles</a> (5)
-		</li>
-		<li class="cat-item cat-item-32"><a href="http://ampconf.local/category/trackbacks/"
-											title="Posts in this category test trackbacks.">Trackbacks</a> (4)
-		</li>
-		<li class="cat-item cat-item-33"><a href="http://ampconf.local/category/twitter/"
-											title="Posts in this category test various Twitter features.">Twitter</a>
-			(2)
-		</li>
-		<li class="cat-item cat-item-1"><a href="http://ampconf.local/category/uncategorized/">Uncategorized</a> (3)
-		</li>
-		<li class="cat-item cat-item-34"><a href="http://ampconf.local/category/unpublished/"
-											title="Posts in this category test unpublished posts.">Unpublished</a>
-			(1)
-		</li>
-		<li class="cat-item cat-item-35"><a href="http://ampconf.local/category/post-format-video/"
-											title="Posts in this category test the video post format.">Video</a> (3)
-		</li>
-		<li class="cat-item cat-item-36"><a href="http://ampconf.local/category/videopress/"
-											title="Posts in this category test VideoPress features.">VideoPress</a>
-			(2)
-		</li>
-	</ul>
-</section>
+	<section id="categories-4" class="widget widget_categories"><h2 class="widget-title">Test Categories Widget: With
+			Count</h2>
+		<ul>
+			<li class="cat-item cat-item-2">
+				<a href="category.php#development=1"
+				   title="Posts in this category test image and text alignment.">Alignment</a>
+				(3)
+			</li>
+			<li class="cat-item cat-item-3">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the aside post format.">Aside</a> (2)
+			</li>
+			<li class="cat-item cat-item-4">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the audio post format.">Audio</a> (2)
+			</li>
+			<li class="cat-item cat-item-5">
+				<a href="category.php#development=1"
+				   title="Posts in this category test image captions.">Captions</a> (2)
+			</li>
+			<li class="cat-item cat-item-6">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the chat post format.">Chat</a> (2)
+			</li>
+			<li class="cat-item cat-item-37">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 01.">Child Category
+					01</a> (1)
+			</li>
+			<li class="cat-item cat-item-38">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 02.">Child Category
+					02</a> (1)
+			</li>
+			<li class="cat-item cat-item-39">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 03.">Child Category
+					03</a> (1)
+			</li>
+			<li class="cat-item cat-item-40">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 04.">Child Category
+					04</a> (1)
+			</li>
+			<li class="cat-item cat-item-41">
+				<a href="category.php#development=1"
+				   title="This is a description for the Child Category 05.">Child Category
+					05</a> (1)
+			</li>
+			<li class="cat-item cat-item-7">
+				<a href="category.php#development=1"
+				   title="Posts in this category contain Codex references.">Codex</a> (3)
+			</li>
+			<li class="cat-item cat-item-8">
+				<a href="category.php#development=1"
+				   title="Posts in this category test comments.">Comments</a> (6)
+			</li>
+			<li class="cat-item cat-item-9">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post content.">Content</a> (11)
+			</li>
+			<li class="cat-item cat-item-10">
+				<a href="category.php#development=1"
+				   title="Posts in this category test odd corner cases, using uncovered by rare user workflows.">Corner
+					Case</a> (4)
+			</li>
+			<li class="cat-item cat-item-11">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various embed codes.">Embeds</a> (2)
+			</li>
+			<li class="cat-item cat-item-12">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post excerpts.">Excerpt</a> (2)
+			</li>
+			<li class="cat-item cat-item-13">
+				<a href="category.php#development=1"
+				   title="Posts in this category test featured images.">Featured Images</a>
+				(3)
+			</li>
+			<li class="cat-item cat-item-14">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various formatting scenarios.">Formatting</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-15">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the gallery post format.">Gallery</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-42">
+				<a
+						href="category.php#development=1"
+						title="This is a description for the Grandchild Category.">Grandchild Category</a> (1)
+			</li>
+			<li class="cat-item cat-item-16">
+				<a href="category.php#development=1"
+				   title="Posts in this category test images in various ways.">Images</a>
+				(7)
+			</li>
+			<li class="cat-item cat-item-17">
+				<a href="category.php#development=1"
+				   title="Posts in this category test Jetpack features.">Jetpack</a> (3)
+			</li>
+			<li class="cat-item cat-item-18">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the link post format.">Link</a> (3)
+			</li>
+			<li class="cat-item cat-item-19">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various list scenarios.">Lists</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-20">
+				<a href="category.php#development=1"
+				   title="Posts in this category test markup tags and styles.">Markup</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-21">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the more tag feature.">More Tag</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-22">
+				<a href="category.php#development=1"
+				   title="This is a parent category. It will contain child categories">Parent
+					Category</a> (1)
+			</li>
+			<li class="cat-item cat-item-23">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the post password feature.">Password</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-24">
+				<a href="category.php#development=1"
+				   title="Posts in this category test pingbacks.">Pingbacks</a> (4)
+			</li>
+			<li class="cat-item cat-item-25">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post formats.">Post Formats</a> (13)
+			</li>
+			<li class="cat-item cat-item-26">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the quote post format.">Quote</a> (2)
+			</li>
+			<li class="cat-item cat-item-27">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various shortcodes.">Shortcodes</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-28">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the standard post format.">Standard</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-29">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the status post format.">Status</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-30">
+				<a href="category.php#development=1">Sticky</a> (1)
+			</li>
+			<li class="cat-item cat-item-31">
+				<a href="category.php#development=1"
+				   title="Posts in this category test post title scenarios.">Titles</a> (5)
+			</li>
+			<li class="cat-item cat-item-32">
+				<a href="category.php#development=1"
+				   title="Posts in this category test trackbacks.">Trackbacks</a> (4)
+			</li>
+			<li class="cat-item cat-item-33">
+				<a href="category.php#development=1"
+				   title="Posts in this category test various Twitter features.">Twitter</a>
+				(2)
+			</li>
+			<li class="cat-item cat-item-1">
+				<a href="category.php#development=1">Uncategorized</a> (3)
+			</li>
+			<li class="cat-item cat-item-34">
+				<a href="category.php#development=1"
+				   title="Posts in this category test unpublished posts.">Unpublished</a>
+				(1)
+			</li>
+			<li class="cat-item cat-item-35">
+				<a href="category.php#development=1"
+				   title="Posts in this category test the video post format.">Video</a> (3)
+			</li>
+			<li class="cat-item cat-item-36">
+				<a href="category.php#development=1"
+				   title="Posts in this category test VideoPress features.">VideoPress</a>
+				(2)
+			</li>
+		</ul>
+	</section>
 
 <?php
 /**

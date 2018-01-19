@@ -10,7 +10,7 @@
 include 'widget-search.php';
 include 'widget-media-audio.php';
 include 'widget-media-video.php';
-include 'widget-recent-entries.php';
+include 'widget-tag-cloud.php';
 include 'widget-recent-comments.php';
 include 'widget-archive.php';
 include 'widget-categories.php';

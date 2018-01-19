@@ -9,7 +9,7 @@
 ?>
 <article class="entry entry--slim">
 	<figure class="entry__thumbnail">
-		<a href="#">
+		<a href="single.php#development=1">
 			<amp-img class="entry__image"
 					 alt="Post title"
 					 src="https://placehold.it/335x225"
@@ -29,7 +29,7 @@
 	<header class="entry__header">
 		<?php include 'entry__meta--date.php'; ?>
 		<h3 class="entry__title">
-			<a href="#" rel="bookmark">The eight African elections to watch out for in 2018</a>
+			<a href="single.php#development=1" rel="bookmark">The eight African elections to watch out for in 2018</a>
 		</h3>
 	</header><!-- .entry__header -->
 

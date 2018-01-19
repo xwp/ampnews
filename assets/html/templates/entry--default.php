@@ -9,7 +9,7 @@
 ?>
 <article class="entry">
 	<figure class="entry__thumbnail">
-		<a href="#">
+		<a href="single.php#development=1">
 			<amp-img class="entry__image"
 					 alt="Post title"
 					 src="https://placehold.it/335x225"
@@ -29,7 +29,7 @@
 	<header class="entry__header">
 		<?php include 'entry__meta--date.php'; ?>
 		<h3 class="entry__title">
-			<a href="#" rel="bookmark">Carrie Underwood Says Her Face Is 'Not Quite Looking the Same' After Fall</a>
+			<a href="single.php#development=1" rel="bookmark">Carrie Underwood Says Her Face Is 'Not Quite Looking the Same' After Fall</a>
 		</h3>
 	</header><!-- .entry__header -->
 
