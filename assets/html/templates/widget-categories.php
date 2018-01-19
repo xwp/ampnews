@@ -436,6 +436,20 @@
 	</ul>
 </section>
 
+<?php
+/**
+ * Dev note:
+ *
+ * After some research it seems it's not possible to implement the `select`-based
+ * category switching. There no way to have a custom JS. Also, the `amp-bind`
+ * doesn't allow for redirects.
+ *
+ * For this reason, I'm leaving this type of widget commented out.
+ *
+ * @see https://github.com/ampproject/amphtml/issues/9128
+ */
+
+/*
 <section id="categories-5" class="widget widget_categories"><h2 class="widget-title">Test Categories Widget: With
 		Count, Dropdown, And Hierarchical</h2>
 	<form action="http://ampconf.local" method="get" novalidate="" class="i-amphtml-form"><label
@@ -487,7 +501,6 @@
 		</select>
 	</form>
 	<script type="text/javascript">
-		/* <![CDATA[ */
 		(function() {
 			var dropdown = document.getElementById( "cat" );
 
@@ -499,7 +512,6 @@
 
 			dropdown.onchange = onCatChange;
 		})();
-		/* ]]> */
 	</script>
-
 </section>
+*/
