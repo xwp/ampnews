@@ -40,6 +40,8 @@
 
 	&--header &__item--branding {
 		position: relative;
+		margin-left: auto;
+		margin-right: auto;
 
 		@media ( query( max, tablet ) ) {
 			background: $black;
