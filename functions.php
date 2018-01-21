@@ -148,6 +148,21 @@ function ampconf_custom_styles( $css ) {
 add_filter( 'amp_custom_styles', 'ampconf_custom_styles' );
 
 /**
+ * Adds custom component scripts to the document.
+ *
+ * @param array $amp_scripts AMP Component scripts, mapping component names to component source URLs.
+ *
+ * @return array
+ */
+function ampconf_amp_component_scripts( $amp_scripts ) {
+	$amp_scripts['amp-form'] = 'https://cdn.ampproject.org/v0/amp-form-0.1.js';
+	$amp_scripts['amp-bind'] = 'https://cdn.ampproject.org/v0/amp-bind-0.1.js';
+
+	return $amp_scripts;
+}
+add_filter( 'amp_component_scripts', 'ampconf_amp_component_scripts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function ampconf_scripts() {
