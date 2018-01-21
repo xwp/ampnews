@@ -40,6 +40,9 @@ add_action( 'wp_head', 'ampconf_pingback_header' );
  * @return string $items
  */
 function ampconf_wp_nav_menu_items( $items, $args ) {
+	if ( 'header' !== $args->theme_location ) {
+		return $items;
+	}
 
 	$form = '<li class="menu-item menu-item-search-form">
 		<form role="search" method="get" target="_top" action="' . esc_url( home_url( '/' ) ) . '">
