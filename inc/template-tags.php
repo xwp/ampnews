@@ -142,3 +142,12 @@ if ( ! function_exists( 'ampconf_post_thumbnail' ) ) :
 	endif; // End is_singular().
 	}
 endif;
+
+if ( ! function_exists( 'ampconf_branding_tag' ) ) :
+	/**
+	 * Outputs the branding in header as h1 or p, depending on the current view.
+	 */
+	function ampconf_branding_tag() {
+		echo esc_html( ( is_front_page() && is_home() ) ? 'h1' : 'p' );
+	}
+endif;

@@ -18,35 +18,36 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ampconf' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php the_custom_logo(); ?>
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
+	<header class="wrap wrap--header wrap--header__menu-hidden" [class]="mobileMenu ? 'wrap wrap--header' : 'wrap wrap--header wrap--header__menu-hidden'">
+
+		<div class="wrap__item wrap__item--branding">
+			<<?php ampconf_branding_tag(); ?> class="wrap__item--branding-title">
+				<?php if ( has_custom_logo() ) : ?>
+					<?php the_custom_logo(); ?>
+				<?php else : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<?php endif; ?>
+
+			</<?php ampconf_branding_tag(); ?>>
 
 			<?php $description = get_bloginfo( 'description', 'display' ); ?>
 			<?php if ( $description || is_customize_preview() ) : ?>
-			<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<p class="wrap__item--branding-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ampconf' ); ?></button>
+			<button class="wrap__item--menu-toggle" on="tap:AMP.setState( { mobileMenu: ! mobileMenu } )" aria-controls="primary-menu" aria-expanded="false"></button>
+		</div>
+
+		<nav class="wrap__item wrap__item--menu">
 			<?php
 				wp_nav_menu(
 					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
+						'theme_location' => 'header',
+						'menu_id'        => false,
 					)
 				);
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+		</nav>
+	</header>
