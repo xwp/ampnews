@@ -182,9 +182,12 @@
 				font-size: 14px;
 				max-width: 70px;
 				transition: max-width 100ms linear, background-color 100ms linear;
+				color: $white;
+				text-overflow: ellipsis;
 
 				&:focus {
 					background-color: $white;
+					color: $black;
 					max-width: 200px;
 				}
 

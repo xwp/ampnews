@@ -48,7 +48,7 @@ function ampconf_wp_nav_menu_items( $items, $args ) {
 		<form role="search" method="get" target="_top" action="' . esc_url( home_url( '/' ) ) . '">
 			<label>
 				<span class="screen-reader-text">' . _x( 'Search for:', 'label', 'ampconf' ) . '</span>
-				<input type="search" class="search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder', 'ampconf' ) . '" value="' . get_search_query() . '" name="s" />
+				<input type="search" placeholder="' . esc_attr_x( 'Search', 'placeholder', 'ampconf' ) . '" value="' . get_search_query() . '" name="s" />
 			</label>
 
 			<button type="submit"></button>
