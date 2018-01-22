@@ -32,7 +32,7 @@ function ampconf_pingback_header() {
 add_action( 'wp_head', 'ampconf_pingback_header' );
 
 /**
- * Adds the search for as the last top-level menu item.
+ * Adds a search form as the last top-level menu item of the header menu.
  *
  * @param string   $items The HTML list content for the menu items.
  * @param stdClass $args  An object containing wp_nav_menu() arguments.
