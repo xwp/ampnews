@@ -35,6 +35,7 @@
 	&-title {
 		@extend .heading;
 		@extend .heading--widget;
+		margin: 0 0 10px;
 	}
 
 	ul {
