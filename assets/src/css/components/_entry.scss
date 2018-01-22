@@ -3,6 +3,9 @@
 //
 
 .entry {
+	@media ( query( min, desktop ) ) {
+		padding: 20px 0 0;
+	}
 
 	//
 	// Entry thumbnail.
@@ -14,12 +17,26 @@
 	}
 
 	//
+	// Entry header.
+	//
+
+	&__header {
+		@media ( query( min, desktop ) ) {
+			padding: 15px 0 0;
+		}
+	}
+
+	//
 	// Entry title.
 	//
 
 	&__title {
 		margin: 0;
 		font-size: 24px;
+
+		@media ( query( min, desktop ) ) {
+			font-size: 36px;
+		}
 	}
 
 	//
@@ -30,8 +47,17 @@
 		line-height: 1.5;
 		color: $muted;
 
+		@media ( query( min, desktop ) ) {
+			font-size: 18px;
+			line-height: #{ 25px / 18px };
+		}
+
 		p {
 			margin: 15px 0 0;
+
+			@media ( query( min, desktop ) ) {
+				margin-top: 20px;
+			}
 		}
 	}
 
@@ -51,6 +77,10 @@
 
 	&__footer {
 		padding-top: 15px;
+
+		@media ( query( min, desktop ) ) {
+			padding-top: 20px;
+		}
 	}
 
 	//
@@ -63,6 +93,10 @@
 		font-size: 14px;
 		line-height: 1.5;
 		color: $muted;
+
+		@media ( query( min, desktop ) ) {
+			font-size: 16px;
+		}
 
 		a {
 			font-weight: 700;
