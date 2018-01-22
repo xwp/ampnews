@@ -143,6 +143,17 @@
 		&--no-separator {
 			border-bottom: none;
 		}
+
+		&--widget {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 40px 0;
+
+			@media ( query( min, desktop ) ) {
+				padding: 60px 0;
+			}
+		}
 	}
 
 	//

@@ -34,8 +34,8 @@
 			<div class="wrap__item">
 				<?php include 'templates/entry--slim.php'; ?>
 			</div>
-			<div class="wrap__item">
-				<?php include 'templates/entry--slim.php'; ?>
+			<div class="wrap__item wrap__item--widget">
+				<?php include 'templates/widget-newsletter.php'; ?>
 			</div>
 			<div class="wrap__item wrap__item--no-separator">
 				<?php include 'templates/entry--slim.php'; ?>
