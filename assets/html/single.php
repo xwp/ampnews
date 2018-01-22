@@ -24,6 +24,23 @@
 
 			</div>
 		</div>
+		<div class="wrap wrap--single">
+			<div class="wrap__item wrap__item--no-separator">
+				<h3 class="heading heading--widget">More Stories</h3>
+			</div>
+			<div class="wrap__item">
+				<?php include 'templates/entry--slim.php'; ?>
+			</div>
+			<div class="wrap__item">
+				<?php include 'templates/entry--slim.php'; ?>
+			</div>
+			<div class="wrap__item">
+				<?php include 'templates/entry--slim.php'; ?>
+			</div>
+			<div class="wrap__item">
+				<?php include 'templates/entry--slim.php'; ?>
+			</div>
+		</div>
 
 	</body>
 </html>
