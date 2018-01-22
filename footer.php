@@ -22,7 +22,10 @@
 		?>
 	</nav>
 
-	<p class="wrap__item wrap__item--footer-copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+	<p class="wrap__item wrap__item--footer-copyright">
+		<?php printf( '&copy; %s', esc_html( date( 'Y' ) ) ); ?>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+	</p>
 </footer>
 
 <?php wp_footer(); ?>
