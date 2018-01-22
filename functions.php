@@ -133,7 +133,7 @@ function ampconf_widgets_init() {
 add_action( 'widgets_init', 'ampconf_widgets_init' );
 
 /**
- * Filters the AMP custom css to include the CSS from out theme.
+ * Filters the AMP custom css to include the CSS from the assets directory.
  *
  * @param string $css The combined custom css.
  *
