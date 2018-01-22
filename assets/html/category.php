@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPConf static home page template.
+ * AMPConf static category template.
  *
  * @package AMPConf
  */
@@ -11,28 +11,13 @@
 <html ⚡>
 	<head>
 		<?php include 'templates/head-common.php'; ?>
-		<title>AMP WordPress Theme Static Home Page Template</title>
-		<link rel="canonical" href="home.html">
+		<title>AMP WordPress Theme Static Category Template</title>
+		<link rel="canonical" href="category.html">
 	</head>
 	<body>
 		<?php include 'templates/site-header.php'; ?>
 
 		<div class="wrap">
-
-			<!-- START: Featured post -->
-			<div class="wrap__item wrap__item--full-width">
-				<?php include 'templates/entry--featured.php'; ?>
-			</div>
-			<!-- END: Featured post -->
-
-			<!-- START: Homepage two-pack -->
-			<div class="wrap__item wrap__item--half wrap__item--half--primary">
-				<?php include 'templates/entry--default.php'; ?>
-			</div>
-			<div class="wrap__item wrap__item--half wrap__item--half--secondary">
-				<?php include 'templates/entry--default.php'; ?>
-			</div>
-			<!-- END: Homepage two-pack -->
 
 			<!-- START: Blog layout -->
 			<div class="wrap__item wrap__item--blog wrap__item--blog--primary">
@@ -50,9 +35,9 @@
 				</div>
 			</div>
 			<div class="wrap__item wrap__item--blog wrap__item--blog--secondary">
-				<aside class="wrap__subitem wrap__subitem--blog wrap__subitem--no-separator">
+				<div class="wrap__subitem wrap__subitem--blog wrap__subitem--no-separator">
 					<?php include 'templates/sidebar.php'; ?>
-				</aside>
+				</div>
 			</div>
 			<!-- END: Blog layout -->
 

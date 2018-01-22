@@ -9,23 +9,25 @@
 ?>
 <article class="entry entry--featured">
 	<figure class="entry__thumbnail">
-		<a href="#">
-			<amp-img class="entry__image entry__image--mobile"
+		<a href="single.php#development=1">
+			<amp-img class="entry__image"
 					 alt="Post title"
 					 src="https://placehold.it/320x192"
 					 width="375"
 					 height="225"
 					 layout="responsive"
+					 media="(max-width: 767px)"
 					 srcset="https://placehold.it/320x192 320w,
 					    https://placehold.it/375x225 375w, https://placehold.it/768x461 768w"
 					 sizes="100vw">
 			</amp-img>
-			<amp-img class="entry__image entry__image--tablet"
+			<amp-img class="entry__image"
 					 alt="Post title"
 					 src="https://placehold.it/320x192"
 					 width="1040"
 					 height="400"
 					 layout="responsive"
+					 media="(min-width: 768px)"
 					 srcset="https://placehold.it/768x295 768w,
 					    https://placehold.it/1040x400 1040w"
 					 sizes="(max-width: 1023px) 100vw,
@@ -39,7 +41,7 @@
 	<header class="entry__header">
 		<?php include 'entry__meta--date.php'; ?>
 		<h2 class="entry__title">
-			<a href="#" rel="bookmark">Carrie Underwood Says Her Face Is 'Not Quite Looking the Same' After Fall</a>
+			<a href="single.php#development=1" rel="bookmark">Carrie Underwood Says Her Face Is 'Not Quite Looking the Same' After Fall</a>
 		</h2>
 	</header><!-- .entry__header -->
 
@@ -48,7 +50,7 @@
 			other at a gym, and Gang shared a photo that that she had someone take of her and the country star
 			after their workout...</p>
 		<p class="entry__link-more">
-			<a href="#" class="more-link">
+			<a href="single.php#development=1" class="more-link">
 				Read more
 				<span class="screen-reader-text"> on "Carrie Underwood Says Her Face Is 'Not Quite Looking the Same' After Fall"</span>
 			</a>
