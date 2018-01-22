@@ -165,16 +165,6 @@ function ampconf_amp_component_scripts( $amp_scripts ) {
 add_filter( 'amp_component_scripts', 'ampconf_amp_component_scripts' );
 
 /**
- * Enqueue scripts and styles.
- */
-function ampconf_scripts() {
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'ampconf_scripts' );
-
-/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
