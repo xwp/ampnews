@@ -150,6 +150,8 @@ add_filter( 'amp_custom_styles', 'ampconf_custom_styles' );
 /**
  * Adds custom component scripts to the document.
  *
+ * @todo Remove once amp-wp plugin automatically includes component scripts.
+ *
  * @param array $amp_scripts AMP Component scripts, mapping component names to component source URLs.
  *
  * @return array
