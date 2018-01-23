@@ -1,0 +1,66 @@
+//
+// Gutenberg blocks.
+//
+
+.wp-block {
+
+	//
+	// Image block.
+	//
+
+	&-image {
+		margin: 32px #{ -$site-gutter };
+		width: calc( 100% + #{ 2 * $site-gutter } );
+	}
+
+	//
+	// Cover image block.
+	//
+
+	&-cover-image {}
+
+	//
+	// Gallery block.
+	//
+
+	&-gallery {}
+
+	//
+	// Quote block.
+	//
+
+	&-quote {}
+
+	//
+	// Pullquote block.
+	//
+
+	&-pullquote {}
+
+	//
+	// Separator block.
+	//
+
+	&-separator {
+		margin: 40px auto;
+		width: 190px;
+		border: none;
+		border-bottom: 1px solid $border-color;
+
+		@media ( query( min, desktop ) ) {
+			width: 150px;
+		}
+	}
+
+	//
+	// Embed block.
+	//
+
+	&-embed {}
+
+	//
+	// Button block.
+	//
+
+	&-button {}
+}
