@@ -5,9 +5,8 @@
 .entry {
 
 	&--slim {
-		@media ( query( min, desktop ) ) {
-			position: relative;
-			padding: 15px 270px 10px 0;
+		@media ( query( min, tablet ) ) {
+			padding-top: 0;
 		}
 	}
 
@@ -16,13 +15,23 @@
 	//
 
 	&--slim &__thumbnail {
+		float: right;
+		width: 122px;
+		padding: 0;
+		margin: 0 0 0 30px;
+
+		@media ( query( min, mobile-large ) ) {
+			width: 160px;
+		}
+
 		@media ( query( min, desktop ) ) {
-			position: absolute;
-			top: 20px;
-			right: 0;
 			width: 240px;
-			height: 160px;
-			padding: 0;
+		}
+
+		&::after {
+			content: '';
+			display: table;
+			clear: both;
 		}
 	}
 
@@ -31,7 +40,14 @@
 	//
 
 	&--slim &__header {
+		margin-right: 142px;
+
+		@media ( query( min, mobile-large ) ) {
+			margin-right: 190px;
+		}
+
 		@media ( query( min, desktop ) ) {
+			margin-right: 270px;
 			padding: 0;
 		}
 	}
@@ -41,6 +57,12 @@
 	//
 
 	&--slim &__title {
+		font-size: 16px;
+
+		@media ( query( min, mobile-large ) ) {
+			font-size: 20px;
+		}
+
 		@media ( query( min, desktop ) ) {
 			font-size: 24px;
 		}
@@ -51,6 +73,9 @@
 	//
 
 	&--slim &__summary {
+		@media ( query( max, tablet ) ) {
+			display: none;
+		}
 
 		p {
 			@media ( query( min, desktop ) ) {
@@ -60,12 +85,28 @@
 	}
 
 	//
-	// Entry footer.
+	// Entry footer and meta.
 	//
 
 	&--slim &__footer {
+		padding-top: 10px;
+
 		@media ( query( min, desktop ) ) {
 			padding-top: 15px;
+		}
+	}
+
+	&--slim &__footer &__meta {
+		padding-bottom: 0;
+	}
+
+	&--slim &__meta {
+
+		&::after {
+			@media ( query( max, desktop ) ) {
+				margin-right: 0.25em;
+				padding-right: 0.25em;
+			}
 		}
 	}
 }
