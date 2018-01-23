@@ -44,9 +44,7 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		/***
-		 * Registers multiple menus
-		 */
+		// This theme uses wp_nav_menu() in multiple locations.
 		register_nav_menus(
 			array(
 				'header' => esc_html__( 'Header', 'ampconf' ),
