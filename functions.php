@@ -44,10 +44,11 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in multiple locations.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'ampconf' ),
+				'header' => esc_html__( 'Header', 'ampconf' ),
+				'footer' => esc_html__( 'Footer', 'ampconf' ),
 			)
 		);
 
@@ -130,16 +131,29 @@ function ampconf_widgets_init() {
 add_action( 'widgets_init', 'ampconf_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Adds custom component scripts to the document.
+ *
+ * @todo Remove once amp-wp plugin automatically includes component scripts.
+ *
+ * @param array $amp_scripts AMP Component scripts, mapping component names to component source URLs.
+ *
+ * @return array
  */
-function ampconf_scripts() {
-	wp_enqueue_style( 'ampconf-style', get_stylesheet_uri() );
+function ampconf_amp_component_scripts( $amp_scripts ) {
+	$amp_scripts['amp-form'] = 'https://cdn.ampproject.org/v0/amp-form-0.1.js';
+	$amp_scripts['amp-bind'] = 'https://cdn.ampproject.org/v0/amp-bind-0.1.js';
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	return $amp_scripts;
 }
-add_action( 'wp_enqueue_scripts', 'ampconf_scripts' );
+add_filter( 'amp_component_scripts', 'ampconf_amp_component_scripts' );
+
+/**
+ * Enqueues styles.
+ */
+function ampconf_enqueue_styles() {
+	wp_enqueue_style( 'ampconf', get_template_directory_uri() . '/assets/dist/css/main.css' );
+}
+add_action( 'wp_enqueue_scripts', 'ampconf_enqueue_styles' );
 
 /**
  * Implement the Custom Header feature.

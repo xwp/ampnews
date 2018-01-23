@@ -1,7 +1,10 @@
 //
 // Search Submit Button Icon
 //
+// Dev Note: used on the <button> element.
+//
 %search-icon {
+	font-size: 0;
 	position: relative;
 	background: $black;
 	border: 2px solid $white;
