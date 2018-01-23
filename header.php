@@ -21,7 +21,7 @@ $description = get_bloginfo( 'description', 'display' );
 <body <?php body_class(); ?>>
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ampconf' ); ?></a>
 
-	<header class="wrap wrap--header wrap--header__menu-hidden" [class]="mobileMenu ? 'wrap wrap--header' : 'wrap wrap--header wrap--header__menu-hidden'">
+	<header class="wrap wrap--header" [class]="ampConf.mobileMenu ? 'wrap wrap--header' : 'wrap wrap--header wrap--header__menu-hidden'">
 
 		<div class="wrap__item wrap__item--branding">
 			<<?php ampconf_branding_tag(); ?> class="wrap__item--branding-title">
@@ -36,7 +36,7 @@ $description = get_bloginfo( 'description', 'display' );
 				<p class="wrap__item--branding-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 
-			<button class="wrap__item--menu-toggle" on="tap:AMP.setState( { mobileMenu: ! mobileMenu } )" aria-controls="primary-menu" aria-expanded="false"></button>
+			<button class="wrap__item--menu-toggle" on="tap:AMP.setState( { ampConf: { mobileMenu: true } } )" aria-controls="primary-menu" aria-expanded="false"></button>
 		</div>
 
 		<nav class="wrap__item wrap__item--menu">

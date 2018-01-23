@@ -156,6 +156,24 @@ function ampconf_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'ampconf_enqueue_styles' );
 
 /**
+ * AMP State
+ *
+ * @todo Expand into a more dynamic method of adding and manipulating state.
+ */
+function ampconf_state() {
+	?>
+	<amp-state id="ampConf">
+		<script type="application/json">
+			{
+				"mobileMenu": false
+			}
+		</script>
+	</amp-state>
+	<?php
+}
+add_action( 'wp_footer', 'ampconf_state' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
