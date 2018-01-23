@@ -110,8 +110,8 @@
 	&--header &__item--menu-toggle {
 		display: none;
 		position: absolute;
-		right: $site-gutter;
-		top: $site-gutter * 1.5;
+		right: $site-gutter - 2px;
+		top: $site-gutter * 1.5 + 7px;
 		cursor: pointer;
 		background: none;
 		border: 0;
@@ -126,6 +126,7 @@
 			height: 7px;
 			width: 20px;
 			border-top: 2px solid $white;
+			transform: rotate( 45deg );
 		}
 
 		&::after {
@@ -133,7 +134,25 @@
 			display: block;
 			height: 9px;
 			width: 20px;
+			margin-top: -7px;
+			margin-left: 4px;
 			border-top: 2px solid $white;
+			transform: rotate( -45deg );
+		}
+	}
+
+	&--header__menu-hidden &__item--menu-toggle {
+		right: $site-gutter;
+		top: $site-gutter * 1.5;
+
+		&::before {
+			transform: rotate( 0 );
+		}
+
+		&::after {
+			margin-top: 0;
+			margin-left: 0;
+			transform: rotate( 0 );
 			border-bottom: 2px solid $white;
 		}
 	}
