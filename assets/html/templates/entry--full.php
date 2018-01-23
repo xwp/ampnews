@@ -113,16 +113,13 @@
 			available in the inserter.</p>
 		<div class="wp-block-gallery alignnone columns-2 is-cropped">
 			<figure class="blocks-gallery-image">
-				<amp-img src="https://cldup.com/n0g6ME5VKC.jpg" alt="" width="2274" height="1446"
-						 sizes="(min-width: 600px) 600px, 100vw" class="amp-wp-enforced-sizes"></amp-img>
+				<amp-img src="https://cldup.com/n0g6ME5VKC.jpg" alt="" width="2274" height="1446" layout="responsive"></amp-img>
 			</figure>
 			<figure class="blocks-gallery-image">
-				<amp-img src="https://cldup.com/ZjESfxPI3R.jpg" alt="" width="1944" height="1191"
-						 sizes="(min-width: 600px) 600px, 100vw" class="amp-wp-enforced-sizes"></amp-img>
+				<amp-img src="https://cldup.com/ZjESfxPI3R.jpg" alt="" width="1944" height="1191" layout="responsive"></amp-img>
 			</figure>
 			<figure class="blocks-gallery-image">
-				<amp-img src="https://cldup.com/EKNF8xD2UM.jpg" alt="" width="1974" height="1316"
-						 sizes="(min-width: 600px) 600px, 100vw" class="amp-wp-enforced-sizes"></amp-img>
+				<amp-img src="https://cldup.com/EKNF8xD2UM.jpg" alt="" width="1974" height="1316" layout="responsive"></amp-img>
 			</figure>
 		</div>
 		<p>You can change the amount of columns in your galleries by dragging a slider in the block inspector in the
@@ -138,12 +135,10 @@
 		<p>Sure, the full-wide image can be pretty big. But sometimes the image is worth it.</p>
 		<div class="wp-block-gallery alignwide columns-2 is-cropped">
 			<figure class="blocks-gallery-image">
-				<amp-img src="https://cldup.com/_rSwtEeDGD.jpg" alt="" width="1944" height="1296"
-						 sizes="(min-width: 600px) 600px, 100vw" class="amp-wp-enforced-sizes"></amp-img>
+				<amp-img src="https://cldup.com/_rSwtEeDGD.jpg" alt="" width="1944" height="1296" layout="responsive"></amp-img>
 			</figure>
 			<figure class="blocks-gallery-image">
-				<amp-img src="https://cldup.com/L-cC3qX2DN.jpg" alt="" width="1944" height="1215"
-						 sizes="(min-width: 600px) 600px, 100vw" class="amp-wp-enforced-sizes"></amp-img>
+				<amp-img src="https://cldup.com/L-cC3qX2DN.jpg" alt="" width="1944" height="1215" layout="responsive"></amp-img>
 			</figure>
 		</div>
 		<p>The above is a gallery with just two images. It's an easier way to create visually appealing layouts,
@@ -160,9 +155,15 @@
 		<p class="amp-wp-inline-2f0158eb062d1ac553a7edcb8a744628"><em>If you want to learn more about how to build
 				additional blocks, or if you are interested in helping with the project, head over to the <a
 						href="https://github.com/WordPress/gutenberg">GitHub repository</a>.</em></p>
-		<div class="wp-block-button aligncenter"><a class="wp-block-button__link"
-													href="https://github.com/WordPress/gutenberg">Help build
-				Gutenberg</a></div>
+		<div class="wp-block-button aligncenter">
+			<a class="wp-block-button__link" href="https://github.com/WordPress/gutenberg">Help build Gutenberg</a>
+		</div>
+		<div class="wp-block-button alignleft">
+			<a class="wp-block-button__link" href="https://github.com/WordPress/gutenberg">Help build Gutenberg</a>
+		</div>
+		<div class="wp-block-button alignright">
+			<a class="wp-block-button__link" href="https://github.com/WordPress/gutenberg">Help build Gutenberg</a>
+		</div>
 		<hr class="wp-block-separator"/>
 		<p class="amp-wp-inline-2f0158eb062d1ac553a7edcb8a744628">Thanks for testing Gutenberg!</p>
 		<p class="amp-wp-inline-2f0158eb062d1ac553a7edcb8a744628">

@@ -11,4 +11,8 @@
 	background-color: $black;
 	font-weight: 700;
 	text-decoration: none;
+
+	&--inline {
+		display: inline-flex;
+	}
 }

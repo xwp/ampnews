@@ -10,7 +10,18 @@
 
 	&-image {
 		margin: 32px #{ -$site-gutter };
-		width: calc( 100% + #{ 2 * $site-gutter } );
+
+		&.aligncenter {
+			margin: 32px #{ -$site-gutter };
+			width: calc( 100% + #{ 2 * $site-gutter } );
+		}
+
+		figcaption {
+			padding: 16px $site-gutter 0;
+			font-size: 14px;
+			line-height: #{ 20px / 14px };
+			text-align: left;
+		}
 	}
 
 	//
@@ -23,19 +34,69 @@
 	// Gallery block.
 	//
 
-	&-gallery {}
+	&-gallery {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 32px #{ -$site-gutter - 1px };
+		width: calc( 100% + #{ 2 * $site-gutter + 2px } );
+
+		figure {
+			display: flex;
+			flex: 1 0 auto;
+			margin: 1px;
+			width: 100%;
+		}
+
+		amp-img {
+			flex: 1;
+			object-fit: cover;
+		}
+
+		@for $i from 2 through 8 {
+			&.columns-#{ $i } figure {
+				width: calc( #{ 100% / $i } - 2px );
+			}
+		}
+
+	}
 
 	//
 	// Quote block.
 	//
 
-	&-quote {}
+	&-quote {
+		margin: 40px auto;
+		font-size: 24px;
+		line-height: #{ 34px / 24px };
+		font-weight: 700;
+		color: $black;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: 50px;
+			margin: 24px 0;
+			border-bottom: 1px solid $border-color;
+		}
+
+		cite {
+			display: block;
+			font-size: 14px;
+			font-weight: 400;
+			font-style: normal;
+			color: $muted;
+		}
+	}
 
 	//
 	// Pullquote block.
 	//
 
-	&-pullquote {}
+	&-pullquote {
+		@extend .wp-block-quote;
+	}
 
 	//
 	// Separator block.
@@ -62,5 +123,14 @@
 	// Button block.
 	//
 
-	&-button {}
+	&-button {
+		justify-content: center;
+		margin-top: 32px;
+		margin-bottom: 32px;
+
+		&__link {
+			@extend .button;
+			@extend .button--inline;
+		}
+	}
 }
