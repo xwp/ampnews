@@ -47,11 +47,13 @@
 			<li class="menu-item"><a href="category.php#development=1">Gaming</a></li>
 			<li class="menu-item"><a href="category.php#development=1">Shopping</a></li>
 			<li class="menu-item menu-item-search-form">
-				<form method="GET" action="https://example.com/search" target="_top">
-					<input type="search" placeholder="Search">
-					<button name="submit"></button>
-				</form>
 			</li>
 		</ul>
+		<div class="wrap__item--search">
+			<form method="GET" action="https://example.com/search" target="_top">
+				<input type="search" placeholder="Search">
+				<button name="submit"></button>
+			</form>
+		</div>
 	</nav>
 </header>
