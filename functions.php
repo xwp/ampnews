@@ -151,7 +151,7 @@ add_filter( 'amp_component_scripts', 'ampconf_amp_component_scripts' );
  * Enqueues styles.
  */
 function ampconf_enqueue_styles() {
-	wp_enqueue_style( 'ampconf', get_template_directory() . '/assets/dist/css/main.css' );
+	wp_enqueue_style( 'ampconf', get_template_directory_uri() . '/assets/dist/css/main.css' );
 }
 add_action( 'wp_enqueue_scripts', 'ampconf_enqueue_styles' );
 
