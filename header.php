@@ -47,7 +47,10 @@ $description = get_bloginfo( 'description', 'display' );
 						'menu_id'        => false,
 					)
 				);
-				get_search_form();
 			?>
+
+			<div class="wrap__item--search">
+				<?php get_search_form(); ?>
+			</div>
 		</nav>
 	</header>

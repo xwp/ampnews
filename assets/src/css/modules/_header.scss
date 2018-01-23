@@ -149,24 +149,14 @@
 		padding: 16px;
 		z-index: 10;
 
-		& > div {
-			float: left;
-		}
-
 		a {
 			color: $white;
 		}
 
 		@media ( query( min, tablet ) ) {
-			display: block;
-			flex-basis: 100%;
-			order: 1;
-
-			.container {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
 		}
 
 		.menu-item-has-children {
@@ -177,8 +167,7 @@
 			}
 		}
 
-		& > form {
-			float: right;
+		.wrap__item--search {
 			margin-top: -4px;
 			margin-bottom: -4px;
 
