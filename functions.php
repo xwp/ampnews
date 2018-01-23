@@ -131,21 +131,6 @@ function ampconf_widgets_init() {
 add_action( 'widgets_init', 'ampconf_widgets_init' );
 
 /**
- * Filters the AMP custom css to include the CSS from the assets directory.
- *
- * @param string $css The combined custom css.
- *
- * @return string $css
- */
-function ampconf_custom_styles( $css ) {
-	$path   = get_template_directory() . '/assets/dist/css/main.css';
-	$styles = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions -- Not a remote file.
-
-	return $styles . $css;
-}
-add_filter( 'amp_custom_styles', 'ampconf_custom_styles' );
-
-/**
  * Adds custom component scripts to the document.
  *
  * @todo Remove once amp-wp plugin automatically includes component scripts.
@@ -161,6 +146,14 @@ function ampconf_amp_component_scripts( $amp_scripts ) {
 	return $amp_scripts;
 }
 add_filter( 'amp_component_scripts', 'ampconf_amp_component_scripts' );
+
+/**
+ * Enqueues styles.
+ */
+function ampconf_enqueue_styles() {
+	wp_enqueue_style( 'ampconf', get_template_directory() . '/assets/dist/css/main.css' );
+}
+add_action( 'wp_enqueue_scripts', 'ampconf_enqueue_styles' );
 
 /**
  * Implement the Custom Header feature.
