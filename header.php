@@ -9,6 +9,7 @@
  * @package AMPConf
  */
 
+$description = get_bloginfo( 'description', 'display' );
 ?>
 <!doctype html>
 <html amp <?php language_attributes(); ?>>
@@ -29,10 +30,8 @@
 				<?php else : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				<?php endif; ?>
-
 			</<?php ampconf_branding_tag(); ?>>
 
-			<?php $description = get_bloginfo( 'description', 'display' ); ?>
 			<?php if ( $description || is_customize_preview() ) : ?>
 				<p class="wrap__item--branding-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
@@ -48,6 +47,7 @@
 						'menu_id'        => false,
 					)
 				);
+				get_search_form();
 			?>
 		</nav>
 	</header>

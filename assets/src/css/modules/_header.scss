@@ -149,6 +149,10 @@
 		padding: 16px;
 		z-index: 10;
 
+		& > div {
+			float: left;
+		}
+
 		a {
 			color: $white;
 		}
@@ -173,7 +177,7 @@
 			}
 		}
 
-		.menu-item-search-form {
+		& > form {
 			float: right;
 			margin-top: -4px;
 			margin-bottom: -4px;

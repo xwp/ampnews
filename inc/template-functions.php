@@ -30,22 +30,3 @@ function ampconf_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'ampconf_pingback_header' );
-
-/**
- * Adds a search form as the last top-level menu item of the header menu.
- *
- * @param string   $items The HTML list content for the menu items.
- * @param stdClass $args  An object containing wp_nav_menu() arguments.
- *
- * @return string $items
- */
-function ampconf_wp_nav_menu_items( $items, $args ) {
-	if ( 'header' !== $args->theme_location ) {
-		return $items;
-	}
-
-	$form = '<li class="menu-item menu-item-search-form">' . get_search_form( false ) . '</li>';
-
-	return $items . $form;
-}
-add_filter( 'wp_nav_menu_items', 'ampconf_wp_nav_menu_items', 10, 2 );
