@@ -1,0 +1,32 @@
+//
+// Inline form.
+//
+
+.inline-form {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	max-width: 320px;
+	margin: 0 auto;
+	background-color: $light-grey;
+	border: 1px solid $border-color;
+
+	&__wrap {
+		flex: 1 1 auto;
+	}
+
+	&__input {
+		min-height: 40px;
+		padding: 10px;
+		border: none;
+		background-color: transparent;
+
+		&--field {
+			width: 100%;
+		}
+
+		&--submit {
+			font-weight: 700;
+		}
+	}
+}

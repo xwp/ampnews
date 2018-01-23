@@ -45,6 +45,24 @@
 				<div class="wrap__subitem wrap__subitem--blog">
 					<?php include 'templates/entry--slim.php'; ?>
 				</div>
+				<div class="wrap__subitem wrap__subitem--widget">
+					<?php include 'templates/widget-newsletter.php'; ?>
+				</div>
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php include 'templates/entry--slim.php'; ?>
+				</div>
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php include 'templates/entry--slim.php'; ?>
+				</div>
+				<div class="wrap__subitem wrap__subitem--widget">
+					<amp-img
+							src="https://placehold.it/300x250"
+							alt="Dev note: this is an ad placeholder"
+							width="300"
+							height="250"
+							layout="fixed">
+					</amp-img>
+				</div>
 				<div class="wrap__subitem wrap__subitem--blog">
 					<?php include 'templates/entry--slim.php'; ?>
 				</div>

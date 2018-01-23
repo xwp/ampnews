@@ -12,15 +12,15 @@
 		<a href="single.php#development=1">
 			<amp-img class="entry__image"
 					 alt="Post title"
-					 src="https://placehold.it/335x225"
-					 width="335"
-					 height="225"
+					 src="https://placehold.it/280x188"
+					 width="280"
+					 height="188"
 					 layout="responsive"
-					 srcset="https://placehold.it/280x188 320w,
-					    https://placehold.it/335x225 375w,
-					    https://placehold.it/727x508 727w"
-					 sizes="(max-width: 767px) calc( 100vw - 40px ),
-					    (max-width: 1023px) calc( 66.667vw - 40px ),
+					 srcset="https://placehold.it/122x82 380w,
+					    https://placehold.it/160x107 1023w,
+					    https://placehold.it/240x161 1024w"
+					 sizes="(max-width: 479px) 122px,
+					    (max-width: 1023px) 160px,
 					    240px">
 			</amp-img>
 		</a>

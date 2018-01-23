@@ -16,3 +16,4 @@ include 'widget-archive.php';
 include 'widget-categories.php';
 include 'widget-meta.php';
 include 'widget-rss.php';
+include 'widget-newsletter.php';
