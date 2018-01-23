@@ -40,10 +40,11 @@
 	}
 
 	//
-	// Entry summary.
+	// Entry summary and content.
 	//
 
-	&__summary {
+	&__summary,
+	&__content {
 		line-height: 1.5;
 		color: $muted;
 

@@ -5,10 +5,11 @@
 .entry {
 
 	&--featured {
+		display: flex;
+		flex-flow: column nowrap;
 		padding: 0 20px;
 
 		@media ( query( min, tablet ) ) {
-			display: flex;
 			flex-flow: row wrap;
 			padding-bottom: 25px;
 		}
@@ -116,10 +117,11 @@
 	}
 
 	//
-	// Summary.
+	// Summary and content.
 	//
 
-	&--featured &__summary {
+	&--featured &__summary,
+	&--featured &__content {
 		@media ( query( min, tablet ) ) {
 			order: 2;
 			max-width: 720px;
@@ -132,6 +134,12 @@
 		@media ( query( min, desktop ) ) {
 			font-size: 20px;
 			line-height: #{ 33px / 20px };
+		}
+	}
+
+	&--featured &__content {
+		@media ( query( max, tablet ) ) {
+			order: 1;
 		}
 	}
 
