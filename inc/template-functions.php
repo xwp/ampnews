@@ -44,16 +44,7 @@ function ampconf_wp_nav_menu_items( $items, $args ) {
 		return $items;
 	}
 
-	$form = '<li class="menu-item menu-item-search-form">
-		<form role="search" method="get" target="_top" action="' . esc_url( home_url( '/' ) ) . '">
-			<label>
-				<span class="screen-reader-text">' . _x( 'Search for:', 'label', 'ampconf' ) . '</span>
-				<input type="search" placeholder="' . esc_attr_x( 'Search', 'placeholder', 'ampconf' ) . '" value="' . get_search_query() . '" name="s" />
-			</label>
-
-			<button type="submit"></button>
-		</form>
-	</li>';
+	$form = '<li class="menu-item menu-item-search-form">' . get_search_form( false ) . '</li>';
 
 	return $items . $form;
 }
