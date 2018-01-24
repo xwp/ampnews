@@ -10,7 +10,7 @@
 <section class="entry entry--slim">
 	<header class="entry__header">
 		<h3 class="entry__title">
-			<?php esc_html_e( 'Nothing Found', 'ampconf' ); ?>
+			<?php esc_html_e( 'No Content Found', 'ampconf' ); ?>
 		</h3>
 	</header><!-- .entry__header -->
 
@@ -37,11 +37,26 @@
 			</p>
 
 		<?php else : ?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'ampconf' ); ?></p>
+			<p>
 			<?php
-				get_search_form();
+			printf(
+				wp_kses(
+					/* translators: 1: link to WP admin new post page. */
+					__( 'It looks like nothing was found at this location. Return <a href="%1$s">home</a>, use the sidebar to find what you’re looking for, or try a search below.', 'ampconf' ),
+					array(
+						'a' => array(
+							'href' => array(),
+						),
+					)
+				),
+				esc_url( home_url( '/' ) )
+			);
+			?>
+			</p>
 
+			<?php
+
+				get_search_form();
 		endif;
 		?>
 	</div><!-- .entry__summary -->

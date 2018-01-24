@@ -49,8 +49,11 @@ get_header(); ?>
 			endwhile;
 
 		else :
-
-			get_template_part( 'template-parts/content', 'none' );
+			?>
+			<div class="wrap__subitem wrap__subitem--blog">
+				<?php get_template_part( 'templates/entry/none' ); ?>
+			</div>
+			<?php
 
 		endif;
 		?>
