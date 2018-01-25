@@ -50,11 +50,11 @@
 			and interact with. Move your cursor around and you'll notice the different blocks light up with outlines
 			and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the
 			process of copying and pasting.</p>
+		<p>What you are reading now is a <strong>text block</strong>, the most basic block of all. The text block
+			has its own controls to be moved freely around the post…</p>
 		<section class="wp-block-cover-image has-background-dim alignwide amp-wp-inline-someimagecoverhash">
 			<h2>Of Mountains &amp; Printing Presses</h2>
 		</section>
-		<p>What you are reading now is a <strong>text block</strong>, the most basic block of all. The text block
-			has its own controls to be moved freely around the post…</p>
 		<p class="amp-wp-inline-256659ade2cf5854eb8a79d0057ffb1c">… like this one, which is right aligned.</p>
 		<p>Headings are separate blocks as well, which helps with the outline and organization of your content.</p>
 		<h1>Heading 1</h1>
@@ -189,11 +189,19 @@
 					 sizes="(min-width: 600px) 600px, 100vw"></amp-img>
 		</p>
 
+		<div class="entry__share entry__share--in-content">
+			<?php include 'social-share.php'; ?>
+		</div>
+
 	</div><!-- .entry__content -->
 
 	<footer class="entry__footer">
 		<?php include 'entry__meta--date.php'; ?>
 		<?php include 'entry__meta--byline.php'; ?>
 		<?php include 'entry__meta--category.php'; ?>
+
+		<div class="entry__share entry__share--in-footer">
+			<?php include 'social-share.php'; ?>
+		</div>
 	</footer><!-- .entry__footer -->
 </article><!-- .entry -->

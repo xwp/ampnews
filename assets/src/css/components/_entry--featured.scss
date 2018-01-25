@@ -7,7 +7,7 @@
 	&--featured {
 		display: flex;
 		flex-flow: column nowrap;
-		padding: 0 20px;
+		padding: 20px;
 
 		@media ( query( min, tablet ) ) {
 			flex-flow: row wrap;
@@ -29,7 +29,7 @@
 	//
 
 	&--featured &__thumbnail {
-		margin: 0 #{ -$site-gutter };
+		margin: -20px #{ -$site-gutter } 0;
 
 		@media ( query( min, tablet ) ) {
 			width: calc( 100% + 40px );
@@ -79,10 +79,6 @@
 			padding: 0;
 			font-size: 16px;
 			line-height: #{ 30px / 16px };
-
-			&::after {
-				content: none;
-			}
 		}
 
 		@media ( query( min, desktop ) ) {
@@ -116,6 +112,26 @@
 		}
 	}
 
+	&--featured &__footer &__meta--byline + &__meta--category::before {
+		@media ( query( min, tablet ) ) {
+			content: none;
+		}
+	}
+
+	//
+	// Share bar.
+	//
+
+	&--featured &__share--in-footer {
+		@media ( query( max, tablet ) ) {
+			display: none;
+		}
+	}
+
+	&--featured &__meta + &__share {
+		padding-top: 50px;
+	}
+
 	//
 	// Summary and content.
 	//
@@ -123,7 +139,7 @@
 	&--featured &__summary,
 	&--featured &__content {
 		@media ( query( min, tablet ) ) {
-			order: 2;
+			order: 3;
 			width: calc( 100% - 150px );
 			max-width: 720px;
 			padding-left: 30px;

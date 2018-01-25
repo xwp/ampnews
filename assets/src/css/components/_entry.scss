@@ -160,21 +160,26 @@
 			font-weight: 400;
 			color: $muted;
 		}
-
-		// Meta items separators.
-		&::after {
-			content: '';
-			display: inline-block;
-			margin: 0 1em 0 0;
-			padding: 1em 1em 0 0;
-			border-right: 1px solid $border-color;
-			vertical-align: middle;
-		}
 	}
 
-	// Don't show meta separators in the header and after last meta item.
-	&__meta:last-child::after,
-	&__header &__meta::after {
-		content: none;
+	//
+	// Meta items separators.
+	//
+
+	&__footer &__meta--byline + &__meta--category::before {
+		content: '';
+		display: inline-block;
+		margin: 0 0 0 1em;
+		padding: 1em 0 0 1em;
+		border-left: 1px solid $border-color;
+		vertical-align: middle;
+	}
+
+	//
+	// Share bar.
+	//
+
+	&__share--in-content {
+		text-align: center;
 	}
 }
