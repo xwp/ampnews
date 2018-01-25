@@ -19,6 +19,7 @@
 	&.aligncenter,
 	&.alignfull,
 	&.alignwide {
+		clear: both;
 		margin: 32px #{ -$site-gutter };
 		width: calc( 100% + #{ 2 * $site-gutter } );
 	}
