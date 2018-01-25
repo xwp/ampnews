@@ -18,7 +18,11 @@
 		</style>
 	</head>
 	<body>
-		<?php include 'templates/site-header.php'; ?>
+		<?php
+		$has_separator = true;
+		include 'templates/site-header.php';
+		unset( $has_separator );
+		?>
 
 		<div class="wrap">
 
