@@ -166,6 +166,7 @@
 
 		&-pullquote {
 			@extend .wp-block-quote;
+			max-width: 100%;
 
 			@media ( query( min, tablet ) ) {
 				width: 320px;
