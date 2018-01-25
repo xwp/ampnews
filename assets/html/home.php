@@ -66,8 +66,11 @@
 							layout="fixed">
 					</amp-img>
 				</div>
-				<div class="wrap__subitem wrap__subitem--blog">
+				<div class="wrap__subitem wrap__subitem--blog wrap__subitem--no-separator">
 					<?php include 'templates/entry--slim.php'; ?>
+				</div>
+				<div class="wrap__subitem wrap__subitem--blog wrap__subitem--no-separator">
+					<a href="#" class="button">Load more stories</a>
 				</div>
 			</div>
 			<div class="wrap__item wrap__item--blog wrap__item--blog--secondary">
