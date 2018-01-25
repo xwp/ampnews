@@ -64,6 +64,11 @@
 	}
 
 	&__content {
+		margin-top: -17px;
+
+		@media ( query( min, desktop ) ) {
+			margin-top: -12px;
+		}
 
 		p,
 		ul,

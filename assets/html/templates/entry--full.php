@@ -74,8 +74,17 @@
 			find aspects of adding captions or going full-width with your pictures much easier and robust than
 			before.</p>
 		<figure class="wp-block-image aligncenter">
-			<amp-img src="https://cldup.com/cXyG__fTLN.jpg" alt="Beautiful landscape" width="2256" height="1506"
-					 sizes="(min-width: 600px) 600px, 100vw" class="amp-wp-enforced-sizes"></amp-img>
+			<!-- Dev Note: `amp-img` example for `aligncenter` image (`sizes` in particular) -->
+			<amp-img
+					src="https://cldup.com/cXyG__fTLN.jpg"
+					alt="Beautiful landscape"
+					width="2256"
+					height="1506"
+					layout="responsive"
+					sizes="(max-width: 767px) 100vw,
+					   (max-width: 909px) calc(100vw - 220px),
+					   690px">
+			</amp-img>
 			<figcaption>Give it a try. Press the "wide" button on the image toolbar.</figcaption>
 		</figure>
 		<p>Try selecting and removing or editing the caption, now you don't have to be careful about selecting the
@@ -128,9 +137,17 @@
 		<p>If you combine the new <strong>wide</strong> and <strong>full-wide</strong> alignments with galleries,
 			you can create a very media rich layout, very quickly:</p>
 		<figure class="wp-block-image alignfull">
-			<amp-img src="https://cldup.com/8lhI-gKnI2.jpg"
-					 alt="Accessibility is important don't forget image alt attribute" width="1122" height="750"
-					 sizes="(min-width: 600px) 600px, 100vw" class="amp-wp-enforced-sizes"></amp-img>
+			<!-- Dev Note: `amp-img` example for `alignfull` image (`sizes` in particular) -->
+			<amp-img
+					src="https://cldup.com/8lhI-gKnI2.jpg"
+					alt="Accessibility is important don't forget image alt attribute"
+					width="1122"
+					height="750"
+					layout="responsive"
+					sizes="(max-width: 1080px) 100vw,
+					   1040px">
+			</amp-img>
+			<figcaption>Give it a try. Press the "wide" button on the image toolbar.</figcaption>
 		</figure>
 		<p>Sure, the full-wide image can be pretty big. But sometimes the image is worth it.</p>
 		<div class="wp-block-gallery alignwide columns-2 is-cropped">

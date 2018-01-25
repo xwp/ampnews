@@ -124,6 +124,7 @@
 	&--featured &__content {
 		@media ( query( min, tablet ) ) {
 			order: 2;
+			width: calc( 100% - 150px );
 			max-width: 720px;
 			padding-left: 30px;
 			flex: 1 1;
