@@ -13,6 +13,9 @@
 		<?php include 'templates/head-common.php'; ?>
 		<title>AMP WordPress Theme Static Archive Template</title>
 		<link rel="canonical" href="archive.html">
+		<style amp-custom>
+			<?php include 'templates/site-css.php'; ?>
+		</style>
 	</head>
 	<body>
 		<?php include 'templates/site-header.php'; ?>
