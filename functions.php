@@ -106,7 +106,7 @@ add_action( 'after_setup_theme', 'ampconf_setup' );
  * @global int $content_width
  */
 function ampconf_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'ampconf_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'ampconf_content_width', 694 );
 }
 add_action( 'after_setup_theme', 'ampconf_content_width', 0 );
 
