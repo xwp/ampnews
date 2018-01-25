@@ -50,7 +50,7 @@
 			and interact with. Move your cursor around and you'll notice the different blocks light up with outlines
 			and arrows. Press the arrows to reposition blocks quickly, without fearing about losing things in the
 			process of copying and pasting.</p>
-		<section class="wp-block-cover-image has-background-dim alignwide">
+		<section class="wp-block-cover-image has-background-dim alignwide amp-wp-inline-someimagecoverhash">
 			<h2>Of Mountains &amp; Printing Presses</h2>
 		</section>
 		<p>What you are reading now is a <strong>text block</strong>, the most basic block of all. The text block
