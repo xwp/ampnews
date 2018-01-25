@@ -110,7 +110,7 @@
 		<p>A huge benefit of blocks is that you can edit them in place and manipulate your content directly. Instead
 			of having fields for editing things like the source of a quote, or the text of a button, you can
 			directly change the content. Try editing the following quote:</p>
-		<blockquote class="wp-block-quote">
+		<blockquote class="wp-block-pullquote alignnone">
 			<p>The editor will endeavour to create a new page and post building experience that makes writing rich
 				posts effortless, and has “blocks” to make it easy what today might take shortcodes, custom HTML, or
 				“mystery meat” embed discovery.</p><cite>Matt Mullenweg, 2017</cite></blockquote>
@@ -167,7 +167,7 @@
 			<amp-vimeo data-videoid="22439234" layout="responsive" width="640" height="360"></amp-vimeo>
 		</figure>
 		<p>You can build any block you like, static or dynamic, decorative or plain. Here's a pullquote block:</p>
-		<blockquote class="wp-block-pullquote alignnone">
+		<blockquote class="wp-block-quote">
 			<p>Code is Poetry</p><cite>The WordPress community</cite></blockquote>
 		<p class="amp-wp-inline-2f0158eb062d1ac553a7edcb8a744628"><em>If you want to learn more about how to build
 				additional blocks, or if you are interested in helping with the project, head over to the <a

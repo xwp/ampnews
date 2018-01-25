@@ -2,7 +2,7 @@
 // Gutenberg blocks.
 //
 
-.wp-block {
+.entry__content .wp-block {
 
 	//
 	// Image block.
@@ -95,6 +95,18 @@
 
 	&-pullquote {
 		@extend .wp-block-quote;
+
+		@media ( query( min, tablet ) ) {
+			width: 320px;
+			margin: 0 30px 20px -150px;
+			float: left;
+		}
+
+		@media ( query( min, desktop ) ) {
+			width: 420px;
+			margin-left: -180px;
+			font-size: 36px;
+		}
 	}
 
 	//
