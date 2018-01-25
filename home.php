@@ -12,16 +12,36 @@
 
 get_header(); ?>
 
-	<div class="wrap__item wrap__item--full-width">
-		<?php get_template_part( 'templates/entry/featured' ); ?>
-	</div>
+	<?php
+	// Only show the feature and subfeatures when not paged.
+	if ( ! is_paged() ) {
+		if ( have_posts() ) {
+			$post_count = 0;
 
-	<div class="wrap__item wrap__item--half wrap__item--half--primary">
-		<?php get_template_part( 'templates/entry/default' ); ?>
-	</div>
-	<div class="wrap__item wrap__item--half wrap__item--half--secondary">
-		<?php get_template_part( 'templates/entry/default' ); ?>
-	</div>
+			while ( have_posts() ) {
+				the_post();
+
+				$post_count++;
+
+				if ( 1 === $post_count ) {
+					?>
+					<div class="wrap__item wrap__item--full-width">
+						<?php get_template_part( 'templates/entry/featured' ); ?>
+					</div>
+					<?php
+				} elseif ( 3 >= $post_count ) {
+					?>
+					<div class="wrap__item wrap__item--half wrap__item--half--primary">
+						<?php get_template_part( 'templates/entry/default' ); ?>
+					</div>
+					<?php
+				} else {
+					break;
+				}
+			}
+		}
+	}
+	?>
 
 	<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
 		<?php
@@ -56,6 +76,8 @@ get_header(); ?>
 			<?php
 
 		endif;
+
+		the_posts_pagination();
 		?>
 	</main>
 

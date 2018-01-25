@@ -1,11 +1,17 @@
 <?php
 /**
- * AMPConf static entry byline partial.
+ * Entry byline partial.
  *
  * @package AMPConf
  */
 
 ?>
 <span class="entry__meta entry__meta--byline">
-	by <span class="author vcard"><a class="url fn n" href="archive.php#development=1">Joon Ian Wong</a></span>
+	<?php
+	printf(
+		/* translators: %s: post author. */
+		esc_html_x( 'by %s', 'post author', 'ampconf' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+	?>
 </span>

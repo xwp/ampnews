@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPConf static slim entry template.
+ * Slim entry template.
  *
  * @package AMPConf
  */
@@ -28,13 +28,11 @@
 
 	<header class="entry__header">
 		<?php get_template_part( 'templates/entry/meta/date' ); ?>
-		<h3 class="entry__title">
-			<a href="single.php#development=1" rel="bookmark">The eight African elections to watch out for in 2018</a>
-		</h3>
+		<?php the_title( '<h3 class="entry__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' ); ?>
 	</header><!-- .entry__header -->
 
 	<div class="entry__summary">
-		<p>For many African countries, 2017 was the beginning of a new era. Long-term rulers departed in...</p>
+		<p><?php the_excerpt(); ?></p>
 	</div><!-- .entry__summary -->
 
 	<footer class="entry__footer">

@@ -1,6 +1,6 @@
 <?php
 /**
- * No content template.
+ * No entry template.
  *
  * @package AMPConf
  */
