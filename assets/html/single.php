@@ -51,7 +51,7 @@
 				<?php include 'templates/entry--slim.php'; ?>
 			</div>
 
-			<div class="wrap__item">
+			<div class="wrap__item wrap__item--no-separator">
 				<?php include 'templates/comments.php'; ?>
 			</div>
 		</div>

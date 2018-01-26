@@ -41,12 +41,13 @@
 				padding-top: 5px;
 				text-align: right;
 				font-size: 14px;
+				line-height: 1.4;
 				font-weight: 700;
 			}
 
 			&-content {
 				order: 2;
-				width: calc( 100% - 5px );
+				width: 100%;
 				flex: 0 1 auto;
 				padding-left: 65px;
 				color: $muted;
@@ -101,7 +102,7 @@
 				&::after {
 					content: '';
 					position: absolute;
-					bottom: 0;
+					top: -20px;
 					left: 0;
 					right: 0;
 					border-bottom: 1px solid $border-color;
@@ -117,6 +118,7 @@
 
 				ul,
 				ol {
+
 					ul,
 					ol {
 						margin: 10px 0;
@@ -150,6 +152,7 @@
 
 			@media ( query( min, tablet ) ) {
 				@for $i from 2 through 10 {
+
 					&.depth-#{ $i } {
 						padding-left: 77px;
 
@@ -159,6 +162,100 @@
 					}
 				}
 			}
+
+			&:first-child > .comment-body::after {
+				content: none;
+			}
 		}
+	}
+
+
+	//
+	// Reply form.
+	//
+
+	.comment {
+
+		&-respond {
+			padding: 20px 0 0;
+			font-size: 14px;
+			color: $muted;
+
+			@media ( query( min, tablet ) ) {
+				font-size: 16px;
+			}
+		}
+
+		&-reply-title {
+			margin: 20px 0;
+			font-size: 16px;
+			line-height: 1.4;
+			font-weight: 400;
+			text-transform: none;
+			color: $black;
+
+			@media ( query( min, tablet ) ) {
+				font-size: 18px;
+				margin-bottom: 0;
+			}
+		}
+
+		&-form {
+
+			label {
+				display: block;
+				padding: 10px 0;
+			}
+
+			input[type='text'],
+			input[type='email'],
+			input[type='url'],
+			textarea {
+				display: block;
+				width: 100%;
+				padding: 9px;
+				background-color: $light-grey;
+				border: 1px solid $border-color;
+			}
+
+			input[type='submit'] {
+				@extend .button;
+				width: 100%;
+				font-size: 14px;
+
+				@media ( query( min, tablet ) ) {
+					font-size: 16px;
+				}
+			}
+
+			.form-submit {
+				margin: 30px 0 0;
+			}
+
+			@media ( query( min, tablet ) ) {
+				display: flex;
+				flex-flow: row wrap;
+
+				> p {
+					flex: 0 0 auto;
+					width: 100%;
+					margin-bottom: 0;
+				}
+
+				.comment-form-author {
+					width: 50%;
+					padding-right: 15px;
+				}
+
+				.comment-form-email {
+					width: 50%;
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+
+	&__log-in-button {
+		margin: 10px 0 0;
 	}
 }

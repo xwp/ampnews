@@ -896,15 +896,54 @@
 		</li><!-- #comment-## -->
 	</ol><!-- .comment-list -->
 
+	<div class="comments__log-in-button">
+		<a href="#" class="button">Please log in to comment</a>
+	</div>
+
 	<div id="respond" class="comment-respond">
 		<h3 id="reply-title" class="comment-reply-title">
 			Leave a Reply
-			<small><a rel="nofollow" id="cancel-comment-reply-link" href="#">Cancel reply</a></small>
+			<small>
+				<a rel="nofollow" id="cancel-comment-reply-link" href="#" class="screen-reader-text">Cancel reply</a>
+			</small>
 		</h3>
 		<form action-xhr="#"
 			  method="post"
 			  target="_top"
 			  id="commentform"
+			  class="comment-form"
+			  novalidate>
+			<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required
+				fields are marked <span class="required">*</span></p>
+			<p class="comment-form-comment"><label for="comment">Comment</label>
+				<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true"
+						  required="required"></textarea></p>
+			<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input
+						id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true'
+						required='required'/></p>
+			<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label>
+				<input id="email" name="email" type="email" value="" size="30" maxlength="100"
+					   aria-describedby="email-notes" aria-required='true' required='required'/></p>
+			<p class="comment-form-url"><label for="url">Website</label>
+				<input id="url" name="url" type="url" value="" size="30" maxlength="200"/></p>
+			<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"/>
+				<input type='hidden' name='comment_post_ID' value='149' id='comment_post_ID'/>
+				<input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+			</p>
+		</form>
+	</div><!-- #respond -->
+
+	<div id="respond-logged-in" class="comment-respond">
+		<h3 id="reply-title-1" class="comment-reply-title">
+			Leave a Reply
+			<small>
+				<a rel="nofollow" id="cancel-comment-reply-link-1" href="#" class="screen-reader-text">Cancel reply</a>
+			</small>
+		</h3>
+		<form action-xhr="#"
+			  method="post"
+			  target="_top"
+			  id="commentform-1"
 			  class="comment-form"
 			  novalidate>
 			<p class="logged-in-as">
@@ -913,20 +952,20 @@
 				<a href="#">Log out?</a>
 			</p>
 			<p class="comment-form-comment">
-				<label for="comment">Comment</label>
-				<textarea id="comment" name="comment"
+				<label for="comment-1">Comment</label>
+				<textarea id="comment-1" name="comment"
 						  cols="45" rows="8"
 						  maxlength="65525"
 						  aria-required="true"
 						  required="required"></textarea>
 			</p>
 			<p class="form-submit">
-				<input name="submit" type="submit" id="submit" class="submit" value="Post Comment"/>
-				<input type='hidden' name='comment_post_ID' value='149' id='comment_post_ID'/>
-				<input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+				<input name="submit" type="submit" id="submit-1" class="submit" value="Post Comment"/>
+				<input type='hidden' name='comment_post_ID' value='149' id='comment_post_ID-1'/>
+				<input type='hidden' name='comment_parent' id='comment_parent-1' value='0'/>
 			</p>
 			<input type="hidden"
-				   id="_wp_unfiltered_html_comment_disabled"
+				   id="_wp_unfiltered_html_comment_disabled-1"
 				   name="_wp_unfiltered_html_comment_disabled" value="470d8ca972"/>
 		</form>
 	</div><!-- #respond -->
