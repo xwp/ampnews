@@ -94,6 +94,25 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Custom image sizes.
+		foreach ( array(
+			'1040x400',
+			'768x461',
+			'768x295',
+			'727x508',
+			'375x225',
+			'335x225',
+			'320x192',
+			'280x188',
+			'240x161',
+			'160x107',
+			'122x82',
+		) as $size ) {
+			$dimensions = explode( 'x', $size );
+
+			add_image_size( 'ampconf-' . $size, $dimensions[0], $dimensions[1], true );
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'ampconf_setup' );
