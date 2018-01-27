@@ -8,32 +8,9 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry entry--featured' ); ?>>
 	<figure class="entry__thumbnail">
-		<a href="single.php#development=1">
-			<amp-img class="entry__image"
-					 alt="Post title"
-					 src="https://placehold.it/320x192"
-					 width="375"
-					 height="225"
-					 layout="responsive"
-					 media="(max-width: 767px)"
-					 srcset="https://placehold.it/320x192 320w,
-					    https://placehold.it/375x225 375w, https://placehold.it/768x461 768w"
-					 sizes="100vw">
-			</amp-img>
-			<amp-img class="entry__image"
-					 alt="Post title"
-					 src="https://placehold.it/320x192"
-					 width="1040"
-					 height="400"
-					 layout="responsive"
-					 media="(min-width: 768px)"
-					 srcset="https://placehold.it/768x295 768w,
-					    https://placehold.it/1040x400 1040w"
-					 sizes="(max-width: 1023px) 100vw,
-					    (max-width: 1039px) calc( 100vw - 40px ),
-					    (max-width: 1079px) 1000px,
-					    1040px">
-			</amp-img>
+		<a href="<?php esc_url( the_permalink() ); ?>">
+			<?php the_post_thumbnail( 'ampconf-375x225' ); ?>
+			<?php the_post_thumbnail( 'ampconf-1040x400' ); ?>
 		</a>
 	</figure><!-- .entry__thumbnail -->
 

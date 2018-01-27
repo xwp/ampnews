@@ -8,20 +8,8 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
 	<figure class="entry__thumbnail">
-		<a href="single.php#development=1">
-			<amp-img class="entry__image"
-					 alt="Post title"
-					 src="https://placehold.it/335x225"
-					 width="335"
-					 height="225"
-					 layout="responsive"
-					 srcset="https://placehold.it/280x188 320w,
-					    https://placehold.it/335x225 375w,
-					    https://placehold.it/727x508 727w"
-					 sizes="(max-width: 767px) calc( 100vw - 40px ),
-					    (max-width: 1079px) calc( 50vw - 35px ),
-					    505px">
-			</amp-img>
+		<a href="<?php esc_url( the_permalink() ); ?>">
+			<?php the_post_thumbnail( 'ampconf-335x225' ); ?>
 		</a>
 	</figure><!-- .entry__thumbnail -->
 
