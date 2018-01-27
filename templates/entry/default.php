@@ -6,7 +6,7 @@
  */
 
 ?>
-<article class="entry">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
 	<figure class="entry__thumbnail">
 		<a href="single.php#development=1">
 			<amp-img class="entry__image"
