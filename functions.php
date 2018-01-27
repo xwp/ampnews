@@ -150,23 +150,6 @@ function ampconf_widgets_init() {
 add_action( 'widgets_init', 'ampconf_widgets_init' );
 
 /**
- * Adds custom component scripts to the document.
- *
- * @todo Remove once amp-wp plugin automatically includes component scripts.
- *
- * @param array $amp_scripts AMP Component scripts, mapping component names to component source URLs.
- *
- * @return array
- */
-function ampconf_amp_component_scripts( $amp_scripts ) {
-	$amp_scripts['amp-form'] = 'https://cdn.ampproject.org/v0/amp-form-0.1.js';
-	$amp_scripts['amp-bind'] = 'https://cdn.ampproject.org/v0/amp-bind-0.1.js';
-
-	return $amp_scripts;
-}
-add_filter( 'amp_component_scripts', 'ampconf_amp_component_scripts' );
-
-/**
  * Enqueues styles.
  */
 function ampconf_enqueue_styles() {
