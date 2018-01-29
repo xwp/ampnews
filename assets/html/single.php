@@ -51,11 +51,8 @@
 				<?php include 'templates/entry--slim.php'; ?>
 			</div>
 
-			<div class="wrap__item wrap__item--heading">
-				<h3 class="heading heading--widget">Comments</h3>
-			</div>
-			<div class="wrap__item">
-				Comment goes here.
+			<div class="wrap__item wrap__item--no-separator">
+				<?php include 'templates/comments.php'; ?>
 			</div>
 		</div>
 
