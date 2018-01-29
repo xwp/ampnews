@@ -7,7 +7,7 @@
 	&--featured {
 		display: flex;
 		flex-flow: column nowrap;
-		padding: 0 20px;
+		padding: 10px 20px 0;
 
 		@media ( query( min, tablet ) ) {
 			flex-flow: row wrap;
@@ -29,7 +29,7 @@
 	//
 
 	&--featured &__thumbnail {
-		margin: 0 #{ -$site-gutter };
+		margin: -10px #{ -$site-gutter } 0;
 
 		@media ( query( min, tablet ) ) {
 			width: calc( 100% + 40px );
@@ -37,7 +37,7 @@
 
 		@media ( query( min, desktop ) ) {
 			width: 100%;
-			margin: 0;
+			margin: -10px 0 0;
 		}
 	}
 
@@ -46,13 +46,6 @@
 	//
 
 	&--featured &__header {
-
-		&:first-child {
-			@media ( query( max, tablet ) ) {
-				padding-top: 30px;
-			}
-		}
-
 		@media ( query( min, tablet ) ) {
 			width: 100%;
 			padding: 25px 0 15px;
