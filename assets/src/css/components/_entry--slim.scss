@@ -40,6 +40,7 @@
 	//
 
 	&--slim &__header {
+		padding: 0;
 		margin-right: 142px;
 
 		@media ( query( min, mobile-large ) ) {
@@ -48,7 +49,6 @@
 
 		@media ( query( min, desktop ) ) {
 			margin-right: 270px;
-			padding: 0;
 		}
 	}
 

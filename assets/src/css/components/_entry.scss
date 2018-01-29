@@ -13,7 +13,7 @@
 
 	&__thumbnail {
 		margin: 0;
-		padding: 0 0 20px;
+		padding: 0;
 	}
 
 	//
@@ -21,6 +21,8 @@
 	//
 
 	&__header {
+		padding: 20px 0 0;
+
 		@media ( query( min, desktop ) ) {
 			padding: 15px 0 0;
 		}
@@ -33,6 +35,7 @@
 	&__title {
 		margin: 0;
 		font-size: 24px;
+		text-transform: none;
 
 		@media ( query( min, desktop ) ) {
 			font-size: 36px;
@@ -40,10 +43,11 @@
 	}
 
 	//
-	// Entry summary.
+	// Entry summary and content.
 	//
 
-	&__summary {
+	&__summary,
+	&__content {
 		line-height: 1.5;
 		color: $muted;
 
@@ -60,6 +64,53 @@
 			}
 		}
 	}
+
+	&__content {
+		margin-top: -17px;
+
+		@media ( query( min, desktop ) ) {
+			margin-top: -12px;
+		}
+
+		p,
+		ul,
+		ol,
+		dl,
+		table {
+			margin: 32px 0;
+		}
+
+		ul,
+		ol {
+			padding: 0 0 0 20px;
+		}
+
+		li {
+			margin: 6px 0;
+		}
+
+		.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		.alignleft {
+			float: left;
+			margin-left: 0;
+			margin-right: 20px;
+		}
+
+		.alignright {
+			float: right;
+			margin-left: 20px;
+			margin-right: 0;
+		}
+	}
+
+	//
+	// Link more.
+	//
 
 	&__link-more {
 		display: none;
@@ -111,21 +162,26 @@
 			font-weight: 400;
 			color: $muted;
 		}
-
-		// Meta items separators.
-		&::after {
-			content: '';
-			display: inline-block;
-			margin: 0 1em 0 0;
-			padding: 1em 1em 0 0;
-			border-right: 1px solid $border-color;
-			vertical-align: middle;
-		}
 	}
 
-	// Don't show meta separators in the header and after last meta item.
-	&__meta:last-child::after,
-	&__header &__meta::after {
-		content: none;
+	//
+	// Meta items separators.
+	//
+
+	&__footer &__meta--byline + &__meta--category::before {
+		content: '';
+		display: inline-block;
+		margin: 0 0 0 1em;
+		padding: 1em 0 0 1em;
+		border-left: 1px solid $border-color;
+		vertical-align: middle;
+	}
+
+	//
+	// Share bar.
+	//
+
+	&__share--in-content {
+		text-align: center;
 	}
 }
