@@ -1,0 +1,64 @@
+//
+// Horizontal menu.
+//
+
+.menu {
+
+	&--horizontal {
+		display: flex;
+		flex-flow: row nowrap;
+		white-space: nowrap;
+		overflow: auto;
+		overflow-x: scroll;
+		list-style: none;
+		height: 58px;
+		margin: 0 -10px;
+		padding: 8px 0;
+		font-weight: 700;
+		-webkit-overflow-scrolling: touch;
+
+		@media ( query( min, tablet ) ) {
+			flex-wrap: wrap;
+			overflow-x: auto;
+			white-space: normal;
+			margin: 0 -10px;
+			padding: 8px 0;
+			height: auto;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 1;
+			margin-top: -8px;
+			left: calc( 100vw - 75px );
+			width: 75px;
+			height: 58px;
+			background-image: linear-gradient( to left, #fff, transparent );
+
+			@media ( query( min, tablet ) ) {
+				content: none;
+			}
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		a {
+			display: block;
+			padding: 10px;
+		}
+	}
+
+	&--horizontal &-item:last-child {
+		padding-right: 65px;
+
+		@media ( query( min, tablet ) ) {
+			padding-right: 0;
+		}
+	}
+}
