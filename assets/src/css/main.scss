@@ -13,6 +13,8 @@
 
 // Components
 @import 'components/wrap';
+@import 'components/wrap--header';
+@import 'components/wrap--footer';
 @import 'components/entry';
 @import 'components/entry--featured';
 @import 'components/entry--slim';
@@ -22,7 +24,3 @@
 @import 'components/widget';
 @import 'components/social-share';
 @import 'components/comments';
-
-// Modules
-@import 'modules/header';
-@import 'modules/footer';
