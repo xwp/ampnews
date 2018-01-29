@@ -9,6 +9,11 @@
 	padding: 15px;
 	color: $white;
 	background-color: $black;
+	border: none;
 	font-weight: 700;
 	text-decoration: none;
+
+	&--inline {
+		display: inline-flex;
+	}
 }

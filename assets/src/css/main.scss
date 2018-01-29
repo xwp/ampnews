@@ -16,11 +16,13 @@
 @import 'components/entry';
 @import 'components/entry--featured';
 @import 'components/entry--slim';
+@import 'components/wp-block';
 @import 'components/inline-form';
 @import 'components/nav-links';
 @import 'components/widget';
+@import 'components/social-share';
+@import 'components/comments';
 
 // Modules
 @import 'modules/header';
 @import 'modules/footer';
-@import 'modules/stream';

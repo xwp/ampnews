@@ -9,7 +9,8 @@
 
 <header class="wrap wrap--header wrap--header__menu-hidden" [class]="mobileMenu ? 'wrap wrap--header' : 'wrap wrap--header wrap--header__menu-hidden'">
 
-	<div class="wrap__item wrap__item--branding">
+	<?php $wrap_item_modifier = isset( $has_separator ) ? '' : 'wrap__item--no-separator'; ?>
+	<div class="wrap__item wrap__item--branding <?php echo $wrap_item_modifier; ?>">
 		<h1 class="wrap__item--branding-title"><a href="home.php#development=1">Brand</a></h1>
 		<p class="wrap__item--branding-description">Previewing Another WordPress Blog</p>
 		<button class="wrap__item--menu-toggle" on="tap:AMP.setState( { mobileMenu: ! mobileMenu } )"></button>
