@@ -42,8 +42,9 @@ get_header(); ?>
 			endif;
 			?>
 		</main>
+
+		<?php get_sidebar(); ?>
 	</div><!-- .wrap -->
 
 <?php
-get_sidebar();
 get_footer();
