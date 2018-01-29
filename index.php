@@ -31,6 +31,7 @@ get_header(); ?>
 
 				endwhile;
 
+				the_posts_pagination();
 			else :
 
 				?>
