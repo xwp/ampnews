@@ -9,6 +9,8 @@
 
 ?>
 
+</div><!-- End #content -->
+
 <footer class="wrap wrap--full-width wrap--footer">
 	<nav class="wrap__item wrap__item--footer-menu">
 		<?php

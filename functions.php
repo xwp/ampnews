@@ -94,6 +94,25 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Custom image sizes.
+		foreach ( array(
+			'1040x400',
+			'768x461',
+			'768x295',
+			'727x508',
+			'375x225',
+			'335x225',
+			'320x192',
+			'280x188',
+			'240x161',
+			'160x107',
+			'122x82',
+		) as $size ) {
+			$dimensions = explode( 'x', $size );
+
+			add_image_size( 'ampconf-' . $size, $dimensions[0], $dimensions[1], true );
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'ampconf_setup' );
@@ -106,7 +125,7 @@ add_action( 'after_setup_theme', 'ampconf_setup' );
  * @global int $content_width
  */
 function ampconf_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'ampconf_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'ampconf_content_width', 694 );
 }
 add_action( 'after_setup_theme', 'ampconf_content_width', 0 );
 
@@ -129,23 +148,6 @@ function ampconf_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'ampconf_widgets_init' );
-
-/**
- * Adds custom component scripts to the document.
- *
- * @todo Remove once amp-wp plugin automatically includes component scripts.
- *
- * @param array $amp_scripts AMP Component scripts, mapping component names to component source URLs.
- *
- * @return array
- */
-function ampconf_amp_component_scripts( $amp_scripts ) {
-	$amp_scripts['amp-form'] = 'https://cdn.ampproject.org/v0/amp-form-0.1.js';
-	$amp_scripts['amp-bind'] = 'https://cdn.ampproject.org/v0/amp-bind-0.1.js';
-
-	return $amp_scripts;
-}
-add_filter( 'amp_component_scripts', 'ampconf_amp_component_scripts' );
 
 /**
  * Enqueues styles.
