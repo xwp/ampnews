@@ -25,6 +25,11 @@
 		?>
 
 		<div class="wrap">
+			<!-- START: Page heading -->
+			<div class="wrap__item wrap__item--page-heading">
+				<h1 class="heading heading--h1">October 2017</h1>
+			</div>
+			<!-- END: Page heading -->
 
 			<!-- START: Blog layout -->
 			<div class="wrap__item wrap__item--blog wrap__item--blog--primary">
