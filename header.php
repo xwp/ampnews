@@ -55,4 +55,4 @@ $description = get_bloginfo( 'description', 'display' );
 		</nav>
 	</header>
 
-	<div id="content" class="wrap">
+	<div id="content">

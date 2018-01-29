@@ -14,33 +14,35 @@
 
 get_header(); ?>
 
-	<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
-		<?php
-		if ( have_posts() ) :
+	<div class="wrap">
+		<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
+			<?php
+			if ( have_posts() ) :
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
+
+					?>
+					<div class="wrap__subitem wrap__subitem--blog">
+						<?php get_template_part( 'templates/entry/slim' ); ?>
+					</div>
+					<?php
+
+				endwhile;
+
+			else :
 
 				?>
 				<div class="wrap__subitem wrap__subitem--blog">
-					<?php get_template_part( 'templates/entry/slim' ); ?>
+					<?php get_template_part( 'templates/entry/none' ); ?>
 				</div>
 				<?php
 
-			endwhile;
-
-		else :
-
+			endif;
 			?>
-			<div class="wrap__subitem wrap__subitem--blog">
-				<?php get_template_part( 'templates/entry/none' ); ?>
-			</div>
-			<?php
-
-		endif;
-		?>
-	</main>
+		</main>
+	</div><!-- .wrap -->
 
 <?php
 get_sidebar();
