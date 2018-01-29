@@ -81,8 +81,9 @@ get_header(); ?>
 			the_posts_pagination();
 			?>
 		</main>
+
+		<?php get_sidebar(); ?>
 	</div><!-- .wrap -->
 
 <?php
-get_sidebar();
 get_footer();
