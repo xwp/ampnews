@@ -39,25 +39,16 @@
 	//
 
 	&--header &__item--branding {
-		position: relative;
-		margin-left: auto;
-		margin-right: auto;
 		border-bottom-color: $black;
 
 		@media ( query( max, tablet ) ) {
 			background-color: $black;
 			color: $white;
 			padding: 16px;
-
-			.container {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-			}
 		}
 
 		@media ( query( min, tablet ) ) {
-			flex-basis: 100%;
+			width: 100%;
 			order: 2;
 			text-align: center;
 		}
@@ -145,19 +136,36 @@
 
 	&--header &__item--menu {
 		position: relative;
-		background: $black;
+		background-color: $black;
 		color: $white;
 		padding: 16px;
 		z-index: 10;
-
-		a {
-			color: $white;
-		}
 
 		@media ( query( min, tablet ) ) {
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: space-between;
+			box-shadow: 30vw 0 0 $black, -30vw 0 0 $black;
+		}
+
+		@media ( query( min, site-width ) ) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&::after {
+			@media ( query( min, tablet ) ) {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				display: block;
+
+				background-color: $black;
+			}
+		}
+
+		a {
+			color: $white;
 		}
 
 		.menu-item-has-children {
