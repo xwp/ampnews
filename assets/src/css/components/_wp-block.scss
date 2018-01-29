@@ -3,6 +3,7 @@
 //
 
 .entry__content {
+
 	.alignnone,
 	.aligncenter,
 	.alignfull,
@@ -124,6 +125,7 @@
 			}
 
 			@for $i from 2 through 8 {
+
 				&.columns-#{ $i } figure {
 					width: calc( #{ 100% / $i } - 2px );
 				}
@@ -196,12 +198,6 @@
 				width: 150px;
 			}
 		}
-
-		//
-		// Embed block.
-		//
-
-		&-embed {}
 
 		//
 		// Button block.

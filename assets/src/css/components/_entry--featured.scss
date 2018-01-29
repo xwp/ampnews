@@ -46,13 +46,20 @@
 	//
 
 	&--featured &__header {
+
+		&:first-child {
+			@media ( query( max, tablet ) ) {
+				padding-top: 30px;
+			}
+		}
+
 		@media ( query( min, tablet ) ) {
 			width: 100%;
-			padding: 10px 0 15px;
+			padding: 25px 0 15px;
 		}
 
 		@media ( query( min, desktop ) ) {
-			padding: 20px 0 25px;
+			padding: 30px 0 25px;
 		}
 	}
 

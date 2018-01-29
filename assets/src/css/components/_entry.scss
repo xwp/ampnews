@@ -13,7 +13,7 @@
 
 	&__thumbnail {
 		margin: 0;
-		padding: 0 0 20px;
+		padding: 0;
 	}
 
 	//
@@ -21,6 +21,8 @@
 	//
 
 	&__header {
+		padding: 20px 0 0;
+
 		@media ( query( min, desktop ) ) {
 			padding: 15px 0 0;
 		}
