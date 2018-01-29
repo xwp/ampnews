@@ -30,3 +30,17 @@ function ampconf_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'ampconf_pingback_header' );
+
+/**
+ * Filters the string displayed after the excerpt.
+ *
+ * @param string $more_string The string after the excerpt.
+ *
+ * @return string $more_string
+ */
+function ampconf_excerpt_more( $more_string ) {
+	$more_string = '&hellip;';
+
+	return $more_string;
+}
+add_filter( 'excerpt_more', 'ampconf_excerpt_more' );
