@@ -151,3 +151,24 @@ if ( ! function_exists( 'ampconf_branding_tag' ) ) :
 		echo esc_html( ( is_front_page() && is_home() ) ? 'h1' : 'p' );
 	}
 endif;
+
+/**
+ * Render the HTML attributes for a post. Includes the_ID(), post_class(), and amp-live-list attributes.
+ *
+ * @see post_class()
+ * @globa WP_Post $post
+ */
+function ampconf_post_attributes() {
+	global $post;
+	if ( empty( $post ) ) {
+		return;
+	}
+
+	printf(
+		' id="%s" class="%s" data-sort-time="%d" data-update-time="%d" ',
+		esc_attr( $post->ID ),
+		esc_attr( join( ' ', get_post_class( '', $post->ID ) ) ),
+		esc_attr( mysql2date( 'U', $post->post_date_gmt ) ),
+		esc_attr( mysql2date( 'U', $post->post_modified_gmt ) )
+	);
+}
