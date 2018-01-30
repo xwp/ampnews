@@ -7,7 +7,7 @@
 
 ?>
 
-<section class="entry entry--slim">
+<section class="entry entry--none">
 	<?php if ( ! is_404() ) : ?>
 		<header class="entry__header">
 			<h3 class="entry__title">
