@@ -8,11 +8,13 @@
 ?>
 
 <section class="entry entry--slim">
-	<header class="entry__header">
-		<h3 class="entry__title">
-			<?php esc_html_e( 'No Content Found', 'ampconf' ); ?>
-		</h3>
-	</header><!-- .entry__header -->
+	<?php if ( ! is_404() ) : ?>
+		<header class="entry__header">
+			<h3 class="entry__title">
+				<?php esc_html_e( 'No Content Found', 'ampconf' ); ?>
+			</h3>
+		</header><!-- .entry__header -->
+	<?php endif; ?>
 
 	<div class="entry__summary">
 		<?php

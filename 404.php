@@ -9,54 +9,19 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="wrap">
+		<header class="wrap__item wrap__item--page-heading">
+			<h1 class="heading heading--h1"><?php esc_html_e( '404 &mdash; Page not found', 'ampconf' ); ?></h1>
+		</header>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ampconf' ); ?></h1>
-				</header><!-- .page-header -->
+		<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
+			<div class="wrap__subitem wrap__subitem--blog">
+				<?php get_template_part( 'templates/entry/none' ); ?>
+			</div>
+		</main>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ampconf' ); ?></p>
-
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'ampconf' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'ampconf' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		<?php get_sidebar(); ?>
+	</div><!-- .wrap -->
 
 <?php
 get_footer();
