@@ -7,22 +7,23 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry entry--featured' ); ?>>
-	<figure class="entry__thumbnail">
-		<a href="<?php esc_url( the_permalink() ); ?>">
-			<?php the_post_thumbnail( 'ampconf-375x225' ); ?>
-			<?php the_post_thumbnail( 'ampconf-1040x400' ); ?>
-		</a>
-	</figure><!-- .entry__thumbnail -->
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="entry__thumbnail">
+			<a href="<?php the_permalink(); ?>">
+				<?php ampconf_the_post_thumbnail( 'ampconf-1040x400' ); ?>
+			</a>
+		</figure><!-- .entry__thumbnail -->
+	<?php endif; ?>
 
 	<header class="entry__header">
-		<?php get_template_part( 'templates/entry/meta/date.php' ); ?>
+		<?php get_template_part( 'templates/entry/meta/date' ); ?>
 		<?php the_title( '<h2 class="entry__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 	</header><!-- .entry__header -->
 
 	<div class="entry__summary">
 		<p><?php the_excerpt(); ?></p>
 		<p class="entry__link-more">
-			<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link">
+			<a href="<?php the_permalink(); ?>" class="more-link">
 				<?php
 				printf(
 					wp_kses(

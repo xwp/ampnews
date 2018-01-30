@@ -48,10 +48,26 @@
 		&--page-heading {
 			padding-top: 0;
 			padding-bottom: 0;
+			position: relative;
 
 			@media ( query( min, tablet ) ) {
 				padding-top: $site-gutter;
 				padding-bottom: $site-gutter;
+			}
+
+			span {
+				position: absolute;
+				font-size: 12px;
+				text-transform: uppercase;
+				background: $light-grey;
+				padding: 10px;
+				right: $site-gutter;
+				border-radius: 3px;
+
+				@media ( query( min, desktop ) ) {
+					right: auto;
+					margin-top: -40px;
+				}
 			}
 		}
 

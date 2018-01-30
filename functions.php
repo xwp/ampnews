@@ -118,6 +118,14 @@ endif;
 add_action( 'after_setup_theme', 'ampconf_setup' );
 
 /**
+ * Comments are not ever shown on pages.
+ */
+function ampconf_remove_page_comments_support() {
+	remove_post_type_support( 'page', 'comments' );
+}
+add_action( 'init', 'ampconf_remove_page_comments_support' );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
