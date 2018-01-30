@@ -8,7 +8,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry entry--featured' ); ?>>
 	<figure class="entry__thumbnail">
-		<a href="<?php esc_url( the_permalink() ); ?>">
+		<a href="<?php the_permalink(); ?>">
 			<?php the_post_thumbnail( 'ampconf-375x225' ); ?>
 			<?php the_post_thumbnail( 'ampconf-1040x400' ); ?>
 		</a>
