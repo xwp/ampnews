@@ -7,11 +7,13 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
-	<figure class="entry__thumbnail">
-		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail( 'ampconf-335x225' ); ?>
-		</a>
-	</figure><!-- .entry__thumbnail -->
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="entry__thumbnail">
+			<a href="<?php the_permalink(); ?>">
+				<?php ampconf_the_post_thumbnail( 'ampconf-335x225' ); ?>
+			</a>
+		</figure><!-- .entry__thumbnail -->
+	<?php endif; ?>
 
 	<header class="entry__header">
 		<?php get_template_part( 'templates/entry/meta/date' ); ?>

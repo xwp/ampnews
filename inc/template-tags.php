@@ -124,3 +124,20 @@ if ( ! function_exists( 'ampconf_branding_tag' ) ) :
 		echo esc_html( ( is_front_page() && is_home() ) ? 'h1' : 'p' );
 	}
 endif;
+
+/**
+ * Get the post thumbnail for AMP.
+ *
+ * There is a problem with the AMP sanitizer that is not properly converting img into amp-img,
+ * so this is a workaround to preempt the sanitizer.
+ *
+ * @see the_post_thumbnail()
+ *
+ * @param string|array $size Optional. Image size to use. Accepts any valid image size, or
+ *                           an array of width and height values in pixels (in that order).
+ *                           Default 'post-thumbnail'.
+ * @param string|array $attr Optional. Query string or array of attributes. Default empty.
+ */
+function ampconf_the_post_thumbnail( $size = 'post-thumbnail', $attr = '' ) {
+	echo str_replace( '<img ', '<amp-img ', get_the_post_thumbnail( null, $size, $attr ) ) . '</amp-img>'; // WPCS: xss ok.
+}

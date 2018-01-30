@@ -7,15 +7,16 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry entry--featured' ); ?>>
-	<figure class="entry__thumbnail">
-		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail( 'ampconf-375x225' ); ?>
-			<?php the_post_thumbnail( 'ampconf-1040x400' ); ?>
-		</a>
-	</figure><!-- .entry__thumbnail -->
+	<?php if ( has_post_thumbnail() ) : ?>
+		<figure class="entry__thumbnail">
+			<a href="<?php the_permalink(); ?>">
+				<?php ampconf_the_post_thumbnail( 'ampconf-1040x400' ); ?>
+			</a>
+		</figure><!-- .entry__thumbnail -->
+	<?php endif; ?>
 
 	<header class="entry__header">
-		<?php get_template_part( 'templates/entry/meta/date.php' ); ?>
+		<?php get_template_part( 'templates/entry/meta/date' ); ?>
 		<?php the_title( '<h2 class="entry__title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 	</header><!-- .entry__header -->
 
