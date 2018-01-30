@@ -43,9 +43,6 @@ if ( post_password_required() ) {
 	</h2><!-- .comments-title -->
 
 	<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" layout="container" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'page_comments' ) ? get_option( 'comments_per_page' ) : 10000 ); ?>">
-		<div update>
-			<button on="tap:amp-live-comments-list-<?php the_ID(); ?>.update"><?php esc_html_e( 'You have updates', 'ampconf' ); ?></button>
-		</div>
 		<ol items class="comment-list">
 			<?php
 				wp_list_comments( array(
@@ -54,6 +51,9 @@ if ( post_password_required() ) {
 				) );
 			?>
 		</ol><!-- .comment-list -->
+		<div update>
+			<button on="tap:amp-live-comments-list-<?php the_ID(); ?>.update"><?php esc_html_e( 'You have updates', 'ampconf' ); ?></button>
+		</div>
 		<nav pagination>
 			<?php the_comments_navigation(); ?>
 		</nav>
