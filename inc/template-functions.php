@@ -44,3 +44,32 @@ function ampconf_excerpt_more( $more_string ) {
 	return $more_string;
 }
 add_filter( 'excerpt_more', 'ampconf_excerpt_more' );
+
+/**
+ * Filters the archive title and wraps the type of archive in a span element.
+ *
+ * @param string $title Archive title to be displayed.
+ *
+ * @return string $title
+ */
+function ampconf_get_the_archive_title( $title ) {
+	$parts = explode( ':', $title );
+
+	if ( 2 <= count( $parts ) ) {
+		$title = str_replace( $parts[0] . ': ', '', $title );
+
+		$title = wp_kses(
+			sprintf(
+				'<span>%1$s</span>%2$s',
+				$parts[0],
+				$title
+			),
+			array(
+				'span' => array(),
+			)
+		);
+	}
+
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'ampconf_get_the_archive_title' );
