@@ -22,8 +22,7 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
-	<?php /* @todo Set initial class names based on have_comments() */ ?>
-	<h2 class="comments-title">
+	<h2 class="comments-title <?php echo have_comments() ? 'has-comments' : 'no-comments'; ?>">
 		<?php
 		$comment_count = get_comments_number();
 		if ( '1' === $comment_count ) {
@@ -45,7 +44,7 @@ if ( post_password_required() ) {
 
 	<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" layout="container" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'page_comments' ) ? get_option( 'comments_per_page' ) : 10000 ); ?>">
 		<div update>
-			<button update on="tap:amp-live-comments-list-<?php the_ID(); ?>.update"><?php esc_html_e( 'You have updates', 'ampconf' ); ?></button>
+			<button on="tap:amp-live-comments-list-<?php the_ID(); ?>.update"><?php esc_html_e( 'You have updates', 'ampconf' ); ?></button>
 		</div>
 		<ol items class="comment-list">
 			<?php
