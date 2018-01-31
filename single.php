@@ -29,17 +29,11 @@ get_header(); ?>
 				<?php get_template_part( 'templates/entry/slim' ); ?>
 			</div>
 
-			<div class="wrap__item wrap__item--heading">
-				<h3 class="heading heading--widget"><?php esc_html_e( 'Comments', 'ampconf' ); ?></h3>
-			</div>
-
-			<div class="wrap__item">
-				<?php
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-				?>
-			</div>
+			<?php
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+			?>
 		</div>
 		<?php
 	endwhile;
