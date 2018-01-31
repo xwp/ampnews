@@ -8,8 +8,9 @@
 $current_id = get_the_ID();
 
 $stories = new WP_Query( array(
-	'posts_per_page' => 3,
-	'post_type'      => get_post_type(),
+	'posts_per_page'      => 3,
+	'post_type'           => get_post_type(),
+	'ignore_sticky_posts' => true,
 ) );
 
 if ( $stories->have_posts() ) : ?>
@@ -49,7 +50,7 @@ if ( $stories->have_posts() ) : ?>
 
 			?>
 
-				<div class="wrap__item">
+				<div class="wrap__item" id="more-stories__<?php echo esc_attr( get_the_ID() ); ?>" data-sort-time="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
 					<?php get_template_part( 'templates/entry/slim' ); ?>
 				</div>
 
