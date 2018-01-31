@@ -5,10 +5,11 @@
  * @package AMPConf
  */
 
+$max_shown  = 3;
 $current_id = get_the_ID();
 
 $stories = new WP_Query( array(
-	'posts_per_page'      => 3,
+	'posts_per_page'      => $max_shown + 1,
 	'post_type'           => get_post_type(),
 	'ignore_sticky_posts' => true,
 ) );
@@ -33,27 +34,28 @@ if ( $stories->have_posts() ) : ?>
 		</div>
 	<?php endif; ?>
 
-	<amp-live-list id="more-stories" data-poll-interval="15000" data-max-items-per-page="3">
+	<amp-live-list id="more-stories" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( $max_shown ); ?>">
 		<button update on="tap:more-stories.update">
 			<?php esc_html_e( 'Click for more stories!', 'ampconf' ); ?>
 		</button>
 
 		<div items>
 			<?php
-			while ( $stories->have_posts() ) :
+
+			$shown = 0;
+			while ( $stories->have_posts() && $shown < $max_shown ) :
 				$stories->the_post();
 
 				// Skip current post, if needed.
 				if ( get_the_ID() === $current_id ) {
 					continue;
 				}
+				?>
 
-			?>
-
-				<div class="wrap__item" id="more-stories__<?php echo esc_attr( get_the_ID() ); ?>" data-sort-time="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
+				<div class="wrap__item" id="more-stories__<?php echo esc_attr( get_the_ID() ); ?>" data-sort-time="<?php echo esc_attr( get_the_date( 'U' ) ); ?>">
 					<?php get_template_part( 'templates/entry/slim' ); ?>
 				</div>
-
+				<?php $shown++; ?>
 			<?php endwhile; ?>
 		</div>
 	</amp-live-list>
