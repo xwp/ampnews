@@ -20,14 +20,7 @@ get_header(); ?>
 		</div>
 
 		<div class="wrap wrap--single">
-			<div class="wrap__item wrap__item--heading">
-				<h3 class="heading heading--widget"><?php esc_html_e( 'More Stories', 'ampconf' ); ?></h3>
-			</div>
-
-			<?php // TODO: Create loop of recent posts, cached. ?>
-			<div class="wrap__item">
-				<?php get_template_part( 'templates/entry/slim' ); ?>
-			</div>
+			<?php get_template_part( 'templates/more-stories' ); ?>
 
 			<div class="wrap__item wrap__item--heading">
 				<h3 class="heading heading--widget"><?php esc_html_e( 'Comments', 'ampconf' ); ?></h3>
