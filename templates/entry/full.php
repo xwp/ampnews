@@ -28,5 +28,6 @@
 		<?php get_template_part( 'templates/entry/meta/date' ); ?>
 		<?php get_template_part( 'templates/entry/meta/byline' ); ?>
 		<?php get_template_part( 'templates/entry/meta/category' ); ?>
+		<?php edit_post_link(); ?>
 	</footer><!-- .entry__footer -->
 </article><!-- .entry -->
