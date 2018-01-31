@@ -18,6 +18,20 @@ if ( $stories->have_posts() ) : ?>
 		<h3 class="heading heading--widget"><?php esc_html_e( 'More Stories', 'ampconf' ); ?></h3>
 	</div>
 
+	<?php if ( class_exists( 'Jetpack_Subscriptions_Widget' ) ) : ?>
+		<div class="wrap__item wrap__item--widget">
+			<?php
+			the_widget( 'Jetpack_Subscriptions_Widget', array(
+				'title'                 => esc_html__( 'Must Read', 'ampconf' ),
+				'subscribe_text'        => esc_html__( '5 stories you cannot afford to miss, straight your inbox.', 'ampconf' ),
+				'subscribe_placeholder' => esc_html__( 'Email', 'ampconf' ),
+				'subscribe_button'      => esc_html__( 'Add', 'ampconf' ),
+				'success_message'       => esc_html__( 'Successfully subscribed!', 'ampconf' ),
+			) );
+			?>
+		</div>
+	<?php endif; ?>
+
 	<amp-live-list id="more-stories" data-poll-interval="15000" data-max-items-per-page="3">
 		<button update on="tap:more-stories.update">
 			<?php esc_html_e( 'Click for more stories!', 'ampconf' ); ?>
@@ -44,6 +58,7 @@ if ( $stories->have_posts() ) : ?>
 	</amp-live-list>
 
 	<?php
-endif; // End if().
 
-wp_reset_postdata();
+	wp_reset_postdata();
+
+endif; // End if().
