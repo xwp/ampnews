@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 	<h2 class="comments-title <?php echo have_comments() ? 'has-comments' : 'no-comments'; ?>">
 		<?php
 		$comment_count = get_comments_number();
-		if ( '1' === $comment_count ) {
+		if ( '1' === (string) $comment_count ) {
 			printf(
 				/* translators: 1: title. */
 				esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'ampconf' ),
@@ -52,7 +52,9 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 		<div update>
-			<button on="tap:amp-live-comments-list-<?php the_ID(); ?>.update"><?php esc_html_e( 'You have updates', 'ampconf' ); ?></button>
+			<button on="tap:amp-live-comments-list-<?php the_ID(); ?>.update">
+				<?php esc_html_e( 'New comment(s)', 'ampconf' ); ?>
+			</button>
 		</div>
 		<nav pagination>
 			<?php the_comments_navigation(); ?>
