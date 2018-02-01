@@ -5,10 +5,11 @@
 .entry {
 
 	&--featured {
-		padding: 0 20px;
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 10px 20px 0;
 
 		@media ( query( min, tablet ) ) {
-			display: flex;
 			flex-flow: row wrap;
 			padding-bottom: 25px;
 		}
@@ -28,7 +29,7 @@
 	//
 
 	&--featured &__thumbnail {
-		margin: 0 #{ -$site-gutter };
+		margin: -10px #{ -$site-gutter } 0;
 
 		@media ( query( min, tablet ) ) {
 			width: calc( 100% + 40px );
@@ -36,7 +37,7 @@
 
 		@media ( query( min, desktop ) ) {
 			width: 100%;
-			margin: 0;
+			margin: -10px 0 0;
 		}
 	}
 
@@ -47,11 +48,11 @@
 	&--featured &__header {
 		@media ( query( min, tablet ) ) {
 			width: 100%;
-			padding: 10px 0 15px;
+			padding: 25px 0 15px;
 		}
 
 		@media ( query( min, desktop ) ) {
-			padding: 20px 0 25px;
+			padding: 30px 0 25px;
 		}
 	}
 
@@ -78,10 +79,6 @@
 			padding: 0;
 			font-size: 16px;
 			line-height: #{ 30px / 16px };
-
-			&::after {
-				content: none;
-			}
 		}
 
 		@media ( query( min, desktop ) ) {
@@ -115,13 +112,35 @@
 		}
 	}
 
+	&--featured &__footer &__meta--byline + &__meta--category::before {
+		@media ( query( min, tablet ) ) {
+			content: none;
+		}
+	}
+
 	//
-	// Summary.
+	// Share bar.
 	//
 
-	&--featured &__summary {
+	&--featured &__share--in-footer {
+		@media ( query( max, tablet ) ) {
+			display: none;
+		}
+	}
+
+	&--featured &__meta + &__share {
+		padding-top: 50px;
+	}
+
+	//
+	// Summary and content.
+	//
+
+	&--featured &__summary,
+	&--featured &__content {
 		@media ( query( min, tablet ) ) {
-			order: 2;
+			order: 3;
+			width: calc( 100% - 150px );
 			max-width: 720px;
 			padding-left: 30px;
 			flex: 1 1;
@@ -132,6 +151,12 @@
 		@media ( query( min, desktop ) ) {
 			font-size: 20px;
 			line-height: #{ 33px / 20px };
+		}
+	}
+
+	&--featured &__content {
+		@media ( query( max, tablet ) ) {
+			order: 1;
 		}
 	}
 

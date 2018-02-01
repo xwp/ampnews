@@ -1,0 +1,32 @@
+.search-form {
+
+	.error404 .entry__summary & {
+		display: flex;
+		justify-content: space-around;
+		margin-top: $site-gutter;
+
+		input,
+		button {
+			background: $light-grey;
+			border: 1px solid fade-out( $black, 0.9 );
+			padding: 12px;
+			font-size: 13px;
+		}
+
+		label {
+			flex-basis: 90%;
+		}
+
+		input {
+			width: 100%;
+			border-right: none;
+		}
+
+		button {
+			opacity: 1;
+			flex-basis: 10%;
+			border-left: none;
+			margin-left: -5px;
+		}
+	}
+}

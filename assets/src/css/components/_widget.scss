@@ -219,4 +219,55 @@
 			@extend .inline-form__input--submit;
 		}
 	}
+
+	//
+	// Jetpack Subscription Widget
+	//
+
+	&.jetpack_subscription_widget {
+
+		form {
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-between;
+
+			label {
+				// @extend .inline-form__wrap;
+				@extend .screen-reader-text;
+			}
+
+			> div {
+				flex-basis: 100%;
+			}
+
+			> p {
+				background-color: $light-grey;
+				border: 1px solid $border-color;
+				border-right-width: 0;
+				flex-basis: 80%;
+				padding: 0;
+
+				& + p {
+					flex-basis: 20%;
+					border-left-width: 0;
+					border-right-width: 1px;
+				}
+			}
+		}
+
+		input {
+			min-height: 40px;
+			border: none;
+			background-color: transparent;
+		}
+
+		input[type='email'] {
+			width: 100%;
+			padding: 10px;
+		}
+
+		input[type='submit'] {
+
+		}
+	}
 }
