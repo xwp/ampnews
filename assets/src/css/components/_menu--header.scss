@@ -13,8 +13,9 @@
 		font-size: 24px;
 
 		@media ( query( min, tablet ) ) {
-			flex-direction: row;
-			margin: 0 -8px;
+			margin: 0 -10px;
+			flex-flow: row nowrap;
+			font-size: 14px;
 		}
 
 		//
@@ -24,10 +25,6 @@
 		.menu-item {
 			position: relative;
 			padding: 0;
-
-			@media ( query( min, tablet ) ) {
-				padding: 0 8px;
-			}
 
 			a {
 				display: inline-flex;
@@ -42,9 +39,24 @@
 				&:focus {
 					opacity: 0.8;
 				}
+
+				@media ( query( min, tablet ) ) {
+					display: flex;
+					max-width: none;
+					padding: 10px;
+					opacity: 0.8;
+
+					&:hover,
+					&:focus {
+						opacity: 1;
+					}
+				}
 			}
 
 			&-has-children {
+				@media ( query( min, tablet ) ) {
+					padding-right: 16px;
+				}
 
 				&::after {
 					content: '▾';
@@ -57,18 +69,26 @@
 					justify-content: center;
 					align-items: center;
 					transition: transform 0.2s ease-out;
+					transform-origin: 50% 53%;
+
+					@media ( query( min, tablet ) ) {
+						width: 20px;
+						height: 36px;
+						right: 4px;
+						opacity: 0.8;
+					}
+				}
+			}
+
+			&:hover,
+			&:focus {
+
+				&::after {
+					transform: rotateZ( 180deg );
 				}
 
-				&:hover,
-				&:focus {
-
-					&::after {
-						transform: rotateZ( 180deg );
-					}
-
-					> .sub-menu {
-						display: block;
-					}
+				> .sub-menu {
+					display: block;
 				}
 			}
 		}
@@ -78,6 +98,7 @@
 		//
 
 		.sub-menu {
+			position: relative;
 			display: none;
 			list-style: none;
 			margin: 0;
@@ -86,9 +107,17 @@
 
 			@media ( query( min, tablet ) ) {
 				position: absolute;
-				padding-top: 16px;
-				margin-left: -16px;
+				padding: 10px 0;
+				margin: 0 0 0 -10px;
+				min-width: 150px;
+				font-size: 14px;
 				background-color: $black;
+
+				.sub-menu {
+					left: calc( 100% + 10px );
+					top: -10px;
+					background-color: mix( $black, #fff, 80% );
+				}
 			}
 
 			.menu-item {
@@ -100,10 +129,29 @@
 					&:focus {
 						opacity: 1;
 					}
+
+					@media ( query( min, tablet ) ) {
+						padding: 10px 20px;
+					}
 				}
 
-				&-has-children::after {
-					content: none;
+				&-has-children {
+
+					&:hover,
+					&:focus {
+
+						&::after {
+							transform: none;
+						}
+					}
+
+					&::after {
+						content: '▸';
+
+						@media ( query( max, tablet ) ) {
+							content: none;
+						}
+					}
 				}
 			}
 		}

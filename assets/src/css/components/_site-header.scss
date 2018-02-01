@@ -175,13 +175,15 @@
 
 		@media ( query( min, tablet ) ) {
 			order: 1;
+			z-index: 3;
 			position: static;
+			overflow: visible;
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: space-between;
 			transform: none;
 			transition: none;
-			padding-top: 0;
+			padding: 6px 0;
 			box-shadow: 30vw 0 0 $black, -30vw 0 0 $black;
 
 			&::after {
@@ -189,12 +191,6 @@
 			}
 		}
 	}
-
-	//
-	// Header menu container.
-	//
-
-	&__menu {}
 
 	//
 	// Search form.
