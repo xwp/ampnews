@@ -1,0 +1,111 @@
+//
+// Menu in the header.
+//
+
+.menu {
+
+	&--header {
+		display: flex;
+		flex-flow: column nowrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 24px;
+
+		@media ( query( min, tablet ) ) {
+			flex-direction: row;
+			margin: 0 -8px;
+		}
+
+		//
+		// Menu item.
+		//
+
+		.menu-item {
+			position: relative;
+			padding: 0;
+
+			@media ( query( min, tablet ) ) {
+				padding: 0 8px;
+			}
+
+			a {
+				display: inline-flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				opacity: 1;
+				color: $white;
+				padding: 10px 20px;
+				max-width: calc( 100% - 50px );
+
+				&:hover,
+				&:focus {
+					opacity: 0.8;
+				}
+			}
+
+			&-has-children {
+
+				&::after {
+					content: '▾';
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 50px;
+					height: 50px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: transform 0.2s ease-out;
+				}
+
+				&:hover,
+				&:focus {
+
+					&::after {
+						transform: rotateZ( 180deg );
+					}
+
+					> .sub-menu {
+						display: block;
+					}
+				}
+			}
+		}
+
+		//
+		// Sub menu.
+		//
+
+		.sub-menu {
+			display: none;
+			list-style: none;
+			margin: 0;
+			padding: 8px 0;
+			font-size: 18px;
+
+			@media ( query( min, tablet ) ) {
+				position: absolute;
+				padding-top: 16px;
+				margin-left: -16px;
+				background-color: $black;
+			}
+
+			.menu-item {
+
+				a {
+					opacity: 0.8;
+
+					&:hover,
+					&:focus {
+						opacity: 1;
+					}
+				}
+
+				&-has-children::after {
+					content: none;
+				}
+			}
+		}
+	}
+}

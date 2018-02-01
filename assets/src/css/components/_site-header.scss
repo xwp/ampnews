@@ -1,0 +1,241 @@
+//
+// Site Header.
+//
+
+.site-header {
+	display: flex;
+	flex-flow: row nowrap;
+	max-width: $site-max-width - ( 2 * $site-gutter );
+	margin: 0 auto;
+	font-size: 14px;
+
+	@media ( query( min, tablet ) ) {
+		flex-flow: column nowrap;
+	}
+
+	//
+	// Branding container.
+	//
+
+	&__branding {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		color: $white;
+		background-color: $black;
+
+		@media ( query( min, tablet ) ) {
+			order: 2;
+			flex-flow: column nowrap;
+			width: 100%;
+			padding: 40px 20px;
+			text-align: center;
+			color: $black;
+			background-color: transparent;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 20px;
+			bottom: 0;
+			right: 20px;
+			height: 1px;
+			border-bottom: 1px solid $white;
+			opacity: 0;
+			transition: opacity 0.3s ease-out;
+
+			@media ( query( min, tablet ) ) {
+				content: none;
+			}
+
+			.is-menu-expanded & {
+				opacity: 1;
+				transition-delay: 0.4s;
+			}
+		}
+	}
+
+	&__title {
+		margin: 0;
+		padding: 15px 20px;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.25;
+
+		@media ( query( min, tablet ) ) {
+			padding: 0;
+			font-size: 56px;
+		}
+
+		a {
+			color: $white;
+			opacity: 1;
+
+			@media ( query( min, tablet ) ) {
+				color: $black;
+			}
+
+			&:hover,
+			&:focus {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&__description {
+		display: none;
+		margin: 0;
+		color: $muted;
+		font-size: 18px;
+		font-weight: 300;
+
+		@media ( query( min, tablet ) ) {
+			display: block;
+		}
+	}
+
+	//
+	// Mobile Menu Toggle.
+	//
+
+	&__menu-toggle {
+		display: block;
+		position: relative;
+		padding: 0;
+		width: 52px;
+		height: 52px;
+		margin-right: 4px;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+
+		@media ( query( min, tablet ) ) {
+			display: none;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50% );
+			height: 2px;
+			width: 20px;
+			background-color: $white;
+			transition: box-shadow 0.3s ease-out, transform 0.5s cubic-bezier( 0.23, 1, 0.32, 1 ), opacity 0.5s cubic-bezier( 0.23, 1, 0.32, 1 );
+		}
+
+		&::before {
+			box-shadow: 0 6px 0 0 $white, 0 -6px 0 0 $white;
+		}
+
+		&::after {
+			opacity: 0;
+		}
+
+		.is-menu-expanded &::before {
+			transform: translate( -50%, -50% ) rotateZ( 45deg );
+			box-shadow: none;
+		}
+
+		.is-menu-expanded &::after {
+			transform: translate( -50%, -50% ) rotateZ( -45deg );
+			opacity: 1;
+		}
+	}
+
+	//
+	// Header nav container.
+	//
+
+	&__nav {
+		position: absolute;
+		z-index: 1;
+		top: 60px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 20px 0;
+		transform: translateY( -100% );
+		transition: transform 0.5s cubic-bezier( 0.23, 1, 0.32, 1 );
+		overflow-y: scroll;
+		background-color: $black;
+		color: $white;
+
+		.is-menu-expanded & {
+			transform: none;
+		}
+
+		@media ( query( min, tablet ) ) {
+			order: 1;
+			position: static;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			transform: none;
+			transition: none;
+			padding-top: 0;
+			box-shadow: 30vw 0 0 $black, -30vw 0 0 $black;
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	//
+	// Header menu container.
+	//
+
+	&__menu {}
+
+	//
+	// Search form.
+	//
+
+	&__search {
+		display: none;
+		margin-top: -4px;
+		margin-bottom: -4px;
+
+		@media ( query( min, tablet ) ) {
+			display: block;
+		}
+
+		input {
+			background-color: $black;
+			border: 0;
+			padding: 4px;
+			font-size: 14px;
+			max-width: 70px;
+			transition: max-width 100ms linear, background-color 100ms linear;
+			color: $white;
+			text-overflow: ellipsis;
+
+			&:focus {
+				background-color: $white;
+				color: $black;
+				max-width: 200px;
+			}
+
+			&::placeholder {
+				color: $white;
+				font-size: 14px;
+			}
+		}
+
+		button {
+			@extend %search-icon;
+			margin-top: 4px;
+			margin-left: 4px;
+			float: right;
+		}
+	}
+}
