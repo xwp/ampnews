@@ -112,13 +112,23 @@
 				min-width: 150px;
 				font-size: 14px;
 				background-color: $black;
+			}
 
-				.sub-menu {
+			//
+			// Second level sub menu.
+			//
+
+			.sub-menu {
+				@media ( query( min, tablet ) ) {
 					left: calc( 100% + 10px );
 					top: -10px;
 					background-color: mix( $black, #fff, 80% );
 				}
 			}
+
+			//
+			// Sub menu item.
+			//
 
 			.menu-item {
 

@@ -162,7 +162,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		padding: 20px 0;
+		padding: 20px;
 		transform: translateY( -100% );
 		transition: transform 0.5s cubic-bezier( 0.23, 1, 0.32, 1 );
 		overflow-y: scroll;
@@ -184,12 +184,16 @@
 			align-items: center;
 			transform: none;
 			transition: none;
-			padding: 6px 0;
+			padding: 6px 20px;
 			box-shadow: 30vw 0 0 $black, -30vw 0 0 $black;
 
 			&::after {
 				content: none;
 			}
+		}
+
+		@media ( query( min, site-width ) ) {
+			padding: 6px 0;
 		}
 	}
 
