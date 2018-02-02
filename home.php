@@ -15,32 +15,22 @@ get_header(); ?>
 	<div class="wrap">
 		<?php
 		// Only show the feature and subfeatures when not paged.
-		if ( ! is_paged() ) {
-			if ( have_posts() ) {
-				$post_count = 0;
+		if ( ! is_paged() && have_posts() ) {
+			?>
+			<div class="wrap__item wrap__item--full-width">
+				<?php get_template_part( 'templates/entry/featured' ); ?>
+				<hr>
+			</div>
+			<?php
 
-				while ( have_posts() ) {
-					the_post();
-
-					$post_count++;
-
-					if ( 1 === $post_count ) {
-						?>
-						<div class="wrap__item wrap__item--full-width">
-							<?php get_template_part( 'templates/entry/featured' ); ?>
-							<hr>
-						</div>
-						<?php
-					} elseif ( 3 >= $post_count ) {
-						?>
-						<div class="wrap__item wrap__item--half wrap__item--half--<?php echo esc_attr( 2 === $post_count ? 'primary' : 'secondary' ); ?>">
-							<?php get_template_part( 'templates/entry/default' ); ?>
-						</div>
-						<?php
-					} else {
-						break;
-					}
-				}
+			// Show the next two posts with the default entry template.
+			for ( $i = 0; have_posts() && $i < 2; $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
+				the_post();
+				?>
+				<div class="wrap__item wrap__item--half wrap__item--half--<?php echo esc_attr( 0 === $i ? 'primary' : 'secondary' ); ?>">
+					<?php get_template_part( 'templates/entry/default' ); ?>
+				</div>
+				<?php
 			}
 		}
 		?>
