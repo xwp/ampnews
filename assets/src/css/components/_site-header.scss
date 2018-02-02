@@ -18,7 +18,8 @@
 	//
 
 	&__branding {
-		position: relative;
+		position: fixed;
+		top: 0;
 		z-index: 2;
 		display: flex;
 		flex-flow: row nowrap;
@@ -29,6 +30,7 @@
 		background-color: $black;
 
 		@media ( query( min, tablet ) ) {
+			position: static;
 			order: 2;
 			flex-flow: column nowrap;
 			width: 100%;
@@ -176,7 +178,9 @@
 		@media ( query( min, tablet ) ) {
 			order: 1;
 			z-index: 3;
-			position: static;
+			position: fixed;
+			top: 0;
+			bottom: auto;
 			overflow: visible;
 			display: flex;
 			flex-flow: row nowrap;
