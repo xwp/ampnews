@@ -16,22 +16,23 @@ get_header(); ?>
 		<?php
 		// Only show the feature and subfeatures when not paged.
 		if ( ! is_paged() && have_posts() ) {
+			ampconf_set_additional_post_classes( array( 'wrap__item', 'wrap__item--full-width' ) );
+			get_template_part( 'templates/entry/featured' );
 			?>
-			<div class="wrap__item wrap__item--full-width">
-				<?php get_template_part( 'templates/entry/featured' ); ?>
-				<hr>
-			</div>
+			<hr>
 			<?php
 
 			// Show the next two posts with the default entry template.
 			for ( $i = 0; have_posts() && $i < 2; $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
 				the_post();
-				?>
-				<div class="wrap__item wrap__item--half wrap__item--half--<?php echo esc_attr( 0 === $i ? 'primary' : 'secondary' ); ?>">
-					<?php get_template_part( 'templates/entry/default' ); ?>
-				</div>
-				<?php
+				ampconf_set_additional_post_classes( array(
+					'wrap__item',
+					'wrap__item--half',
+					sprintf( 'wrap__item--half--%s', 0 === $i ? 'primary' : 'secondary' ),
+				) );
+				get_template_part( 'templates/entry/default' );
 			}
+			ampconf_set_additional_post_classes( array() );
 		}
 		?>
 
