@@ -31,15 +31,9 @@ get_header(); ?>
 							<hr>
 						</div>
 						<?php
-					} elseif ( 2 === $post_count ) {
+					} elseif ( 3 >= $post_count ) {
 						?>
-						<div class="wrap__item wrap__item--half wrap__item--half--primary">
-							<?php get_template_part( 'templates/entry/default' ); ?>
-						</div>
-						<?php
-					} elseif ( 3 === $post_count ) {
-						?>
-						<div class="wrap__item wrap__item--half wrap__item--half--secondary">
+						<div class="wrap__item wrap__item--half wrap__item--half--<?php echo esc_attr( 2 === $post_count ? 'primary' : 'secondary' ); ?>">
 							<?php get_template_part( 'templates/entry/default' ); ?>
 						</div>
 						<?php
