@@ -28,11 +28,18 @@ get_header(); ?>
 						?>
 						<div class="wrap__item wrap__item--full-width">
 							<?php get_template_part( 'templates/entry/featured' ); ?>
+							<hr>
 						</div>
 						<?php
-					} elseif ( 3 >= $post_count ) {
+					} elseif ( 2 === $post_count ) {
 						?>
 						<div class="wrap__item wrap__item--half wrap__item--half--primary">
+							<?php get_template_part( 'templates/entry/default' ); ?>
+						</div>
+						<?php
+					} elseif ( 3 === $post_count ) {
+						?>
+						<div class="wrap__item wrap__item--half wrap__item--half--secondary">
 							<?php get_template_part( 'templates/entry/default' ); ?>
 						</div>
 						<?php
@@ -60,13 +67,7 @@ get_header(); ?>
 				/* Start the Loop */
 				while ( have_posts() ) :
 					the_post();
-
-					?>
-					<div class="wrap__subitem wrap__subitem--blog">
-						<?php get_template_part( 'templates/entry/slim' ); ?>
-					</div>
-					<?php
-
+					get_template_part( 'templates/entry/slim' );
 				endwhile;
 
 			else :
