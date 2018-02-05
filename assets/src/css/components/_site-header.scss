@@ -181,6 +181,9 @@
 			position: fixed;
 			top: 0;
 			bottom: auto;
+			max-width: $site-max-width - ( 2 * $site-gutter );
+			margin: 0 auto;
+			padding: 6px 20px;
 			overflow: visible;
 			display: flex;
 			flex-flow: row nowrap;
@@ -188,7 +191,6 @@
 			align-items: center;
 			transform: none;
 			transition: none;
-			padding: 6px 20px;
 			box-shadow: 30vw 0 0 $black, -30vw 0 0 $black;
 
 			&::after {
