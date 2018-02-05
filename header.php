@@ -36,7 +36,7 @@ $description = get_bloginfo( 'description', 'display' );
 				</<?php ampconf_branding_tag(); ?>>
 
 				<?php if ( $description || is_customize_preview() ) : ?>
-					<p class="site-header__description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+					<p class="site-header__description"><?php echo esc_html( $description ); ?></p>
 				<?php endif; ?>
 
 				<button
