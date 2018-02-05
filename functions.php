@@ -162,6 +162,7 @@ add_action( 'widgets_init', 'ampconf_widgets_init' );
  */
 function ampconf_enqueue_styles() {
 	wp_enqueue_style( 'ampconf', get_template_directory_uri() . '/assets/dist/css/main.css' );
+	wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,400,700', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'ampconf_enqueue_styles' );
 
