@@ -16,6 +16,7 @@ get_header(); ?>
 		<?php
 		// Only show the feature and subfeatures when not paged.
 		if ( ! is_paged() && have_posts() ) {
+			the_post();
 			ampconf_set_additional_post_classes( array( 'wrap__item', 'wrap__item--full-width' ) );
 			get_template_part( 'templates/entry/featured' );
 			?>
