@@ -1,0 +1,169 @@
+//
+// Menu in the header.
+//
+
+.menu {
+
+	&--header {
+		display: flex;
+		flex-flow: column nowrap;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 24px;
+
+		@media ( query( min, tablet ) ) {
+			margin: 0 -10px;
+			flex-flow: row nowrap;
+			font-size: 14px;
+		}
+
+		//
+		// Menu item.
+		//
+
+		.menu-item {
+			position: relative;
+			padding: 0;
+
+			a {
+				display: inline-flex;
+				flex-flow: row nowrap;
+				justify-content: space-between;
+				opacity: 1;
+				color: $white;
+				padding: 10px 20px;
+				max-width: calc( 100% - 50px );
+
+				&:hover,
+				&:focus {
+					opacity: 0.8;
+				}
+
+				@media ( query( min, tablet ) ) {
+					display: flex;
+					max-width: none;
+					padding: 10px;
+					opacity: 0.8;
+
+					&:hover,
+					&:focus {
+						opacity: 1;
+					}
+				}
+			}
+
+			&-has-children {
+				@media ( query( min, tablet ) ) {
+					padding-right: 16px;
+				}
+
+				&::after {
+					content: '▾';
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 50px;
+					height: 50px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: transform 0.2s ease-out;
+					transform-origin: 50% 53%;
+
+					@media ( query( min, tablet ) ) {
+						width: 20px;
+						height: 36px;
+						right: 4px;
+						opacity: 0.8;
+					}
+				}
+			}
+
+			&:hover,
+			&:focus {
+
+				&::after {
+					transform: rotateZ( 180deg );
+				}
+
+				> .sub-menu {
+					display: block;
+				}
+			}
+		}
+
+		//
+		// Sub menu.
+		//
+
+		.sub-menu {
+			position: relative;
+			display: none;
+			list-style: none;
+			margin: 0;
+			padding: 8px 0;
+			font-size: 18px;
+
+			@media ( query( min, tablet ) ) {
+				position: absolute;
+				padding: 10px 0;
+				margin: 0 0 0 -10px;
+				min-width: 150px;
+				font-size: 14px;
+				background-color: $black;
+			}
+
+			//
+			// Second level sub menu.
+			//
+
+			.sub-menu {
+				@media ( query( min, tablet ) ) {
+					left: calc( 100% + 10px );
+					top: -10px;
+					background-color: mix( $black, #fff, 80% );
+				}
+			}
+
+			//
+			// Sub menu item.
+			//
+
+			.menu-item {
+
+				a {
+					opacity: 0.8;
+
+					&:hover,
+					&:focus {
+						opacity: 1;
+					}
+
+					@media ( query( min, tablet ) ) {
+						padding: 10px 20px;
+					}
+				}
+
+				&-has-children {
+
+					&:hover,
+					&:focus {
+
+						&::after {
+							transform: none;
+						}
+					}
+
+					&::after {
+						content: '▸';
+
+						@media ( query( max, tablet ) ) {
+							content: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

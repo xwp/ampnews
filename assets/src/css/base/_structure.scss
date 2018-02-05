@@ -12,6 +12,23 @@
 	overflow: hidden;
 }
 
+#page {
+	padding-top: 60px;
+
+	@media ( query( min, tablet ) ) {
+		padding-top: 49px;
+	}
+
+	&.no-scroll {
+		@media ( query( max, tablet ) ) {
+			position: absolute;
+			overflow: hidden;
+			width: 100%;
+			height: 100vh;
+		}
+	}
+}
+
 %content-block-alignment {
 	margin: 32px #{ -$site-gutter };
 
