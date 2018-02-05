@@ -12,60 +12,59 @@
 
 get_header(); ?>
 
-	<div class="wrap">
-		<?php
-		// Only show the feature and subfeatures when not paged.
-		if ( ! is_paged() && have_posts() ) {
-			ampconf_set_additional_post_classes( array( 'wrap__item', 'wrap__item--full-width' ) );
-			get_template_part( 'templates/entry/featured' );
-			?>
-			<hr>
-			<?php
-
-			// Show the next two posts with the default entry template.
-			for ( $i = 0; have_posts() && $i < 2; $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
-				the_post();
-				ampconf_set_additional_post_classes( array(
-					'wrap__item',
-					'wrap__item--half',
-					sprintf( 'wrap__item--half--%s', 0 === $i ? 'primary' : 'secondary' ),
-				) );
-				get_template_part( 'templates/entry/default' );
-			}
-			ampconf_set_additional_post_classes( array() );
-		}
+	<?php
+	// Only show the feature and subfeatures when not paged.
+	if ( ! is_paged() && have_posts() ) :
 		?>
+		<amp-live-list id="ampconf-featured-articles-list" data-poll-interval="15000" data-max-items-per-page="3">
+			<button class="button" update on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Click for new features!', 'ampconf' ); ?></button>
+			<div items class="wrap wrap--triple-feature">
+				<?php
+				// Show the first three posts with specific entry templates.
+				for ( $i = 0; have_posts() && $i < 3; $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
+					the_post();
 
-		<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
-			<?php
-			if ( have_posts() ) :
-
-				if ( ! is_front_page() ) :
+					if ( 0 === $i ) {
+						get_template_part( 'templates/entry/featured' );
+					} else {
+						get_template_part( 'templates/entry/default' );
+					}
+				}
 				?>
+			</div>
+		</amp-live-list>
+	<?php endif; ?>
+
+	<div class="wrap">
+		<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
+			<?php if ( have_posts() ) : ?>
+
+				<?php if ( ! is_front_page() ) : ?>
 					<header>
 						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 					</header>
+				<?php endif; ?>
 
-				<?php
-				endif;
+				<amp-live-list id="ampconf-articles-list" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
+					<button class="button" update on="tap:ampconf-articles-list.update"><?php esc_html_e( 'Click for newer articles.', 'ampconf' ); ?></button>
+					<div items>
+						<?php
+						while ( have_posts() ) :
+							the_post();
+							get_template_part( 'templates/entry/slim' );
+						endwhile;
+						?>
+					</div>
 
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-					get_template_part( 'templates/entry/slim' );
-				endwhile;
-
-			else :
-				?>
+					<div pagination></div>
+				</amp-live-list>
+			<?php else : ?>
 				<div class="wrap__subitem wrap__subitem--blog">
 					<?php get_template_part( 'templates/entry/none' ); ?>
 				</div>
-				<?php
+			<?php endif; ?>
 
-			endif;
-
-			the_posts_pagination();
-			?>
+			<?php the_posts_pagination(); ?>
 		</main>
 
 		<?php get_sidebar(); ?>
