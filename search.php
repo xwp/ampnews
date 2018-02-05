@@ -9,28 +9,38 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="wrap">
+		<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
+			<?php
+			if ( have_posts() ) :
 
-		<?php if ( have_posts() ) : ?>
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			<header class="page-header">
-				<h1 class="page-title">
-				<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'ampconf' ), '<span>' . get_search_query() . '</span>' );
+					?>
+					<div class="wrap__subitem wrap__subitem--blog">
+						<?php get_template_part( 'templates/entry/slim' ); ?>
+					</div>
+					<?php
+
+				endwhile;
+
+				the_posts_pagination();
+			else :
+
 				?>
-				</h1>
-			</header><!-- .page-header -->
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php get_template_part( 'templates/entry/none' ); ?>
+				</div>
+				<?php
 
-			<?php get_template_part( 'template-parts/the-loop', 'search' ); ?>
-		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-		<?php endif; ?>
+			endif;
+			?>
+		</main>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		<?php get_sidebar(); ?>
+	</div><!-- .wrap -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -14,24 +14,38 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<div class="wrap">
+		<main class="wrap__item wrap__item--blog wrap__item--blog--primary">
+			<?php
+			if ( have_posts() ) :
 
-		<?php if ( have_posts() ) : ?>
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
 
-			<?php get_template_part( 'template-parts/the-loop', 'index' ); ?>
-		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-		<?php endif; ?>
+					?>
+					<div class="wrap__subitem wrap__subitem--blog">
+						<?php get_template_part( 'templates/entry/slim' ); ?>
+					</div>
+					<?php
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				endwhile;
+
+				the_posts_pagination();
+			else :
+
+				?>
+				<div class="wrap__subitem wrap__subitem--blog">
+					<?php get_template_part( 'templates/entry/none' ); ?>
+				</div>
+				<?php
+
+			endif;
+			?>
+		</main>
+
+		<?php get_sidebar(); ?>
+	</div><!-- .wrap -->
 
 <?php
-get_sidebar();
 get_footer();

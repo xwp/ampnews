@@ -18,60 +18,43 @@
 if ( post_password_required() ) {
 	return;
 }
+
+
+// @todo Once amp-live-list has an update event, let the comments-title be hidden if !get_comments_number() until an update happens when there are any items included.
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="wrap__item wrap__item--heading">
+	<h3 class="heading heading--widget"><?php esc_html_e( 'Comments', 'ampconf' ); ?></h3>
+</div>
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-	?>
-		<h2 class="comments-title">
+<div class="wrap__item">
+
+	<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" layout="container" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'page_comments' ) ? get_option( 'comments_per_page' ) : 10000 ); ?>">
+		<ol items class="comment-list">
 			<?php
-			$comment_count = get_comments_number();
-			if ( 1 === $comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'ampconf' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'ampconf' ) ),
-					number_format_i18n( $comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
-
-		<?php the_comments_navigation(); ?>
-
-		<ol class="comment-list">
-			<?php
-				wp_list_comments(
-					array(
-						'style'      => 'ol',
-						'short_ping' => true,
-					)
-				);
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				) );
 			?>
 		</ol><!-- .comment-list -->
+		<div update>
+			<button on="tap:amp-live-comments-list-<?php the_ID(); ?>.update">
+				<?php esc_html_e( 'New comment(s)', 'ampconf' ); ?>
+			</button>
+		</div>
+		<nav pagination>
+			<?php the_comments_navigation(); ?>
+		</nav>
+	</amp-live-list>
 
-		<?php
-		the_comments_navigation();
+	<?php if ( ! comments_open() ) : ?>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'ampconf' ); ?></p>
+	<?php endif; ?>
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-		?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'ampconf' ); ?></p>
-		<?php
-		endif;
-
-	endif; // Check for have_comments().
-
+	<?php
+	// Warning: If you supply title_reply_before/title_reply_after here then the comment_form_defaults filter won't be able to inject the necessary markup for AMP.
 	comment_form();
 	?>
 
-</div><!-- #comments -->
+</div>

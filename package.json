@@ -24,14 +24,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xwp/wp-amp-theme.git"
+    "url": "git+https://github.com/xwp/ampconf.git"
   },
   "author": "",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/xwp/wp-amp-theme/issues"
+    "url": "https://github.com/xwp/ampconf/issues"
   },
-  "homepage": "https://github.com/xwp/wp-amp-theme#readme",
+  "homepage": "https://github.com/xwp/ampconf#readme",
   "stylelint": {
     "extends": "stylelint-config-xwp/scss",
     "rules": {
@@ -43,20 +43,32 @@
           ]
         }
       ],
+      "selector-type-no-unknown": [
+        true,
+        {
+          "ignoreTypes": [
+            "/^amp-/"
+          ]
+        }
+      ],
       "plugin/no-unsupported-browser-features": [
         true,
         {
           "ignore": [
+            "background-img-opts",
+            "border-radius",
             "calc",
+            "css-boxshadow",
             "css-transitions",
             "fontface",
             "font-unicode-range",
             "flexbox",
+            "object-fit",
             "outline",
             "transforms2d",
             "viewport-units",
             "will-change",
-            "border-radius"
+            "word-break"
           ]
         }
       ]

@@ -94,9 +94,36 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// Custom image sizes.
+		foreach ( array(
+			'1040x400',
+			'768x461',
+			'768x295',
+			'727x508',
+			'375x225',
+			'335x225',
+			'320x192',
+			'280x188',
+			'240x161',
+			'160x107',
+			'122x82',
+		) as $size ) {
+			$dimensions = explode( 'x', $size );
+
+			add_image_size( 'ampconf-' . $size, $dimensions[0], $dimensions[1], true );
+		}
 	}
 endif;
 add_action( 'after_setup_theme', 'ampconf_setup' );
+
+/**
+ * Comments are not ever shown on pages.
+ */
+function ampconf_remove_page_comments_support() {
+	remove_post_type_support( 'page', 'comments' );
+}
+add_action( 'init', 'ampconf_remove_page_comments_support' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -106,7 +133,7 @@ add_action( 'after_setup_theme', 'ampconf_setup' );
  * @global int $content_width
  */
 function ampconf_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'ampconf_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'ampconf_content_width', 694 );
 }
 add_action( 'after_setup_theme', 'ampconf_content_width', 0 );
 
