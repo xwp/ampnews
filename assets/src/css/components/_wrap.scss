@@ -194,8 +194,10 @@
 	&--triple-feature {
 
 		.wrap__item {
+			display: none;
 
 			&:nth-child(1) {
+				display: block;
 				padding: 0 0 $site-gutter;
 				border-bottom: none;
 
@@ -206,6 +208,8 @@
 
 			&:nth-child(2),
 			&:nth-child(3) {
+				display: block;
+
 				@media ( query( min, tablet ) ) {
 					width: 50%;
 				}
