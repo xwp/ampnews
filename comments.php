@@ -27,10 +27,10 @@ if ( post_password_required() ) {
 	<h3 class="heading heading--widget"><?php esc_html_e( 'Comments', 'ampconf' ); ?></h3>
 </div>
 
-<div class="wrap__item">
+<div class="comments wrap__item">
 
 	<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" layout="container" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'page_comments' ) ? get_option( 'comments_per_page' ) : 10000 ); ?>">
-		<ol items class="comment-list">
+		<ol items class="comments__list">
 			<?php
 				wp_list_comments( array(
 					'style'      => 'ol',
