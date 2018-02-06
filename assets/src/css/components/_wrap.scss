@@ -189,6 +189,31 @@
 	}
 
 	//
+	// Triple 'Featured' layout.
+	//
+	&--triple-feature {
+
+		.wrap__item {
+
+			&:nth-child(1) {
+				padding: 0 0 $site-gutter;
+				border-bottom: none;
+
+				@media ( query( min, tablet ) ) {
+					padding-top: 0;
+				}
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				@media ( query( min, tablet ) ) {
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	//
 	// 'Single' layout.
 	//
 
