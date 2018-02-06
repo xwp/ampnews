@@ -10,7 +10,7 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 		<figure class="entry__thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php ampconf_the_post_thumbnail( 'ampconf-280x188' ); ?>
+				<?php the_post_thumbnail( 'ampconf-280x188' ); ?>
 			</a>
 		</figure><!-- .entry__thumbnail -->
 	<?php endif; ?>
