@@ -73,6 +73,7 @@
 
 		@media ( query( min, tablet ) ) {
 			width: auto;
+			height: auto;
 			padding: 0;
 			font-size: 56px;
 		}
@@ -94,6 +95,7 @@
 		.custom-logo-link {
 			display: block;
 			width: 100%;
+			max-width: 400px;
 			height: 100%;
 		}
 
