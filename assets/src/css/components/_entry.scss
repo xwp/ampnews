@@ -195,6 +195,18 @@
 				border-bottom: 2px solid $black;
 			}
 		}
+
+		//
+		// Buttons.
+		//
+
+		button,
+		.button {
+			@extend .button;
+			@extend .button--inline;
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 
 	//
