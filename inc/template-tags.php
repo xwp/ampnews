@@ -126,18 +126,43 @@ if ( ! function_exists( 'ampconf_branding_tag' ) ) :
 endif;
 
 /**
- * Get the post thumbnail for AMP.
+ * Filter the featured image for AMP.
  *
  * There is a problem with the AMP sanitizer that is not properly converting img into amp-img,
  * so this is a workaround to preempt the sanitizer.
  *
- * @see the_post_thumbnail()
+ * @see get_the_post_thumbnail()
  *
- * @param string|array $size Optional. Image size to use. Accepts any valid image size, or
- *                           an array of width and height values in pixels (in that order).
- *                           Default 'post-thumbnail'.
- * @param string|array $attr Optional. Query string or array of attributes. Default empty.
+ * @param string $html The post thumbnail HTML.
+ * @return string Amplified HTML.
  */
-function ampconf_the_post_thumbnail( $size = 'post-thumbnail', $attr = '' ) {
-	echo str_replace( '<img ', '<amp-img ', get_the_post_thumbnail( null, $size, $attr ) ) . '</amp-img>'; // WPCS: xss ok.
+function ampconf_filter_post_thumbnail_html( $html ) {
+	if ( is_amp_endpoint() ) {
+		$html = str_replace( '<img ', '<amp-img ', $html ) . '</amp-img>';
+	}
+	return $html;
+}
+if ( function_exists( 'is_amp_endpoint' ) ) {
+	add_filter( 'post_thumbnail_html', 'ampconf_filter_post_thumbnail_html' );
+}
+
+/**
+ * Filter the custom logo image for AMP.
+ *
+ * There is a problem with the AMP sanitizer that is not properly converting img into amp-img,
+ * so this is a workaround to preempt the sanitizer.
+ *
+ * @see get_custom_logo()
+ *
+ * @param string $html The custom logo HTML.
+ * @return string Amplified HTML.
+ */
+function ampconf_filter_get_custom_logo( $html ) {
+	if ( is_amp_endpoint() ) {
+		$html = str_replace( '<img ', '<amp-img ', $html ) . '</amp-img>';
+	}
+	return $html;
+}
+if ( function_exists( 'is_amp_endpoint' ) ) {
+	add_filter( 'get_custom_logo', 'ampconf_filter_get_custom_logo' );
 }
