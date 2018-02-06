@@ -196,13 +196,16 @@
 		.wrap__item {
 			display: none;
 
-			&:nth-child(1) {
-				display: block;
-				padding: 0 0 $site-gutter;
-				border-bottom: none;
+			.entry__meta {
+				padding-bottom: 0;
+			}
 
-				@media ( query( min, tablet ) ) {
-					padding-top: 0;
+			&:nth-child(1) {
+				@extend .entry--featured;
+				padding-bottom: $site-gutter * 2;
+
+				@media ( query( max, tablet ) ) {
+					padding-bottom: $site-gutter;
 				}
 			}
 
@@ -212,6 +215,18 @@
 
 				@media ( query( min, tablet ) ) {
 					width: 50%;
+				}
+			}
+
+			&:nth-child(2) {
+				@media ( query( min, tablet ) ) {
+					padding-right: $site-gutter;
+				}
+			}
+
+			&:nth-child(3) {
+				@media ( query( min, tablet ) ) {
+					padding-left: $site-gutter;
 				}
 			}
 		}
