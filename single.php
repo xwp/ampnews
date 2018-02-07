@@ -16,7 +16,7 @@ get_header(); ?>
 		<div class="wrap">
 			<main class="wrap__item wrap__item--full-width">
 				<amp-live-list id="ampconf-live-post-<?php the_ID(); ?>" data-poll-interval="15000" data-max-items-per-page="1">
-					<button update on="tap:ampconf-live-post-<?php the_ID(); ?>.update" class="button"><?php esc_html_e( 'Click for updates!', 'ampconf' ); ?></button>
+					<button update on="tap:ampconf-live-post-<?php the_ID(); ?>.update" class="button"><?php esc_html_e( 'Load updates!', 'ampconf' ); ?></button>
 					<div items>
 						<?php get_template_part( 'templates/entry/full' ); ?>
 					</div>

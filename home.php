@@ -17,7 +17,7 @@ get_header(); ?>
 	if ( ! is_paged() && have_posts() ) :
 		?>
 		<amp-live-list id="ampconf-featured-articles-list" data-poll-interval="15000" data-max-items-per-page="3">
-			<button class="button" update on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Click for new features!', 'ampconf' ); ?></button>
+			<button class="button" update on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Load new features!', 'ampconf' ); ?></button>
 			<div items class="wrap wrap--triple-feature">
 				<?php
 				// Show the first three posts with specific entry templates.
@@ -46,7 +46,7 @@ get_header(); ?>
 				<?php endif; ?>
 
 				<amp-live-list id="ampconf-articles-list" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
-					<button class="button" update on="tap:ampconf-articles-list.update"><?php esc_html_e( 'Click for newer articles.', 'ampconf' ); ?></button>
+					<button class="button" update on="tap:ampconf-articles-list.update"><?php esc_html_e( 'Load newer articles.', 'ampconf' ); ?></button>
 					<div items>
 						<?php
 						while ( have_posts() ) :
