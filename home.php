@@ -20,8 +20,23 @@ get_header(); ?>
 			<button class="button" update on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
 			<div items class="wrap wrap--triple-feature">
 				<?php
+				$show_count = 3;
+
+				/*
+				 * Override the modified time of the items to all be the same as the max so that the featured
+				 * item will get updated to use the default template when a new featured item is published.
+				 */
+				global $wp_query;
+				$featured_posts        = array_slice( $wp_query->posts, 0, $show_count );
+				$max_post_modified     = max( wp_list_pluck( $featured_posts, 'post_modified' ) );
+				$max_post_modified_gmt = max( wp_list_pluck( $featured_posts, 'post_modified_gmt' ) );
+				foreach ( $featured_posts as $featured_post ) {
+					$featured_post->post_modified     = $max_post_modified;
+					$featured_post->post_modified_gmt = $max_post_modified_gmt;
+				}
+
 				// Show the first three posts with specific entry templates.
-				for ( $i = 0; have_posts() && $i < 3; $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
+				for ( $i = 0; have_posts() && $i < $show_count; $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
 					the_post();
 
 					if ( 0 === $i ) {
