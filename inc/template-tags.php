@@ -126,43 +126,25 @@ if ( ! function_exists( 'ampconf_branding_tag' ) ) :
 endif;
 
 /**
- * Filter the featured image for AMP.
+ * Render attributes for a post's article, including id, class, and amp-live-list attributes.
  *
- * There is a problem with the AMP sanitizer that is not properly converting img into amp-img,
- * so this is a workaround to preempt the sanitizer.
+ * @see post_class()
+ * @see the_ID()
  *
- * @see get_the_post_thumbnail()
- *
- * @param string $html The post thumbnail HTML.
- * @return string Amplified HTML.
+ * @param array $attributes Attributes to output.
  */
-function ampconf_filter_post_thumbnail_html( $html ) {
-	if ( is_amp_endpoint() ) {
-		$html = str_replace( '<img ', '<amp-img ', $html ) . '</amp-img>';
-	}
-	return $html;
-}
-if ( function_exists( 'is_amp_endpoint' ) ) {
-	add_filter( 'post_thumbnail_html', 'ampconf_filter_post_thumbnail_html' );
-}
+function ampconf_the_post_attributes( $attributes = array() ) {
+	$attributes = wp_parse_args( $attributes, array(
+		'id'               => sprintf( 'post-%d', get_the_ID() ),
+		'class'            => '',
+		'data-sort-time'   => get_the_date( 'U' ),
+		'data-update-time' => get_the_modified_time( 'U' ),
+	) );
 
-/**
- * Filter the custom logo image for AMP.
- *
- * There is a problem with the AMP sanitizer that is not properly converting img into amp-img,
- * so this is a workaround to preempt the sanitizer.
- *
- * @see get_custom_logo()
- *
- * @param string $html The custom logo HTML.
- * @return string Amplified HTML.
- */
-function ampconf_filter_get_custom_logo( $html ) {
-	if ( is_amp_endpoint() ) {
-		$html = str_replace( '<img ', '<amp-img ', $html ) . '</amp-img>';
+	// Fill out the classes.
+	$attributes['class'] = implode( ' ', get_post_class( $attributes['class'] ) );
+
+	foreach ( $attributes as $name => $value ) {
+		printf( ' %s="%s"', $name, esc_attr( $value ) ); // WPCS: XSS OK.
 	}
-	return $html;
-}
-if ( function_exists( 'is_amp_endpoint' ) ) {
-	add_filter( 'get_custom_logo', 'ampconf_filter_get_custom_logo' );
 }
