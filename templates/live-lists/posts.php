@@ -9,7 +9,7 @@ if ( have_posts() ) :
 
 	?>
 	<amp-live-list id="ampconf-posts-list" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
-		<button update on="tap:ampconf-posts-list.update" class="button"><?php esc_html_e( 'Click for updates!', 'ampconf' ); ?></button>
+		<button update on="tap:ampconf-posts-list.update" class="button"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
 		<div items>
 			<?php
 			/* Start the Loop */

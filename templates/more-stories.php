@@ -36,7 +36,7 @@ if ( $stories->have_posts() ) : ?>
 
 	<amp-live-list id="more-stories" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( $max_shown ); ?>">
 		<button update on="tap:more-stories.update" class="button">
-			<?php esc_html_e( 'Click for more stories!', 'ampconf' ); ?>
+			<?php esc_html_e( 'Load Newer Stories', 'ampconf' ); ?>
 		</button>
 
 		<div items>
