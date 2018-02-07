@@ -1,9 +1,9 @@
 // Commons
 @import 'base/variables';
+@import 'base/colors';
 @import 'scss-query/query';
 @import 'base/typography';
 @import 'base/structure';
-@import 'base/colors';
 
 // Elements
 @import 'elements/headings';
@@ -12,14 +12,14 @@
 @import 'elements/search-icon';
 
 // Components
+@import 'components/entry';
+@import 'components/entry--featured';
+@import 'components/entry--slim';
 @import 'components/wrap';
 @import 'components/site-header';
 @import 'components/wrap--footer';
 @import 'components/menu--header';
 @import 'components/menu--horizontal';
-@import 'components/entry';
-@import 'components/entry--featured';
-@import 'components/entry--slim';
 @import 'components/wp-block';
 @import 'components/inline-form';
 @import 'components/nav-links';
@@ -27,6 +27,8 @@
 @import 'components/social-share';
 @import 'components/search-form';
 @import 'components/comments';
+@import 'components/amp-live-list';
+@import 'components/amp-img';
 
 // Widgets
 @import 'widgets/recentcomments';

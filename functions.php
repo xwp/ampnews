@@ -7,6 +7,13 @@
  * @package AMPConf
  */
 
+/**
+ * Interval for polling for updates to live-lists.
+ *
+ * @var int
+ */
+define( 'AMPCONF_LIVE_LIST_POLL_INTERVAL', 15000 );
+
 if ( ! function_exists( 'ampconf_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -97,17 +104,21 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 
 		// Custom image sizes.
 		foreach ( array(
-			'1040x400',
-			'768x461',
-			'768x295',
-			'727x508',
-			'375x225',
-			'335x225',
-			'320x192',
-			'280x188',
-			'240x161',
-			'160x107',
-			'122x82',
+			'1600x900',
+			'1400x787',
+			'1200x675',
+			'1040x585',
+			'768x432',
+			'727x409',
+			'600x338',
+			'500x281',
+			'375x211',
+			'335x188',
+			'320x180',
+			'280x158',
+			'240x135',
+			'160x90',
+			'122x67',
 		) as $size ) {
 			$dimensions = explode( 'x', $size );
 

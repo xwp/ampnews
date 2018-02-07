@@ -34,9 +34,9 @@ if ( $stories->have_posts() ) : ?>
 		</div>
 	<?php endif; ?>
 
-	<amp-live-list id="more-stories" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( $max_shown ); ?>">
-		<button update on="tap:more-stories.update">
-			<?php esc_html_e( 'Click for more stories!', 'ampconf' ); ?>
+	<amp-live-list id="more-stories" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( $max_shown ); ?>">
+		<button update on="tap:more-stories.update" class="button">
+			<?php esc_html_e( 'Load Newer Stories', 'ampconf' ); ?>
 		</button>
 
 		<div items>
@@ -52,7 +52,7 @@ if ( $stories->have_posts() ) : ?>
 				}
 				?>
 
-				<div class="wrap__item" id="more-stories__<?php echo esc_attr( get_the_ID() ); ?>" data-sort-time="<?php echo esc_attr( get_the_date( 'U' ) ); ?>">
+				<div id="more-stories__<?php echo esc_attr( get_the_ID() ); ?>" data-sort-time="<?php echo esc_attr( get_the_date( 'U' ) ); ?>" data-update-time="<?php echo esc_attr( get_the_modified_time( 'U' ) ); ?>">
 					<?php get_template_part( 'templates/entry/slim' ); ?>
 				</div>
 				<?php $shown++; ?>

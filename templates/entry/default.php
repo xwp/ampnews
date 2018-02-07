@@ -6,11 +6,11 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
+<article <?php ampconf_the_post_attributes( array( 'class' => 'entry wrap__item' ) ); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
 		<figure class="entry__thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'ampconf-335x225' ); ?>
+				<?php the_post_thumbnail( 'ampconf-768x432' ); ?>
 			</a>
 		</figure><!-- .entry__thumbnail -->
 	<?php endif; ?>
