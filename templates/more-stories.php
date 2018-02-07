@@ -52,7 +52,7 @@ if ( $stories->have_posts() ) : ?>
 				}
 				?>
 
-				<div id="more-stories__<?php echo esc_attr( get_the_ID() ); ?>" data-sort-time="<?php echo esc_attr( get_the_date( 'U' ) ); ?>">
+				<div id="more-stories__<?php echo esc_attr( get_the_ID() ); ?>" data-sort-time="<?php echo esc_attr( get_the_date( 'U' ) ); ?>" data-update-time="<?php echo esc_attr( get_the_modified_time( 'U' ) ); ?>">
 					<?php get_template_part( 'templates/entry/slim' ); ?>
 				</div>
 				<?php $shown++; ?>
