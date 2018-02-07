@@ -34,10 +34,10 @@ if ( $stories->have_posts() ) : ?>
 		</div>
 	<?php endif; ?>
 
-	<amp-live-list id="more-stories" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( $max_shown ); ?>">
-		<button update on="tap:more-stories.update" class="button">
-			<?php esc_html_e( 'Load Newer Stories', 'ampconf' ); ?>
-		</button>
+	<amp-live-list id="more-stories" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( $max_shown ); ?>">
+		<div update on="tap:more-stories.update" class="live-list__button">
+			<button class="button"><?php esc_html_e( 'Load Newer Stories', 'ampconf' ); ?></button>
+		</div>
 
 		<div items>
 			<?php
