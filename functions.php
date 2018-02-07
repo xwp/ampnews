@@ -7,6 +7,13 @@
  * @package AMPConf
  */
 
+/**
+ * Interval for polling for updates to live-lists.
+ *
+ * @var int
+ */
+define( 'AMPCONF_LIVE_LIST_POLL_INTERVAL', 15000 );
+
 if ( ! function_exists( 'ampconf_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.

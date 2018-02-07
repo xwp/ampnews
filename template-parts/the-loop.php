@@ -7,7 +7,7 @@
 
 ?>
 
-<amp-live-list id="the-loop" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
+<amp-live-list id="the-loop" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
 	<button update on="tap:the-loop.update">
 		<?php esc_html_e( 'You have updates!', 'ampconf' ); ?>
 	</button>

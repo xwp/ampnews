@@ -16,7 +16,7 @@ get_header(); ?>
 	// Only show the feature and subfeatures when not paged.
 	if ( ! is_paged() && have_posts() ) :
 		?>
-		<amp-live-list id="ampconf-featured-articles-list" data-poll-interval="15000" data-max-items-per-page="3">
+		<amp-live-list id="ampconf-featured-articles-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="3">
 			<button class="button" update on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Load new features!', 'ampconf' ); ?></button>
 			<div items class="wrap wrap--triple-feature">
 				<?php
@@ -45,7 +45,7 @@ get_header(); ?>
 					</header>
 				<?php endif; ?>
 
-				<amp-live-list id="ampconf-articles-list" data-poll-interval="15000" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
+				<amp-live-list id="ampconf-articles-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
 					<button class="button" update on="tap:ampconf-articles-list.update"><?php esc_html_e( 'Load newer articles.', 'ampconf' ); ?></button>
 					<div items>
 						<?php
