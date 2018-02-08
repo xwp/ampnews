@@ -23,18 +23,26 @@
 				flex-flow: row wrap;
 				justify-content: space-between;
 				align-items: flex-start;
+				padding-left: 52px;
 			}
 
 			&-meta {
+				position: relative;
 				flex: 0 1 auto;
 				width: calc( 100% - 60px );
 
 				@media ( query( min, tablet ) ) {
 					font-size: 18px;
 				}
+
+				.comment-awaiting-moderation {
+					margin: 0;
+					color: #e4002b;
+					font-size: 14px;
+				}
 			}
 
-			.reply {
+			&-reply-link {
 				order: 1;
 				flex: 1 0;
 				width: 60px;
@@ -49,11 +57,9 @@
 				order: 2;
 				width: 100%;
 				flex: 0 1 auto;
-				padding-left: 65px;
 				color: $muted;
 
 				@media ( query( min, tablet ) ) {
-					padding-left: 77px;
 					font-size: 18px;
 					line-height: 1.4;
 				}
@@ -73,14 +79,11 @@
 				}
 
 				.avatar {
-					float: left;
+					position: absolute;
+					left: -52px;
+					top: 0;
 					display: inline-block;
-					margin: -3px 20px 0 0;
-					vertical-align: middle;
-
-					@media ( query( min, tablet ) ) {
-						margin-right: 32px;
-					}
+					margin: 0;
 				}
 
 				b {
@@ -90,7 +93,6 @@
 			}
 
 			&-metadata {
-				margin-left: 65px;
 				font-size: 14px;
 				line-height: 1.5;
 				color: $muted;
@@ -98,6 +100,7 @@
 
 			&-body {
 				position: relative;
+				padding-bottom: 8px;
 
 				&::after {
 					content: '';
@@ -162,8 +165,12 @@
 					}
 				}
 			}
+		}
 
-			&:first-child > .comment-body::after {
+		> .comment:first-child {
+			padding-top: 0;
+
+			> .comment-body::after {
 				content: none;
 			}
 		}
@@ -180,6 +187,7 @@
 			padding: 20px 0 0;
 			font-size: 14px;
 			color: $muted;
+			border-top: 1px solid $border-color;
 
 			@media ( query( min, tablet ) ) {
 				font-size: 16px;
@@ -201,6 +209,8 @@
 		}
 
 		&-form {
+			display: flex;
+			flex-flow: column nowrap;
 
 			label {
 				display: block;
@@ -218,6 +228,11 @@
 				border: 1px solid $border-color;
 			}
 
+			input.user-invalid,
+			textarea.user-invalid {
+				border-color: #e4002b;
+			}
+
 			input[type='submit'] {
 				@extend .button;
 				width: 100%;
@@ -229,11 +244,22 @@
 			}
 
 			.form-submit {
+				order: 1;
 				margin: 30px 0 0;
 			}
 
+			[submit-error],
+			[submit-success] {
+				width: 100%;
+				margin: 30px 0 0;
+				font-weight: 700;
+			}
+
+			[submit-error] {
+				color: #e4002b;
+			}
+
 			@media ( query( min, tablet ) ) {
-				display: flex;
 				flex-flow: row wrap;
 
 				> p {

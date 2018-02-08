@@ -1,0 +1,12 @@
+.live-list {
+	width: 100%;
+
+	&__button {
+		display: none;
+		padding: 0 $site-gutter;
+
+		> .button {
+			margin: $site-gutter auto;
+		}
+	}
+}

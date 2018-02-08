@@ -20,6 +20,12 @@ hr {
 	border-bottom: 1px solid $border-color;
 }
 
+img,
+amp-img {
+	max-width: 100%;
+	height: auto;
+}
+
 #page {
 	padding-top: 60px;
 

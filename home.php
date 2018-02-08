@@ -16,8 +16,10 @@ get_header(); ?>
 	// Only show the feature and subfeatures when not paged.
 	if ( ! is_paged() && have_posts() ) :
 		?>
-		<amp-live-list id="ampconf-featured-articles-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="3">
-			<button class="button" update on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
+		<amp-live-list id="ampconf-featured-articles-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="3">
+			<div update class="live-list__button">
+				<button class="button"on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
+			</div>
 			<div items class="wrap wrap--triple-feature">
 				<?php
 				$show_count = 3;
@@ -60,7 +62,7 @@ get_header(); ?>
 					</header>
 				<?php endif; ?>
 
-				<amp-live-list id="ampconf-articles-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
+				<amp-live-list id="ampconf-articles-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
 					<div items>
 						<?php
 						while ( have_posts() ) :
@@ -70,7 +72,9 @@ get_header(); ?>
 						?>
 					</div>
 
-					<button class="button" update on="tap:ampconf-articles-list.update<?php echo esc_attr( ( ! is_paged() ) ? ',ampconf-featured-articles-list.update' : '' ); ?>"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
+					<div update class="live-list__button">
+						<button class="button" on="tap:ampconf-articles-list.update<?php echo esc_attr( ( ! is_paged() ) ? ',ampconf-featured-articles-list.update' : '' ); ?>"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
+					</div>
 
 					<div pagination></div>
 				</amp-live-list>
