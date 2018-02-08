@@ -38,8 +38,8 @@ if ( post_password_required() ) {
 				) );
 			?>
 		</ol><!-- .comment-list -->
-		<div update on="tap:amp-live-comments-list-<?php the_ID(); ?>.update" class="live-list__button">
-			<button class="button"><?php esc_html_e( 'New comment(s)', 'ampconf' ); ?></button>
+		<div update class="live-list__button">
+			<button class="button" on="tap:amp-live-comments-list-<?php the_ID(); ?>.update"><?php esc_html_e( 'New comment(s)', 'ampconf' ); ?></button>
 		</div>
 		<nav pagination>
 			<?php the_comments_navigation(); ?>

@@ -17,8 +17,8 @@ get_header(); ?>
 	if ( ! is_paged() && have_posts() ) :
 		?>
 		<amp-live-list id="ampconf-featured-articles-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="3">
-			<div class="live-list__button" update on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update">
-				<button class="button"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
+			<div update class="live-list__button">
+				<button class="button"on="tap:ampconf-articles-list.update,ampconf-featured-articles-list.update"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
 			</div>
 			<div items class="wrap wrap--triple-feature">
 				<?php
@@ -72,8 +72,8 @@ get_header(); ?>
 						?>
 					</div>
 
-					<div class="live-list__button" update on="tap:ampconf-articles-list.update<?php echo esc_attr( ( ! is_paged() ) ? ',ampconf-featured-articles-list.update' : '' ); ?>">
-						<button class="button"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
+					<div update class="live-list__button">
+						<button class="button" on="tap:ampconf-articles-list.update<?php echo esc_attr( ( ! is_paged() ) ? ',ampconf-featured-articles-list.update' : '' ); ?>"><?php esc_html_e( 'Load Newer Articles', 'ampconf' ); ?></button>
 					</div>
 
 					<div pagination></div>
