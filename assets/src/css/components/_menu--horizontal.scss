@@ -30,7 +30,6 @@
 			content: '';
 			display: block;
 			position: absolute;
-			z-index: 1;
 			margin-top: -8px;
 			left: calc( 100vw - 75px );
 			width: 75px;
@@ -39,6 +38,7 @@
 
 			@media ( query( min, tablet ) ) {
 				content: none;
+				z-index: 1;
 			}
 		}
 
