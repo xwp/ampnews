@@ -15,21 +15,10 @@
 		margin: 0;
 		padding: 0;
 
-		a {
-			display: block;
-			position: relative;
-			padding-bottom: 66%;
-			overflow: hidden;
-		}
-
 		.wp-post-image {
-			position: absolute;
-			top: 50%;
-			transform: translateY( -50% );
+			position: relative;
 			width: 100%;
-			min-width: 100%;
-			min-height: 100%;
-			object-fit: cover;
+			padding-bottom: 66%;
 		}
 
 		img {
