@@ -97,10 +97,25 @@
 			width: 100%;
 			max-width: 400px;
 			height: 100%;
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: contain;
+
+			@media ( query( min, tablet ) ) {
+				height: auto;
+			}
 		}
 
 		.custom-logo {
-			max-width: 100%;
+			max-height: 100%;
+
+			@media ( query( min, tablet ) ) {
+				display: block;
+			}
+
+			img {
+				object-fit: contain;
+			}
 		}
 	}
 
