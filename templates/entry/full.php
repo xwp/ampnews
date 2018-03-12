@@ -21,7 +21,7 @@
 	</header><!-- .entry__header -->
 
 	<div class="entry__content">
-		<p><?php the_content(); ?></p>
+		<?php the_content(); ?>
 	</div><!-- .entry__summary -->
 
 	<footer class="entry__footer">
