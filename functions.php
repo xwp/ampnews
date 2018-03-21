@@ -31,7 +31,9 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 		 */
 		load_theme_textdomain( 'ampconf', get_template_directory() . '/languages' );
 
-		add_theme_support( 'amp' );
+		add_theme_support( 'amp', array(
+			'comments_live_list' => true,
+		) );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
