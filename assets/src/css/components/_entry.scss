@@ -14,6 +14,16 @@
 	&__thumbnail {
 		margin: 0;
 		padding: 0;
+
+		.wp-post-image {
+			position: relative;
+			width: 100%;
+			padding-bottom: 66%;
+		}
+
+		img {
+			object-fit: cover;
+		}
 	}
 
 	//
