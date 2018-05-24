@@ -7,14 +7,14 @@
 
 ?>
 
-<div id="page" class="" [class]="ampConf.mobileMenu ? 'no-scroll' : ''">
+<div id="page" class="" [class]="ampNews.mobileMenu ? 'no-scroll' : ''">
 
-	<header class="site-header" [class]="ampConf.mobileMenu ? 'site-header is-menu-expanded' : 'site-header'">
+	<header class="site-header" [class]="ampNews.mobileMenu ? 'site-header is-menu-expanded' : 'site-header'">
 
 		<div class="site-header__branding">
 			<h1 class="site-header__title"><a href="home.php#development=1">Brand</a></h1>
 			<p class="site-header__description">Previewing Another WordPress Blog</p>
-			<button class="site-header__menu-toggle" on="tap:AMP.setState( { ampConf: { mobileMenu: ! ampConf.mobileMenu } } )" aria-controls="primary-menu" aria-expanded="false">
+			<button class="site-header__menu-toggle" on="tap:AMP.setState( { ampNews: { mobileMenu: ! ampNews.mobileMenu } } )" aria-controls="primary-menu" aria-expanded="false">
 				<span class="screen-reader-text">Open menu</span>
 			</button>
 		</div>

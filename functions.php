@@ -186,7 +186,7 @@ add_action( 'wp_enqueue_scripts', 'ampnews_enqueue_styles' );
  */
 function ampnews_state() {
 	?>
-	<amp-state id="ampConf">
+	<amp-state id="ampNews">
 		<script type="application/json">
 			{
 				"mobileMenu": false

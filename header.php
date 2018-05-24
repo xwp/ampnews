@@ -20,11 +20,11 @@ $description = get_bloginfo( 'description', 'display' );
 
 <body <?php body_class(); ?>>
 
-	<div id="page" class="" [class]="ampConf.mobileMenu ? 'no-scroll' : ''">
+	<div id="page" class="" [class]="ampNews.mobileMenu ? 'no-scroll' : ''">
 
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ampnews' ); ?></a>
 
-		<header class="site-header" [class]="ampConf.mobileMenu ? 'site-header is-menu-expanded' : 'site-header'">
+		<header class="site-header" [class]="ampNews.mobileMenu ? 'site-header is-menu-expanded' : 'site-header'">
 
 			<div class="site-header__branding">
 				<<?php ampnews_branding_tag(); ?> class="site-header__title">
@@ -41,7 +41,7 @@ $description = get_bloginfo( 'description', 'display' );
 
 				<button
 						class="site-header__menu-toggle"
-						on="tap:AMP.setState( { ampConf: { mobileMenu: ! ampConf.mobileMenu } } )"
+						on="tap:AMP.setState( { ampNews: { mobileMenu: ! ampNews.mobileMenu } } )"
 						aria-controls="primary-menu"
 						aria-expanded="false">
 					<span class="screen-reader-text"><?php esc_html_e( 'Open menu', 'ampnews' ); ?></span>

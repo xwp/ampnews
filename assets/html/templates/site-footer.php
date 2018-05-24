@@ -20,7 +20,7 @@
 		<p class="wrap__item wrap__item--footer-copyright">&copy; <?php echo date( 'Y' ) ?> Brand</p>
 	</footer>
 
-	<amp-state id="ampConf" aria-hidden="true">
+	<amp-state id="ampNews" aria-hidden="true">
 		<script type="application/json">
 			{
 				"mobileMenu": false
