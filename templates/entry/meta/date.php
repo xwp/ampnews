@@ -7,5 +7,5 @@
 
 ?>
 <span class="entry__meta entry__meta--date">
-	<?php ampconf_posted_on(); ?>
+	<?php ampnews_posted_on(); ?>
 </span>

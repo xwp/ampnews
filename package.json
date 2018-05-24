@@ -24,14 +24,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xwp/ampconf.git"
+    "url": "git+https://github.com/xwp/ampnews.git"
   },
   "author": "",
   "license": "GPL-2.0+",
   "bugs": {
-    "url": "https://github.com/xwp/ampconf/issues"
+    "url": "https://github.com/xwp/ampnews/issues"
   },
-  "homepage": "https://github.com/xwp/ampconf#readme",
+  "homepage": "https://github.com/xwp/ampnews#readme",
   "stylelint": {
     "extends": "stylelint-config-xwp/scss",
     "rules": {

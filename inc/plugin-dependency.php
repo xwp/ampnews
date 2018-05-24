@@ -11,7 +11,7 @@
  *
  * @since 0.1
  */
-function ampconf_plugin_dependency_notice() {
+function ampnews_plugin_dependency_notice() {
 	$filepath = 'amp/amp.php';
 	$updates  = get_site_transient( 'update_plugins' );
 
@@ -24,7 +24,7 @@ function ampconf_plugin_dependency_notice() {
 		$slug    = 'amp';
 		$path    = 'update.php';
 		$button  = __( 'Install', 'default' );
-		$message = __( 'The AMPNews theme requires the AMP plugin to be installed to render fully valid AMP. But it will still function without it.', 'ampconf' );
+		$message = __( 'The AMPNews theme requires the AMP plugin to be installed to render fully valid AMP. But it will still function without it.', 'ampnews' );
 		$params  = array(
 			'action'   => 'install-plugin',
 			'plugin'   => $slug,
@@ -33,7 +33,7 @@ function ampconf_plugin_dependency_notice() {
 	} elseif ( ! is_plugin_active( $filepath ) ) {
 		$path    = 'plugins.php';
 		$button  = __( 'Activate', 'default' );
-		$message = __( 'The AMPNews theme requires the AMP plugin to be activated to render fully valid AMP. But it will still function without it.', 'ampconf' );
+		$message = __( 'The AMPNews theme requires the AMP plugin to be activated to render fully valid AMP. But it will still function without it.', 'ampnews' );
 		$params  = array(
 			'action'   => 'activate',
 			'plugin'   => $filepath,
@@ -42,7 +42,7 @@ function ampconf_plugin_dependency_notice() {
 	} elseif ( isset( $updates->response[ $filepath ]->new_version ) ) {
 		$path    = 'update.php';
 		$button  = __( 'Update', 'default' );
-		$message = __( 'A new version of the AMP plugin is available, please upgrade.', 'ampconf' );
+		$message = __( 'A new version of the AMP plugin is available, please upgrade.', 'ampnews' );
 		$params  = array(
 			'action'   => 'upgrade-plugin',
 			'plugin'   => $filepath,
@@ -61,4 +61,4 @@ function ampconf_plugin_dependency_notice() {
 		<?php
 	}
 }
-add_action( 'admin_notices', 'ampconf_plugin_dependency_notice' );
+add_action( 'admin_notices', 'ampnews_plugin_dependency_notice' );

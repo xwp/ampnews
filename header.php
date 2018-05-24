@@ -22,18 +22,18 @@ $description = get_bloginfo( 'description', 'display' );
 
 	<div id="page" class="" [class]="ampConf.mobileMenu ? 'no-scroll' : ''">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ampconf' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ampnews' ); ?></a>
 
 		<header class="site-header" [class]="ampConf.mobileMenu ? 'site-header is-menu-expanded' : 'site-header'">
 
 			<div class="site-header__branding">
-				<<?php ampconf_branding_tag(); ?> class="site-header__title">
+				<<?php ampnews_branding_tag(); ?> class="site-header__title">
 					<?php if ( has_custom_logo() ) : ?>
 						<?php the_custom_logo(); ?>
 					<?php else : ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					<?php endif; ?>
-				</<?php ampconf_branding_tag(); ?>>
+				</<?php ampnews_branding_tag(); ?>>
 
 				<?php if ( $description || is_customize_preview() ) : ?>
 					<p class="site-header__description"><?php echo esc_html( $description ); ?></p>
@@ -44,7 +44,7 @@ $description = get_bloginfo( 'description', 'display' );
 						on="tap:AMP.setState( { ampConf: { mobileMenu: ! ampConf.mobileMenu } } )"
 						aria-controls="primary-menu"
 						aria-expanded="false">
-					<span class="screen-reader-text"><?php esc_html_e( 'Open menu', 'ampconf' ); ?></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Open menu', 'ampnews' ); ?></span>
 				</button>
 
 			</div>

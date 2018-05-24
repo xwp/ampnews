@@ -6,11 +6,11 @@
  */
 
 ?>
-<article <?php ampconf_the_post_attributes( array( 'class' => 'entry wrap__item' ) ); ?>>
+<article <?php ampnews_the_post_attributes( array( 'class' => 'entry wrap__item' ) ); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
 		<figure class="entry__thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'ampconf-1040x585', array( 'data-amp-layout' => 'fill' ) ); ?>
+				<?php the_post_thumbnail( 'ampnews-1040x585', array( 'data-amp-layout' => 'fill' ) ); ?>
 			</a>
 		</figure><!-- .entry__thumbnail -->
 	<?php endif; ?>
@@ -28,7 +28,7 @@
 				printf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Read more<span class="screen-reader-text"> "%s"</span>', 'ampconf' ),
+						__( 'Read more<span class="screen-reader-text"> "%s"</span>', 'ampnews' ),
 						array(
 							'span' => array(
 								'class' => array(),

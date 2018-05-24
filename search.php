@@ -14,7 +14,7 @@ get_header(); ?>
 			<h1 class="heading heading--h1">
 			<?php
 				/* translators: %s: search query. */
-				printf( esc_html__( 'Search Results for: %s', 'ampconf' ), get_search_query() );
+				printf( esc_html__( 'Search Results for: %s', 'ampnews' ), get_search_query() );
 			?>
 			</h1>
 		</header><!-- .page-header -->

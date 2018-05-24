@@ -13,7 +13,7 @@
 			role="search"
 			method="get"
 			class="search-form"
-			action="https://ampconf.local/"
+			action="https://ampnews.local/"
 			target="_top">
 		<label>
 			<span class="screen-reader-text">Search for:</span>

@@ -3,14 +3,14 @@
 
 A WordPress theme showcasing canonical AMP functionality for AMP Conf 2018.
 
-**Contributors:** [xwp](https://profiles.wordpress.org/xwp)  
-**Tags:** [custom-background](https://wordpress.org/plugins/tags/custom-background), [custom-logo](https://wordpress.org/plugins/tags/custom-logo), [custom-menu](https://wordpress.org/plugins/tags/custom-menu), [featured-images](https://wordpress.org/plugins/tags/featured-images), [threaded-comments](https://wordpress.org/plugins/tags/threaded-comments), [translation-ready](https://wordpress.org/plugins/tags/translation-ready)  
-**Requires at least:** 4.0  
-**Tested up to:** 4.9  
-**Stable tag:** 1.0.0  
-**License:** [GNU General Public License v2 or later](LICENSE)  
+**Contributors:** [xwp](https://profiles.wordpress.org/xwp)
+**Tags:** [custom-background](https://wordpress.org/plugins/tags/custom-background), [custom-logo](https://wordpress.org/plugins/tags/custom-logo), [custom-menu](https://wordpress.org/plugins/tags/custom-menu), [featured-images](https://wordpress.org/plugins/tags/featured-images), [threaded-comments](https://wordpress.org/plugins/tags/threaded-comments), [translation-ready](https://wordpress.org/plugins/tags/translation-ready)
+**Requires at least:** 4.0
+**Tested up to:** 4.9
+**Stable tag:** 1.0.0
+**License:** [GNU General Public License v2 or later](LICENSE)
 
-[![Build Status](https://travis-ci.org/xwp/ampconf.svg?branch=master)](https://travis-ci.org/xwp/ampconf) 
+[![Build Status](https://travis-ci.org/xwp/ampnews.svg?branch=master)](https://travis-ci.org/xwp/ampnews)
 
 ## Description ##
 

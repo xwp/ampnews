@@ -14,12 +14,12 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function ampconf_jetpack_setup() {
+function ampnews_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll', array(
 			'container' => 'main',
-			'render'    => 'ampconf_infinite_scroll_render',
+			'render'    => 'ampnews_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -31,7 +31,7 @@ function ampconf_jetpack_setup() {
 	add_theme_support(
 		'jetpack-content-options', array(
 			'post-details'    => array(
-				'stylesheet' => 'ampconf-style',
+				'stylesheet' => 'ampnews-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -46,12 +46,12 @@ function ampconf_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'ampconf_jetpack_setup' );
+add_action( 'after_setup_theme', 'ampnews_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function ampconf_infinite_scroll_render() {
+function ampnews_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

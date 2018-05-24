@@ -11,7 +11,7 @@
 	<?php if ( ! is_404() ) : ?>
 		<header class="entry__header">
 			<h3 class="entry__title">
-				<?php esc_html_e( 'No Content Found', 'ampconf' ); ?>
+				<?php esc_html_e( 'No Content Found', 'ampnews' ); ?>
 			</h3>
 		</header><!-- .entry__header -->
 	<?php endif; ?>
@@ -26,7 +26,7 @@
 				printf(
 					wp_kses(
 						/* translators: 1: link to WP admin new post page. */
-						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'ampconf' ),
+						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'ampnews' ),
 						array(
 							'a' => array(
 								'href' => array(),
@@ -44,7 +44,7 @@
 			printf(
 				wp_kses(
 					/* translators: 1: link to WP admin new post page. */
-					__( 'It looks like nothing was found at this location. Return <a href="%1$s">home</a>, use the sidebar to find what you’re looking for, or try a search below.', 'ampconf' ),
+					__( 'It looks like nothing was found at this location. Return <a href="%1$s">home</a>, use the sidebar to find what you’re looking for, or try a search below.', 'ampnews' ),
 					array(
 						'a' => array(
 							'href' => array(),

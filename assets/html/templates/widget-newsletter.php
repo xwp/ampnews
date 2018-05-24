@@ -14,7 +14,7 @@
 	<form
 			method="get"
 			class="newsletter-form"
-			action="https://ampconf.local/"
+			action="https://ampnews.local/"
 			target="_top">
 		<label>
 			<span class="screen-reader-text">Sign up for a weekly newsletter:</span>
