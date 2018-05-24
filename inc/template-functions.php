@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array Classes.
  */
-function ampconf_body_classes( $classes ) {
+function ampnews_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -19,27 +19,27 @@ function ampconf_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'ampconf_body_classes' );
+add_filter( 'body_class', 'ampnews_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function ampconf_pingback_header() {
+function ampnews_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'ampconf_pingback_header' );
+add_action( 'wp_head', 'ampnews_pingback_header' );
 
 /**
  * Filters the string displayed after the excerpt.
  *
  * @return string $more_string More text.
  */
-function ampconf_excerpt_more() {
+function ampnews_excerpt_more() {
 	return '&hellip;';
 }
-add_filter( 'excerpt_more', 'ampconf_excerpt_more' );
+add_filter( 'excerpt_more', 'ampnews_excerpt_more' );
 
 /**
  * Filters the archive title and wraps the type of archive in a span element.
@@ -47,7 +47,7 @@ add_filter( 'excerpt_more', 'ampconf_excerpt_more' );
  * @param string $title Archive title to be displayed.
  * @return string $title Title.
  */
-function ampconf_get_the_archive_title( $title ) {
+function ampnews_get_the_archive_title( $title ) {
 	$parts = explode( ':', $title );
 
 	if ( 2 <= count( $parts ) ) {
@@ -67,4 +67,4 @@ function ampconf_get_the_archive_title( $title ) {
 
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'ampconf_get_the_archive_title' );
+add_filter( 'get_the_archive_title', 'ampnews_get_the_archive_title' );

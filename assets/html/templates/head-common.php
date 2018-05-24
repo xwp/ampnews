@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static page head common elements.
+ * AMP News static page head common elements.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

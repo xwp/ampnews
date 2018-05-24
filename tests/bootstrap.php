@@ -39,11 +39,11 @@ require_once getenv( 'WP_TESTS_DIR' ) . '/includes/functions.php';
 /**
  * Loads theme.
  */
-function ampconf_bootstrap_phpunit_switch_theme() {
+function ampnews_bootstrap_phpunit_switch_theme() {
 	register_theme_directory( WP_CONTENT_DIR . '/themes' );
 	switch_theme( basename( AMP_THEME_DIR ) );
 }
-tests_add_filter( 'setup_theme', 'ampconf_bootstrap_phpunit_switch_theme' );
+tests_add_filter( 'setup_theme', 'ampnews_bootstrap_phpunit_switch_theme' );
 
 // Start up the WP testing environment.
 require getenv( 'WP_TESTS_DIR' ) . '/includes/bootstrap.php';

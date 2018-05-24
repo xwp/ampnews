@@ -4,14 +4,14 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 get_header(); ?>
 
 	<div class="wrap">
 		<header class="wrap__item wrap__item--page-heading">
-			<h1 class="heading heading--h1"><?php esc_html_e( '404 &mdash; Page not found', 'ampconf' ); ?></h1>
+			<h1 class="heading heading--h1"><?php esc_html_e( '404 &mdash; Page not found', 'ampnews' ); ?></h1>
 		</header>
 
 		<main class="wrap__item wrap__item--blog wrap__item--blog--primary">

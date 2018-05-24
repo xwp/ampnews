@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget tag cloud template.
+ * AMP News static widget tag cloud template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 /**

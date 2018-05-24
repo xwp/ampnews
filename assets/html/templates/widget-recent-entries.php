@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget recent entries template.
+ * AMP News static widget recent entries template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

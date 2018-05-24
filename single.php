@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 get_header(); ?>
@@ -15,9 +15,9 @@ get_header(); ?>
 		?>
 		<div class="wrap">
 			<main class="wrap__item wrap__item--full-width">
-				<amp-live-list id="ampconf-live-post-<?php the_ID(); ?>" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="1">
+				<amp-live-list id="ampnews-live-post-<?php the_ID(); ?>" class="live-list" data-poll-interval="<?php echo esc_attr( AMPNEWS_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="1">
 					<div update class="live-list__button">
-						<button class="button" on="tap:ampconf-live-post-<?php the_ID(); ?>.update"><?php esc_html_e( 'Load updates!', 'ampconf' ); ?></button>
+						<button class="button" on="tap:ampnews-live-post-<?php the_ID(); ?>.update"><?php esc_html_e( 'Load updates!', 'ampnews' ); ?></button>
 					</div>
 					<div items>
 						<?php get_template_part( 'templates/entry/full' ); ?>

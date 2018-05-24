@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget rss template.
+ * AMP News static widget rss template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart
@@ -20,7 +20,7 @@
 			?>
 			<amp-img class="rss-widget-icon"
 					 alt="RSS"
-					 src="http://ampconf.local/wp-includes/images/rss.png"
+					 src="http://ampnews.local/wp-includes/images/rss.png"
 					 width="14"
 					 height="14"
 					 layout="fixed">

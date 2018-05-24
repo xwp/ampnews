@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget categories template.
+ * AMP News static widget categories template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart
@@ -578,7 +578,7 @@
 /*
 <section id="categories-5" class="widget widget_categories"><h2 class="widget-title">Test Categories Widget: With
 		Count, Dropdown, And Hierarchical</h2>
-	<form action="http://ampconf.local" method="get" novalidate="" class="i-amphtml-form"><label
+	<form action="http://ampnews.local" method="get" novalidate="" class="i-amphtml-form"><label
 				class="screen-reader-text" for="cat">Test Categories Widget: With Count, Dropdown, And
 			Hierarchical</label><select name="cat" id="cat" class="postform">
 			<option value="-1">Select Category</option>

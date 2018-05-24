@@ -2,15 +2,15 @@
 /**
  * Full entry template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 ?>
-<article <?php ampconf_the_post_attributes( array( 'class' => 'entry entry--featured' ) ); ?>>
+<article <?php ampnews_the_post_attributes( array( 'class' => 'entry entry--featured' ) ); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
 		<figure class="entry__thumbnail">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'ampconf-1040x585', array( 'data-amp-layout' => 'fill' ) ); ?>
+				<?php the_post_thumbnail( 'ampnews-1040x585', array( 'data-amp-layout' => 'fill' ) ); ?>
 			</a>
 		</figure><!-- .entry__thumbnail -->
 	<?php endif; ?>

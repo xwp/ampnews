@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static comments list and reply form template.
+ * AMP News static comments list and reply form template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart
@@ -30,13 +30,13 @@
 						<span class="says">says:</span>
 					</div>
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-4">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-4">
 							<time datetime="2012-09-03T10:18:04+00:00">
 								September 3, 2012 at 10:18 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=4">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=4">Edit</a></span>
 					</div><!-- .comment-metadata -->
 				</footer>
 				<div class="comment-content">
@@ -228,13 +228,13 @@
 						<span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-3">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-3">
 							<time datetime="2013-01-04T10:15:32+00:00">
 								January 4, 2013 at 10:15 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=3">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=3">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -293,13 +293,13 @@
 						<span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-5">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-5">
 							<time datetime="2013-03-11T23:45:54+00:00">
 								March 11, 2013 at 11:45 pm
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=5">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=5">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -335,13 +335,13 @@
 								bradley</a></b> <span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-6">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-6">
 							<time datetime="2013-03-12T13:17:35+00:00">
 								March 12, 2013 at 1:17 pm
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=6">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=6">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -369,13 +369,13 @@
 						<span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-7">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-7">
 							<time datetime="2013-03-14T07:53:26+00:00">
 								March 14, 2013 at 7:53 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=7">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=7">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -403,13 +403,13 @@
 						<span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-8">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-8">
 							<time datetime="2013-03-14T07:56:46+00:00">
 								March 14, 2013 at 7:56 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=8">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=8">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -437,13 +437,13 @@
 								Erickson</a></b> <span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-9">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-9">
 							<time datetime="2013-03-14T07:57:01+00:00">
 								March 14, 2013 at 7:57 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=9">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=9">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -471,13 +471,13 @@
 								<span class="says">says:</span></div><!-- .comment-author -->
 
 							<div class="comment-metadata">
-								<a href="https://ampconf.local/2013/01/03/comments/#comment-10">
+								<a href="https://ampnews.local/2013/01/03/comments/#comment-10">
 									<time datetime="2013-03-14T08:01:21+00:00">
 										March 14, 2013 at 8:01 am
 									</time>
 								</a>
 								<span class="edit-link"><a class="comment-edit-link"
-														   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=10">Edit</a></span>
+														   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=10">Edit</a></span>
 							</div><!-- .comment-metadata -->
 
 						</footer><!-- .comment-meta -->
@@ -506,13 +506,13 @@
 									<!-- .comment-author -->
 
 									<div class="comment-metadata">
-										<a href="https://ampconf.local/2013/01/03/comments/#comment-11">
+										<a href="https://ampnews.local/2013/01/03/comments/#comment-11">
 											<time datetime="2013-03-14T08:02:06+00:00">
 												March 14, 2013 at 8:02 am
 											</time>
 										</a>
 										<span class="edit-link"><a class="comment-edit-link"
-																   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=11">Edit</a></span>
+																   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=11">Edit</a></span>
 									</div><!-- .comment-metadata -->
 
 								</footer><!-- .comment-meta -->
@@ -542,13 +542,13 @@
 											<!-- .comment-author -->
 
 											<div class="comment-metadata">
-												<a href="https://ampconf.local/2013/01/03/comments/#comment-12">
+												<a href="https://ampnews.local/2013/01/03/comments/#comment-12">
 													<time datetime="2013-03-14T08:03:22+00:00">
 														March 14, 2013 at 8:03 am
 													</time>
 												</a>
 												<span class="edit-link"><a class="comment-edit-link"
-																		   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=12">Edit</a></span>
+																		   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=12">Edit</a></span>
 											</div><!-- .comment-metadata -->
 
 										</footer><!-- .comment-meta -->
@@ -577,13 +577,13 @@
 													<!-- .comment-author -->
 
 													<div class="comment-metadata">
-														<a href="https://ampconf.local/2013/01/03/comments/#comment-13">
+														<a href="https://ampnews.local/2013/01/03/comments/#comment-13">
 															<time datetime="2013-03-14T08:10:29+00:00">
 																March 14, 2013 at 8:10 am
 															</time>
 														</a>
 														<span class="edit-link"><a class="comment-edit-link"
-																				   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=13">Edit</a></span>
+																				   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=13">Edit</a></span>
 													</div><!-- .comment-metadata -->
 
 												</footer><!-- .comment-meta -->
@@ -609,13 +609,13 @@
 													<!-- .comment-author -->
 
 													<div class="comment-metadata">
-														<a href="https://ampconf.local/2013/01/03/comments/#comment-14">
+														<a href="https://ampnews.local/2013/01/03/comments/#comment-14">
 															<time datetime="2013-03-14T08:12:16+00:00">
 																March 14, 2013 at 8:12 am
 															</time>
 														</a>
 														<span class="edit-link"><a class="comment-edit-link"
-																				   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=14">Edit</a></span>
+																				   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=14">Edit</a></span>
 													</div><!-- .comment-metadata -->
 
 												</footer><!-- .comment-meta -->
@@ -640,13 +640,13 @@
 													<!-- .comment-author -->
 
 													<div class="comment-metadata">
-														<a href="https://ampconf.local/2013/01/03/comments/#comment-15">
+														<a href="https://ampnews.local/2013/01/03/comments/#comment-15">
 															<time datetime="2013-03-14T08:12:58+00:00">
 																March 14, 2013 at 8:12 am
 															</time>
 														</a>
 														<span class="edit-link"><a class="comment-edit-link"
-																				   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=15">Edit</a></span>
+																				   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=15">Edit</a></span>
 													</div><!-- .comment-metadata -->
 
 												</footer><!-- .comment-meta -->
@@ -671,13 +671,13 @@
 													<!-- .comment-author -->
 
 													<div class="comment-metadata">
-														<a href="https://ampconf.local/2013/01/03/comments/#comment-16">
+														<a href="https://ampnews.local/2013/01/03/comments/#comment-16">
 															<time datetime="2013-03-14T08:13:42+00:00">
 																March 14, 2013 at 8:13 am
 															</time>
 														</a>
 														<span class="edit-link"><a class="comment-edit-link"
-																				   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=16">Edit</a></span>
+																				   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=16">Edit</a></span>
 													</div><!-- .comment-metadata -->
 
 												</footer><!-- .comment-meta -->
@@ -702,13 +702,13 @@
 													<!-- .comment-author -->
 
 													<div class="comment-metadata">
-														<a href="https://ampconf.local/2013/01/03/comments/#comment-17">
+														<a href="https://ampnews.local/2013/01/03/comments/#comment-17">
 															<time datetime="2013-03-14T08:14:13+00:00">
 																March 14, 2013 at 8:14 am
 															</time>
 														</a>
 														<span class="edit-link"><a class="comment-edit-link"
-																				   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=17">Edit</a></span>
+																				   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=17">Edit</a></span>
 													</div><!-- .comment-metadata -->
 
 												</footer><!-- .comment-meta -->
@@ -734,13 +734,13 @@
 													<!-- .comment-author -->
 
 													<div class="comment-metadata">
-														<a href="https://ampconf.local/2013/01/03/comments/#comment-18">
+														<a href="https://ampnews.local/2013/01/03/comments/#comment-18">
 															<time datetime="2013-03-14T08:14:47+00:00">
 																March 14, 2013 at 8:14 am
 															</time>
 														</a>
 														<span class="edit-link"><a class="comment-edit-link"
-																				   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=18">Edit</a></span>
+																				   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=18">Edit</a></span>
 													</div><!-- .comment-metadata -->
 
 												</footer><!-- .comment-meta -->
@@ -772,13 +772,13 @@
 								Erickson</a></b> <span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-20">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-20">
 							<time datetime="2013-03-14T09:56:43+00:00">
 								March 14, 2013 at 9:56 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=20">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=20">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -809,13 +809,13 @@
 								class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-21">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-21">
 							<time datetime="2013-03-14T11:23:24+00:00">
 								March 14, 2013 at 11:23 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=21">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=21">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -841,13 +841,13 @@
 								class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-22">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-22">
 							<time datetime="2013-03-14T11:27:54+00:00">
 								March 14, 2013 at 11:27 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=22">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=22">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -874,13 +874,13 @@
 						<span class="says">says:</span></div><!-- .comment-author -->
 
 					<div class="comment-metadata">
-						<a href="https://ampconf.local/2013/01/03/comments/#comment-23">
+						<a href="https://ampnews.local/2013/01/03/comments/#comment-23">
 							<time datetime="2013-03-14T11:30:33+00:00">
 								March 14, 2013 at 11:30 am
 							</time>
 						</a>
 						<span class="edit-link"><a class="comment-edit-link"
-												   href="https://ampconf.local/wp-admin/comment.php?action=editcomment&#038;c=23">Edit</a></span>
+												   href="https://ampnews.local/wp-admin/comment.php?action=editcomment&#038;c=23">Edit</a></span>
 					</div><!-- .comment-metadata -->
 
 				</footer><!-- .comment-meta -->
@@ -947,7 +947,7 @@
 			  class="comment-form"
 			  novalidate>
 			<p class="logged-in-as">
-				<a href="https://ampconf.local/wp-admin/profile.php"
+				<a href="https://ampnews.local/wp-admin/profile.php"
 				   aria-label="Logged in as admin. Edit your profile.">Logged in as admin</a>.
 				<a href="#">Log out?</a>
 			</p>

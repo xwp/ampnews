@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 $category = get_category( get_query_var( 'cat' ) );

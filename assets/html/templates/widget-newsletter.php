@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget newsletter sign-up template.
+ * AMP News static widget newsletter sign-up template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart
@@ -14,7 +14,7 @@
 	<form
 			method="get"
 			class="newsletter-form"
-			action="https://ampconf.local/"
+			action="https://ampnews.local/"
 			target="_top">
 		<label>
 			<span class="screen-reader-text">Sign up for a weekly newsletter:</span>

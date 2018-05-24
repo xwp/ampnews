@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static default entry template.
+ * AMP News static default entry template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart
@@ -17,11 +17,11 @@
 					 height="225"
 					 layout="responsive"
 					 srcset="https://placehold.it/280x188 320w,
-					    https://placehold.it/335x225 375w,
-					    https://placehold.it/727x508 727w"
+						https://placehold.it/335x225 375w,
+						https://placehold.it/727x508 727w"
 					 sizes="(max-width: 767px) calc( 100vw - 40px ),
-					    (max-width: 1079px) calc( 50vw - 35px ),
-					    505px">
+						(max-width: 1079px) calc( 50vw - 35px ),
+						505px">
 			</amp-img>
 		</a>
 	</figure><!-- .entry__thumbnail -->

@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static featured entry template.
+ * AMP News static featured entry template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart
@@ -18,7 +18,7 @@
 					 layout="responsive"
 					 media="(max-width: 767px)"
 					 srcset="https://placehold.it/320x192 320w,
-					    https://placehold.it/375x225 375w, https://placehold.it/768x461 768w"
+						https://placehold.it/375x225 375w, https://placehold.it/768x461 768w"
 					 sizes="100vw">
 			</amp-img>
 			<amp-img class="entry__image"
@@ -29,11 +29,11 @@
 					 layout="responsive"
 					 media="(min-width: 768px)"
 					 srcset="https://placehold.it/768x295 768w,
-					    https://placehold.it/1040x400 1040w"
+						https://placehold.it/1040x400 1040w"
 					 sizes="(max-width: 1023px) 100vw,
-					    (max-width: 1039px) calc( 100vw - 40px ),
-					    (max-width: 1079px) 1000px,
-					    1040px">
+						(max-width: 1039px) calc( 100vw - 40px ),
+						(max-width: 1079px) 1000px,
+						1040px">
 			</amp-img>
 		</a>
 	</figure><!-- .entry__thumbnail -->
