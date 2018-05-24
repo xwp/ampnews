@@ -1,4 +1,4 @@
-=== AMP Conf ===
+=== AMP News Theme ===
 Contributors: xwp
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 Requires at least: 4.0
