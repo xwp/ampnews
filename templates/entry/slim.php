@@ -2,7 +2,7 @@
 /**
  * Slim entry template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 ?>

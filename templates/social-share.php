@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf social share bar.
+ * AMPNews social share bar.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @todo Integrate with Jetpack sharing extension.

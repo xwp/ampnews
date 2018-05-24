@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget newsletter sign-up template.
+ * AMPNews static widget newsletter sign-up template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

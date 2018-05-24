@@ -2,7 +2,7 @@
 /**
  * More stories component.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 $max_shown  = 3;

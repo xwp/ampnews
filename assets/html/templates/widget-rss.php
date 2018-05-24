@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget rss template.
+ * AMPNews static widget rss template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

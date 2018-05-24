@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static comments list and reply form template.
+ * AMPNews static comments list and reply form template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

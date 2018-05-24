@@ -3,7 +3,7 @@
  * AMP plugin dependency.
  *
  * @since 0.1
- * @package AMPConf
+ * @package AMPNews
  */
 
 /**
@@ -24,7 +24,7 @@ function ampconf_plugin_dependency_notice() {
 		$slug    = 'amp';
 		$path    = 'update.php';
 		$button  = __( 'Install', 'default' );
-		$message = __( 'The AMPConf theme requires the AMP plugin to be installed to render fully valid AMP. But it will still function without it.', 'ampconf' );
+		$message = __( 'The AMPNews theme requires the AMP plugin to be installed to render fully valid AMP. But it will still function without it.', 'ampconf' );
 		$params  = array(
 			'action'   => 'install-plugin',
 			'plugin'   => $slug,
@@ -33,7 +33,7 @@ function ampconf_plugin_dependency_notice() {
 	} elseif ( ! is_plugin_active( $filepath ) ) {
 		$path    = 'plugins.php';
 		$button  = __( 'Activate', 'default' );
-		$message = __( 'The AMPConf theme requires the AMP plugin to be activated to render fully valid AMP. But it will still function without it.', 'ampconf' );
+		$message = __( 'The AMPNews theme requires the AMP plugin to be activated to render fully valid AMP. But it will still function without it.', 'ampconf' );
 		$params  = array(
 			'action'   => 'activate',
 			'plugin'   => $filepath,

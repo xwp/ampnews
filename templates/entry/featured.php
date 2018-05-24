@@ -2,7 +2,7 @@
 /**
  * Featured entry template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 ?>

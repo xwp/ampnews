@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static single template.
+ * AMPNews static single template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

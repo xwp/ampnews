@@ -2,7 +2,7 @@
 /**
  * Posts Live Lists.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 if ( have_posts() ) :

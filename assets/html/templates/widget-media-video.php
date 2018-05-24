@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget media video template.
+ * AMPNews static widget media video template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

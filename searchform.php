@@ -2,7 +2,7 @@
 /**
  * Custom search form template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 ?>

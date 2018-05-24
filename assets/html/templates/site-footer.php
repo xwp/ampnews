@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static site-footer template.
+ * AMPNews static site-footer template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 ?>

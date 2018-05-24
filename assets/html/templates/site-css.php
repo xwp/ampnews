@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf site global CSS.
+ * AMPNews site global CSS.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

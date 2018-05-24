@@ -1,10 +1,10 @@
 <?php
 /**
- * AMPConf functions and definitions
+ * AMPNews functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 /**
@@ -26,7 +26,7 @@ if ( ! function_exists( 'ampconf_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on AMPConf, use a find and replace
+		 * If you're building a theme based on AMPNews, use a find and replace
 		 * to change 'ampconf' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'ampconf', get_template_directory() . '/languages' );

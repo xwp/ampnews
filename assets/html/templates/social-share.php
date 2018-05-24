@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static social share bar partial.
+ * AMPNews static social share bar partial.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

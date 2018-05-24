@@ -2,7 +2,7 @@
 /**
  * Entry byline partial.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 ?>

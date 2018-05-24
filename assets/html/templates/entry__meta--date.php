@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static entry posted on partial.
+ * AMPNews static entry posted on partial.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

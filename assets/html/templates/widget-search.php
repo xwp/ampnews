@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf static widget search template.
+ * AMPNews static widget search template.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 // @codingStandardsIgnoreStart

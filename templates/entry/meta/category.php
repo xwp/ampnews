@@ -2,7 +2,7 @@
 /**
  * Entry category partial.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 /* translators: used between list items, there is a space after the comma */

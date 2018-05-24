@@ -1,8 +1,8 @@
 <?php
 /**
- * AMPConf Theme Customizer
+ * AMPNews Theme Customizer
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 /**

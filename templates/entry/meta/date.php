@@ -2,7 +2,7 @@
 /**
  * Entry posted on partial.
  *
- * @package AMPConf
+ * @package AMPNews
  */
 
 ?>
