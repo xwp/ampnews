@@ -8,7 +8,7 @@
 if ( have_posts() ) :
 
 	?>
-	<amp-live-list id="ampnews-posts-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
+	<amp-live-list id="ampnews-posts-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPNEWS_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
 		<div update class="live-list__button">
 			<button class="button" on="tap:ampnews-posts-list.update"><?php esc_html_e( 'Load Newer Articles', 'ampnews' ); ?></button>
 		</div>

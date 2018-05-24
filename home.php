@@ -16,7 +16,7 @@ get_header(); ?>
 	// Only show the feature and subfeatures when not paged.
 	if ( ! is_paged() && have_posts() ) :
 		?>
-		<amp-live-list id="ampnews-featured-articles-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="3">
+		<amp-live-list id="ampnews-featured-articles-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPNEWS_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="3">
 			<div update class="live-list__button">
 				<button class="button"on="tap:ampnews-articles-list.update,ampnews-featured-articles-list.update"><?php esc_html_e( 'Load Newer Articles', 'ampnews' ); ?></button>
 			</div>
@@ -62,7 +62,7 @@ get_header(); ?>
 					</header>
 				<?php endif; ?>
 
-				<amp-live-list id="ampnews-articles-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
+				<amp-live-list id="ampnews-articles-list" class="live-list" data-poll-interval="<?php echo esc_attr( AMPNEWS_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'posts_per_page' ) ); ?>">
 					<div items>
 						<?php
 						while ( have_posts() ) :

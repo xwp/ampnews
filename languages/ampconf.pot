@@ -134,7 +134,7 @@ msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "AMP Conf"
+msgid "AMP News"
 msgstr ""
 
 #. Theme URI of the plugin/theme

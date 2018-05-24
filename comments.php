@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 <div class="comments wrap__item">
 
 	<?php $sort_attr = ( 'asc' === get_option( 'comment_order' ) ) ? ' sort="ascending" ' : ''; ?>
-	<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" class="live-list" layout="container" <?php echo $sort_attr; // WPCS: XSS OK. ?> data-poll-interval="<?php echo esc_attr( AMPCONF_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'page_comments' ) ? get_option( 'comments_per_page' ) : 10000 ); ?>">
+	<amp-live-list id="amp-live-comments-list-<?php the_ID(); ?>" class="live-list" layout="container" <?php echo $sort_attr; // WPCS: XSS OK. ?> data-poll-interval="<?php echo esc_attr( AMPNEWS_LIVE_LIST_POLL_INTERVAL ); ?>" data-max-items-per-page="<?php echo esc_attr( get_option( 'page_comments' ) ? get_option( 'comments_per_page' ) : 10000 ); ?>">
 		<ol items class="comments__list">
 			<?php
 				wp_list_comments( array(

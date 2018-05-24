@@ -12,7 +12,7 @@
  *
  * @var int
  */
-define( 'AMPCONF_LIVE_LIST_POLL_INTERVAL', 15000 );
+define( 'AMPNEWS_LIVE_LIST_POLL_INTERVAL', 15000 );
 
 if ( ! function_exists( 'ampnews_setup' ) ) :
 	/**
