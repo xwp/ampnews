@@ -1,11 +1,11 @@
 {
-	"name": "ampnews/theme",
-	"description": "WordPress AMP News theme",
-	"type": "wordpress-theme",
-	"license": "GPL-2.0+",
-	"require-dev": {
-		"wp-coding-standards/wpcs": "^0.14.0",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-		"wimg/php-compatibility": "^8.1"
-	}
+    "name": "ampnews/theme",
+    "description": "WordPress AMP News theme",
+    "type": "wordpress-theme",
+    "license": "GPL-2.0+",
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^0.14.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+        "wimg/php-compatibility": "^8.1"
+    }
 }
