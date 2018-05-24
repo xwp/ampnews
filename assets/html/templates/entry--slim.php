@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static slim entry template.
+ * AMP News static slim entry template.
  *
  * @package AMPNews
  */

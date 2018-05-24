@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static widget newsletter sign-up template.
+ * AMP News static widget newsletter sign-up template.
  *
  * @package AMPNews
  */

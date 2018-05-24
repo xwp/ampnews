@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews Theme Customizer
+ * AMP News Theme Customizer
  *
  * @package AMPNews
  */

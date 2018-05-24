@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static sidebar template.
+ * AMP News static sidebar template.
  *
  * @package AMPNews
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static comments list and reply form template.
+ * AMP News static comments list and reply form template.
  *
  * @package AMPNews
  */

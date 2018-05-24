@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static widget recent entries template.
+ * AMP News static widget recent entries template.
  *
  * @package AMPNews
  */

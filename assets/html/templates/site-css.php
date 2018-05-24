@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews site global CSS.
+ * AMP News site global CSS.
  *
  * @package AMPNews
  */

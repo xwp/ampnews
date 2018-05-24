@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static entry posted on partial.
+ * AMP News static entry posted on partial.
  *
  * @package AMPNews
  */

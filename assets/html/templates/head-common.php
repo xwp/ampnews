@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static page head common elements.
+ * AMP News static page head common elements.
  *
  * @package AMPNews
  */

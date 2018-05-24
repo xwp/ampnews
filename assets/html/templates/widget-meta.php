@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static widget meta template.
+ * AMP News static widget meta template.
  *
  * @package AMPNews
  */

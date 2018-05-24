@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static widget media audio template.
+ * AMP News static widget media audio template.
  *
  * @package AMPNews
  */

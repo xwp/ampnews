@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static social share bar partial.
+ * AMP News static social share bar partial.
  *
  * @package AMPNews
  */

@@ -1,6 +1,6 @@
 <?php
 /**
- * AMPNews static widget search template.
+ * AMP News static widget search template.
  *
  * @package AMPNews
  */
