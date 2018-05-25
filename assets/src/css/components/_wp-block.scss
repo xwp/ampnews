@@ -1,0 +1,173 @@
+//
+// Gutenberg blocks.
+//
+
+.entry__content {
+
+	.alignnone,
+	.aligncenter,
+	.alignfull,
+	.alignwide {
+		clear: both;
+		margin: 32px #{ -$site-gutter };
+		width: calc( 100% + #{ 2 * $site-gutter } );
+	}
+
+	.alignnone,
+	.aligncenter {
+		@media ( query( min, tablet ) ) {
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+	}
+
+	.alignfull,
+	.alignwide {
+		@media ( query( min, tablet ) ) {
+			width: 100vw;
+			max-width: 1040px;
+			margin-left: -200px;
+			margin-right: 0;
+
+			figcaption {
+				max-width: 720px;
+				margin-left: 200px;
+				padding-right: 30px;
+			}
+		}
+
+		@media ( query( min, site-width ) ) {
+			margin-left: -180px;
+
+			figcaption {
+				margin-left: 180px;
+			}
+		}
+	}
+
+	.wp-block {
+
+		//
+		// Image block.
+		//
+
+		&-image {
+
+			figcaption {
+				padding: 16px $site-gutter 0;
+				font-size: 14px;
+				line-height: #{ 20px / 14px };
+				text-align: left;
+
+				@media ( query( min, tablet ) ) {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+
+		//
+		// Cover image block.
+		//
+
+		&-cover-image {
+			position: relative;
+			padding: 50px 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+
+			h2 {
+				position: relative;
+				z-index: 1;
+				font-size: 24px;
+				color: $white;
+
+				@media ( query( min, tablet ) ) {
+					font-size: 36px;
+				}
+			}
+		}
+
+		//
+		// Gallery block.
+		//
+
+		&-gallery {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+
+			figure {
+				display: flex;
+				flex: 1 0 auto;
+				margin: 1px;
+				width: 100%;
+			}
+
+			amp-img {
+				flex: 1;
+				object-fit: cover;
+			}
+
+			@for $i from 2 through 8 {
+
+				&.columns-#{ $i } figure {
+					width: calc( #{ 100% / $i } - 2px );
+				}
+			}
+
+		}
+
+		//
+		// Pullquote block.
+		//
+
+		&-pullquote {
+			max-width: 100%;
+
+			@media ( query( min, tablet ) ) {
+				width: 320px;
+				margin: 0 30px 20px -150px;
+				float: left;
+			}
+
+			@media ( query( min, desktop ) ) {
+				width: 420px;
+				margin-left: -180px;
+				font-size: 36px;
+			}
+		}
+
+		//
+		// Button block.
+		//
+
+		&-button {
+			justify-content: center;
+			margin-top: 32px;
+			margin-bottom: 32px;
+
+			&__link {
+				@extend .button;
+				@extend .button--inline;
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+	}
+}

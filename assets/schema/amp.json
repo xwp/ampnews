@@ -1,0 +1,38 @@
+{
+  "clean": {
+    "src": "dist",
+    "series": "before"
+  },
+  "css": {
+    "src": "src/css/**/*.scss",
+    "base": "src/css",
+    "dest": "dist/css",
+    "includePaths": [
+      "node_modules"
+    ],
+    "enableLinter": true,
+    "postcssProcessors": {
+      "cssnext": {
+        "warnForDuplicates": false
+      },
+      "autoprefixer": {},
+      "pxtorem": {
+        "rootValue": 16,
+        "unitPrecision": 5,
+        "propList": [ "*" ],
+        "selectorBlackList": [],
+        "replace": true,
+        "mediaQuery": true,
+        "minPixelValue": 2
+      },
+      "assets": {
+        "relative": true
+      }
+    }
+  },
+  "watch": {
+    "tasks": [ "css" ],
+    "series": "after",
+    "env": "dev"
+  }
+}

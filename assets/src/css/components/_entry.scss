@@ -1,0 +1,298 @@
+//
+// Default entry.
+//
+
+.entry {
+	@media ( query( min, desktop ) ) {
+		padding: 20px 0 0;
+	}
+
+	//
+	// Entry thumbnail.
+	//
+
+	&__thumbnail {
+		margin: 0;
+		padding: 0;
+
+		.wp-post-image {
+			position: relative;
+			width: 100%;
+			padding-bottom: 66%;
+		}
+
+		img {
+			object-fit: cover;
+		}
+	}
+
+	//
+	// Entry header.
+	//
+
+	&__header {
+		padding: 20px 0 0;
+
+		@media ( query( min, desktop ) ) {
+			padding: 15px 0 0;
+		}
+	}
+
+	//
+	// Entry title.
+	//
+
+	&__title {
+		margin: 0;
+		font-size: 24px;
+		text-transform: none;
+
+		@media ( query( min, desktop ) ) {
+			font-size: 36px;
+		}
+	}
+
+	//
+	// Entry summary and content.
+	//
+
+	&__summary,
+	&__content {
+		line-height: 1.5;
+		color: $muted;
+
+		@media ( query( min, desktop ) ) {
+			font-size: 18px;
+			line-height: #{ 25px / 18px };
+		}
+
+		p {
+			margin: 15px 0 0;
+
+			@media ( query( min, desktop ) ) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&__content {
+		margin-top: -17px;
+
+		@media ( query( min, desktop ) ) {
+			margin-top: -12px;
+		}
+
+		p,
+		ul,
+		ol,
+		dl,
+		table {
+			margin: 32px 0;
+		}
+
+		ul,
+		ol {
+			padding: 0 0 0 20px;
+
+			ol,
+			ul {
+				margin: 6px 0;
+			}
+		}
+
+		ol ol {
+			list-style: lower-alpha;
+
+			ol {
+				list-style: upper-roman;
+			}
+		}
+
+		li {
+			margin: 6px 0;
+		}
+
+		dt {
+			font-weight: 700;
+			color: $black;
+		}
+
+		.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		.alignleft {
+			float: left;
+			margin-left: 0;
+			margin-right: 20px;
+		}
+
+		.alignright {
+			float: right;
+			margin-left: 20px;
+			margin-right: 0;
+		}
+
+		//
+		// Block quote (pull quote as part of Gutenberg blocks).
+		//
+
+		blockquote {
+			margin: 40px auto;
+			font-size: 24px;
+			line-height: #{ 34px / 24px };
+			font-weight: 700;
+			color: $black;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				width: 50px;
+				margin: 24px 0;
+				border-bottom: 1px solid $border-color;
+			}
+
+			cite {
+				display: block;
+				font-size: 14px;
+				font-weight: 400;
+				font-style: normal;
+				color: $muted;
+			}
+
+			p > cite {
+				margin-top: 24px;
+			}
+		}
+
+		//
+		// Horizontal separator == Gutenberg's separator block.
+		//
+
+		hr {
+			clear: both;
+			margin: 40px auto;
+			width: 190px;
+			border: none;
+			border-bottom: 1px solid $border-color;
+
+			@media ( query( min, desktop ) ) {
+				width: 150px;
+			}
+		}
+
+		//
+		// Tables.
+		//
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+
+			th,
+			td {
+				padding: 8px 4px;
+				border-bottom: 1px solid $border-color;
+			}
+
+			th {
+				font-weight: 700;
+				text-align: left;
+				color: $black;
+				border-bottom: 2px solid $black;
+			}
+		}
+
+		//
+		// Buttons.
+		//
+
+		button,
+		.button {
+			@extend .button;
+			@extend .button--inline;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	//
+	// Link more.
+	//
+
+	&__link-more {
+		display: none;
+
+		.more-link {
+			@extend .button;
+
+			max-width: 240px;
+		}
+	}
+
+	//
+	// Entry footer.
+	//
+
+	&__footer {
+		padding-top: 15px;
+
+		@media ( query( min, desktop ) ) {
+			padding-top: 20px;
+		}
+	}
+
+	//
+	// Entry meta.
+	//
+
+	&__meta {
+		display: inline-block;
+		padding: 0 0 10px;
+		font-size: 14px;
+		line-height: 1.5;
+		color: $muted;
+
+		@media ( query( min, desktop ) ) {
+			font-size: 16px;
+		}
+
+		a {
+			font-weight: 700;
+			color: $black;
+		}
+
+		&--byline::first-letter {
+			text-transform: uppercase;
+		}
+
+		&--date a {
+			font-weight: 400;
+			color: $muted;
+		}
+	}
+
+	//
+	// Meta items separators.
+	//
+
+	&__footer &__meta--byline + &__meta--category::before {
+		content: '';
+		display: inline-block;
+		margin: 0 0 0 1em;
+		padding: 1em 0 0 1em;
+		border-left: 1px solid $border-color;
+		vertical-align: middle;
+	}
+
+	//
+	// Share bar.
+	//
+
+	&__share--in-content {
+		text-align: center;
+	}
+}

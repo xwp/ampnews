@@ -1,0 +1,48 @@
+//
+// Site Footer
+//
+.wrap {
+
+	&--footer {
+		max-width: 685px;
+
+		@media ( query( max, tablet ) ) {
+			padding-left: $site-gutter;
+			padding-right: $site-gutter;
+		}
+
+		@media ( query( min, tablet ) ) {
+			border-top: 2px solid $black;
+			padding-top: 30px;
+		}
+
+	}
+
+	&--footer &__item--footer-menu {
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin-bottom: 16px;
+			}
+
+			@media ( query( min, tablet ) ) {
+				display: flex;
+				flex-flow: wrap;
+
+				li {
+					flex-basis: 50%;
+				}
+			}
+		}
+	}
+
+	&--footer &__item--footer-copyright {
+		margin: 0;
+		color: $grey;
+		font-weight: 300;
+	}
+}

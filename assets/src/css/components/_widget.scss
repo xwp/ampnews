@@ -1,0 +1,273 @@
+//
+// WordPress widget.
+//
+
+%widget-text-caption {
+	font-size: 20px;
+	font-weight: 700;
+	color: $black;
+}
+
+%widget-text-regular {
+	font-size: 16px;
+	font-weight: 400;
+	color: $muted;
+}
+
+%widget-text-bold {
+	font-size: 16px;
+	font-weight: 700;
+	color: $black;
+}
+
+%widget-text-small {
+	font-size: 12px;
+	font-weight: 400;
+	color: $muted;
+}
+
+.widget {
+	@extend %widget-text-regular;
+	padding: 20px 0;
+	line-height: 1.5;
+	word-break: break-word;
+
+	&-title {
+		@extend .heading;
+		@extend .heading--widget;
+		margin: 0 0 10px;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@media ( query( min, mobile-large ) ) and ( query( max, tablet ) ) {
+			//column-count: 2;
+			//column-gap: 30px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+	}
+
+	li {
+		@extend %widget-text-caption;
+		padding: 0;
+
+		@media ( query( min, mobile-large ) ) and ( query( max, tablet ) ) {
+			width: calc( 50% - 15px );
+		}
+
+		& + li {
+			padding-top: 6px;
+		}
+
+		a {
+			@extend %widget-text-caption;
+			display: inline-block;
+		}
+
+		&.cat-item {
+			@extend %widget-text-regular;
+		}
+	}
+
+	//
+	// Widgets in the main content area.
+	//
+
+	.wrap__item--widget > &,
+	.wrap__subitem--widget > & {
+		max-width: 320px;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		.widget-title {
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 1.25;
+			text-transform: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: none;
+			color: $black;
+		}
+	}
+
+	//
+	// Recent entries widget.
+	//
+
+	&_recent_entries {
+
+		li {
+			display: flex;
+			flex-flow: column nowrap;
+
+			& + li {
+				padding-top: 15px;
+			}
+
+			.post-date {
+				@extend %widget-text-small;
+				order: 0;
+			}
+
+			> a {
+				@extend %widget-text-caption;
+				order: 1;
+			}
+		}
+	}
+
+	//
+	// RSS widget.
+	//
+
+	&_rss {
+
+		li {
+			display: flex;
+			flex-flow: row wrap;
+
+			& + li {
+				padding-top: 20px;
+			}
+
+			.rss-date {
+				@extend %widget-text-small;
+				order: 0;
+				width: 50%;
+				flex: 1 1 50%;
+			}
+
+			> cite {
+				@extend %widget-text-small;
+				order: 1;
+				width: 50%;
+				flex: 1 1 50%;
+				font-weight: 700;
+				font-style: normal;
+				text-align: right;
+			}
+
+			.rsswidget {
+				order: 2;
+				width: 100%;
+				padding: 5px 0;
+			}
+
+			.rssSummary {
+				@extend %widget-text-small;
+				order: 3;
+				width: 100%;
+			}
+		}
+	}
+
+	//
+	// Search widget.
+	//
+
+	&_search {
+
+		.search-form {
+			@extend .inline-form;
+
+			> label {
+				@extend .inline-form__wrap;
+			}
+		}
+
+		.search-field {
+			@extend .inline-form__input;
+			@extend .inline-form__input--field;
+		}
+
+		.search-submit {
+			@extend .inline-form__input;
+			@extend .inline-form__input--submit;
+		}
+	}
+
+
+	//
+	// Newsletter widget.
+	//
+
+	&_newsletter {
+
+		.newsletter-form {
+			@extend .inline-form;
+
+			> label {
+				@extend .inline-form__wrap;
+			}
+		}
+
+		.newsletter-field {
+			@extend .inline-form__input;
+			@extend .inline-form__input--field;
+		}
+
+		.newsletter-submit {
+			@extend .inline-form__input;
+			@extend .inline-form__input--submit;
+		}
+	}
+
+	//
+	// Jetpack Subscription Widget
+	//
+
+	&.jetpack_subscription_widget {
+
+		form {
+			display: flex;
+			flex-flow: wrap;
+			justify-content: space-between;
+
+			label {
+				// @extend .inline-form__wrap;
+				@extend .screen-reader-text;
+			}
+
+			> div {
+				flex-basis: 100%;
+			}
+
+			> p {
+				background-color: $light-grey;
+				border: 1px solid $border-color;
+				border-right-width: 0;
+				flex-basis: 80%;
+				padding: 0;
+
+				& + p {
+					flex-basis: 20%;
+					border-left-width: 0;
+					border-right-width: 1px;
+				}
+			}
+		}
+
+		input {
+			min-height: 40px;
+			border: none;
+			background-color: transparent;
+		}
+
+		input[type='email'] {
+			width: 100%;
+			padding: 10px;
+		}
+
+		input[type='submit'] {
+
+		}
+	}
+}

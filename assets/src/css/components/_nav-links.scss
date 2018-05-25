@@ -1,0 +1,29 @@
+.nav-links {
+	width: 100%;
+	margin-top: $site-gutter;
+	margin-bottom: $site-gutter;
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+
+	a,
+	span {
+		@extend .button;
+		display: none;
+
+		@media ( query( min, mobile-large ) ) {
+			display: block;
+		}
+	}
+
+	.prev,
+	.next {
+		display: block;
+		flex-basis: 50%;
+		text-align: center;
+
+		@media ( query( min, mobile-large ) ) {
+			flex-basis: auto;
+		}
+	}
+}
